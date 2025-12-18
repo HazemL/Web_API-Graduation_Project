@@ -1,5 +1,6 @@
 ﻿using BusinessLogic.DTOs.Auth;
 using BusinessLogic.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Sanay3yMasr.Controllers
@@ -15,13 +16,29 @@ namespace Sanay3yMasr.Controllers
             _auth = auth;
         }
 
+        // ===================== REGISTER =====================
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterRequestDto dto)
-            => Ok(await _auth.RegisterAsync(dto));
+        {
+            var result = await _auth.RegisterAsync(dto);
+            return Ok(result);
+        }
 
+        // ===================== LOGIN =====================
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginRequestDto dto)
-            => Ok(await _auth.LoginAsync(dto));
-    }
+        {
+            var result = await _auth.LoginAsync(dto);
+            return Ok(result);
+        }
 
+        // ===================== LOGOUT =====================
+        [Authorize]
+        [HttpPost("logout")]
+        public async Task<IActionResult> Logout()
+        {
+            await _auth.LogoutAsync(User);
+            return Ok(new { message = "Logged out successfully" });
+        }
+    }
 }

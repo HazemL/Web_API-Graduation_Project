@@ -28,6 +28,8 @@ namespace DataAccess.Context
         }
 
 
+        //  (token)   لحفظ ال   
+        public DbSet<RevokedToken> RevokedTokens { get; set; }
 
 
         public DbSet<City> Citys { get; set; }

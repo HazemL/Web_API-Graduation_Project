@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Sanay3yMasr.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20251218134328_FixAdminPasswordHash")]
+    [Migration("20251218142322_FixAdminPasswordHash")]
     partial class FixAdminPasswordHash
     {
         /// <inheritdoc />
@@ -6517,6 +6517,26 @@ namespace Sanay3yMasr.Migrations
                             UpdatedAt = new DateTime(2024, 4, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserId = 20
                         });
+                });
+
+            modelBuilder.Entity("DataAccess.Models.RevokedToken", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Jti")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("RevokedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RevokedTokens");
                 });
 
             modelBuilder.Entity("DataAccess.Models.Skill", b =>

@@ -2,13 +2,9 @@
 using DataAccess.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLogic.Security
 {
@@ -24,13 +20,15 @@ namespace BusinessLogic.Security
         public AuthResponseDto Generate(User user)
         {
             var claims = new[]
-              {
+            {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Role, user.Role)
-            };
+                new Claim(ClaimTypes.Role, user.Role),
 
+                // ✅ JTI = Token ID (أساس Logout)
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            };
 
             var key = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(_config["Jwt:Key"])
@@ -41,7 +39,10 @@ namespace BusinessLogic.Security
                 audience: _config["Jwt:Audience"],
                 claims: claims,
                 expires: DateTime.UtcNow.AddHours(3),
-                signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
+                signingCredentials: new SigningCredentials(
+                    key,
+                    SecurityAlgorithms.HmacSha256
+                )
             );
 
             return new AuthResponseDto
@@ -52,7 +53,4 @@ namespace BusinessLogic.Security
             };
         }
     }
-
-
-
 }
