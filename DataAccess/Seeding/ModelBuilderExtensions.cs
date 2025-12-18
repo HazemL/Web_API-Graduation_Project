@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
+using DataAccess.Seeding;
 namespace DataAccess.Seeding
 {
     public static partial class ModelBuilderExtensions

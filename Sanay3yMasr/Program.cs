@@ -1,11 +1,14 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿
 using BusinessLogic.Interface;
 using BusinessLogic.Repository;
-using BusinessLogic.Repository;
+using BusinessLogic.Security;
 using BusinessLogic.Service;
 using DataAccess.Context;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 
 
@@ -18,10 +21,33 @@ namespace Sanay3yMasr
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            //servuecs auth
+            builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<JwtTokenGenerator>();
+            
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
+            {
+            options.TokenValidationParameters = new()
+            {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!))
+            };
+            });
+
+            builder.Services.AddAuthorization();
+         
+
 
             builder.Services.AddControllers();
-            // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-            builder.Services.AddOpenApi();
+            //// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+            //builder.Services.AddOpenApi();
             //inject DB ==> register connection string
             builder.Services.AddDbContext<Context>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("CS"),
@@ -48,11 +74,11 @@ namespace Sanay3yMasr
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.MapOpenApi();
-            }
+            //// Configure the HTTP request pipeline.
+            //if (app.Environment.IsDevelopment())
+            //{
+            //    app.MapOpenApi();
+            //}
             //using Swagger
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -63,8 +89,9 @@ namespace Sanay3yMasr
             }
 
             //app.UseHttpsRedirection();
-
+            app.UseAuthentication();
             app.UseAuthorization();
+            app.MapGet("/", () => Results.Redirect("swagger/index.html"));
             app.MapControllers();
 
             app.Run();

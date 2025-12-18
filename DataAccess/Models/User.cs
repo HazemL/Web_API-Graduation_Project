@@ -12,15 +12,16 @@ namespace DataAccess.Models
        
 
         [Required, EmailAddress]
-        public string Email { get; set; }
+        public string Email { get; set; } = string.Empty;
 
         [Required]
-        public string PasswordHash { get; set; }
+        public string PasswordHash { get; set; } = string.Empty;
 
-        public string FullName { get; set; }
-        public string Phone { get; set; }
-        public string ProfileImage { get; set; }
-        public string Role { get; set; } // "Admin", "Customer", "Craftsman"
+        public string FullName { get; set; } = string.Empty;
+        public string? Phone { get; set; }
+        public string? ProfileImage { get; set; }
+        [Required]
+        public string Role { get; set; } = string.Empty;// "Admin", "Customer", "Craftsman"
         public bool IsActive { get; set; }
        
 
