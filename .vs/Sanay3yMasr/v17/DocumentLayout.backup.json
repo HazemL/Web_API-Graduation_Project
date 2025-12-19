@@ -1,0 +1,457 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0C55B728-95D1-408A-A635-C77AB2D42EBD}|Sanay3yMasr\\Sanay3yMasr.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\sanay3ymasr\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C55B728-95D1-408A-A635-C77AB2D42EBD}|Sanay3yMasr\\Sanay3yMasr.csproj|solutionrelative:sanay3ymasr\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\mappers\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\mappers\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\mappers\\skillprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\mappers\\skillprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\mappers\\professionprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\mappers\\professionprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\mappers\\craftsmanprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\mappers\\craftsmanprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\mappers\\cityprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\mappers\\cityprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C55B728-95D1-408A-A635-C77AB2D42EBD}|Sanay3yMasr\\Sanay3yMasr.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\sanay3ymasr\\controllers\\craftsmencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C55B728-95D1-408A-A635-C77AB2D42EBD}|Sanay3yMasr\\Sanay3yMasr.csproj|solutionrelative:sanay3ymasr\\controllers\\craftsmencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C55B728-95D1-408A-A635-C77AB2D42EBD}|Sanay3yMasr\\Sanay3yMasr.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\sanay3ymasr\\controllers\\professionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C55B728-95D1-408A-A635-C77AB2D42EBD}|Sanay3yMasr\\Sanay3yMasr.csproj|solutionrelative:sanay3ymasr\\controllers\\professionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C55B728-95D1-408A-A635-C77AB2D42EBD}|Sanay3yMasr\\Sanay3yMasr.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\sanay3ymasr\\controllers\\skillscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C55B728-95D1-408A-A635-C77AB2D42EBD}|Sanay3yMasr\\Sanay3yMasr.csproj|solutionrelative:sanay3ymasr\\controllers\\skillscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C55B728-95D1-408A-A635-C77AB2D42EBD}|Sanay3yMasr\\Sanay3yMasr.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\sanay3ymasr\\controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C55B728-95D1-408A-A635-C77AB2D42EBD}|Sanay3yMasr\\Sanay3yMasr.csproj|solutionrelative:sanay3ymasr\\controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\service\\craftsmanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\service\\craftsmanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\service\\skillsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\service\\skillsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\dtos\\getallskilldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\getallskilldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\dtos\\getbyidskilldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\getbyidskilldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\service\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\service\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\dtos\\getallcitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\getallcitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\dtos\\getbyidcitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\getbyidcitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\service\\professionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\service\\professionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\dtos\\getbyidprofessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\getbyidprofessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\dtos\\getallprofessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\getallprofessiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03542053-9D02-44CA-A4C4-7D3A04ADDC51}|DataAccess\\DataAccess.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\dataaccess\\models\\profession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03542053-9D02-44CA-A4C4-7D3A04ADDC51}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\profession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\repository\\generalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\repository\\generalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\dtos\\getallcraftsmandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\getallcraftsmandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03542053-9D02-44CA-A4C4-7D3A04ADDC51}|DataAccess\\DataAccess.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\dataaccess\\models\\craftsman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03542053-9D02-44CA-A4C4-7D3A04ADDC51}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\craftsman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|c:\\users\\computer market\\desktop\\graduationproject\\graduation-project-api-master\\businesslogic\\dtos\\getbyidcraftsmandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639EF3EA-F12E-4F9C-A537-770204BE02AD}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\getbyidcraftsmandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 27,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserMapper.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Mappers\\UserMapper.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Mappers\\UserMapper.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Mappers\\UserMapper.cs",
+              "RelativeToolTip": "BusinessLogic\\Mappers\\UserMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T15:05:24.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CityController.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\Sanay3yMasr\\Controllers\\CityController.cs",
+              "RelativeDocumentMoniker": "Sanay3yMasr\\Controllers\\CityController.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\Sanay3yMasr\\Controllers\\CityController.cs",
+              "RelativeToolTip": "Sanay3yMasr\\Controllers\\CityController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAmwB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:52:23.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SkillsController.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\Sanay3yMasr\\Controllers\\SkillsController.cs",
+              "RelativeDocumentMoniker": "Sanay3yMasr\\Controllers\\SkillsController.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\Sanay3yMasr\\Controllers\\SkillsController.cs",
+              "RelativeToolTip": "Sanay3yMasr\\Controllers\\SkillsController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAmwCQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:49:11.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProfessionsController.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\Sanay3yMasr\\Controllers\\ProfessionsController.cs",
+              "RelativeDocumentMoniker": "Sanay3yMasr\\Controllers\\ProfessionsController.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\Sanay3yMasr\\Controllers\\ProfessionsController.cs",
+              "RelativeToolTip": "Sanay3yMasr\\Controllers\\ProfessionsController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAiwCMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:44:47.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CraftsmenController.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\Sanay3yMasr\\Controllers\\CraftsmenController.cs",
+              "RelativeDocumentMoniker": "Sanay3yMasr\\Controllers\\CraftsmenController.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\Sanay3yMasr\\Controllers\\CraftsmenController.cs",
+              "RelativeToolTip": "Sanay3yMasr\\Controllers\\CraftsmenController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAUwCAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:29:45.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CityProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Mappers\\CityProfile.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Mappers\\CityProfile.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Mappers\\CityProfile.cs",
+              "RelativeToolTip": "BusinessLogic\\Mappers\\CityProfile.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAQwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:16:43.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GetByIdCityDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetByIdCityDTO.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\GetByIdCityDTO.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetByIdCityDTO.cs",
+              "RelativeToolTip": "BusinessLogic\\DTOs\\GetByIdCityDTO.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:16:00.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GetAllCityDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetAllCityDTO.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\GetAllCityDTO.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetAllCityDTO.cs",
+              "RelativeToolTip": "BusinessLogic\\DTOs\\GetAllCityDTO.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:15:12.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CityService.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Service\\CityService.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Service\\CityService.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Service\\CityService.cs",
+              "RelativeToolTip": "BusinessLogic\\Service\\CityService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAwwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:10:45.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SkillProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Mappers\\SkillProfile.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Mappers\\SkillProfile.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Mappers\\SkillProfile.cs",
+              "RelativeToolTip": "BusinessLogic\\Mappers\\SkillProfile.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAADwvxcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:04:13.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GetByIdSkillDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetByIdSkillDTO.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\GetByIdSkillDTO.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetByIdSkillDTO.cs",
+              "RelativeToolTip": "BusinessLogic\\DTOs\\GetByIdSkillDTO.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwA0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:03:33.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GetAllSkillDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetAllSkillDTO.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\GetAllSkillDTO.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetAllSkillDTO.cs",
+              "RelativeToolTip": "BusinessLogic\\DTOs\\GetAllSkillDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:02:54.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SkillsService.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Service\\SkillsService.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Service\\SkillsService.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Service\\SkillsService.cs",
+              "RelativeToolTip": "BusinessLogic\\Service\\SkillsService.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAqwCQAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T14:00:15.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProfessionProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Mappers\\ProfessionProfile.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Mappers\\ProfessionProfile.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Mappers\\ProfessionProfile.cs",
+              "RelativeToolTip": "BusinessLogic\\Mappers\\ProfessionProfile.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T13:40:28.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GetByIdProfessionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetByIdProfessionDTO.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\GetByIdProfessionDTO.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetByIdProfessionDTO.cs",
+              "RelativeToolTip": "BusinessLogic\\DTOs\\GetByIdProfessionDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T13:39:52.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GetAllProfessionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetAllProfessionDTO.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\GetAllProfessionDTO.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetAllProfessionDTO.cs",
+              "RelativeToolTip": "BusinessLogic\\DTOs\\GetAllProfessionDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T13:39:09.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Profession.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\DataAccess\\Models\\Profession.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\Profession.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\DataAccess\\Models\\Profession.cs",
+              "RelativeToolTip": "DataAccess\\Models\\Profession.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T13:37:26.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProfessionsService.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Service\\ProfessionsService.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Service\\ProfessionsService.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Service\\ProfessionsService.cs",
+              "RelativeToolTip": "BusinessLogic\\Service\\ProfessionsService.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAqwCgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T13:34:52.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "GetByIdCraftsmanDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetByIdCraftsmanDTO.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\GetByIdCraftsmanDTO.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetByIdCraftsmanDTO.cs",
+              "RelativeToolTip": "BusinessLogic\\DTOs\\GetByIdCraftsmanDTO.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA/wBEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T12:23:38.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CraftsmanProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Mappers\\CraftsmanProfile.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Mappers\\CraftsmanProfile.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Mappers\\CraftsmanProfile.cs",
+              "RelativeToolTip": "BusinessLogic\\Mappers\\CraftsmanProfile.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T12:08:29.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GetAllCraftsmanDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetAllCraftsmanDTO.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\GetAllCraftsmanDTO.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\DTOs\\GetAllCraftsmanDTO.cs",
+              "RelativeToolTip": "BusinessLogic\\DTOs\\GetAllCraftsmanDTO.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T12:02:21.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "GeneralRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Repository\\GeneralRepository.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Repository\\GeneralRepository.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Repository\\GeneralRepository.cs",
+              "RelativeToolTip": "BusinessLogic\\Repository\\GeneralRepository.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwB0AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T11:59:58.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CraftsmanService.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Service\\CraftsmanService.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Service\\CraftsmanService.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\BusinessLogic\\Service\\CraftsmanService.cs",
+              "RelativeToolTip": "BusinessLogic\\Service\\CraftsmanService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T11:57:17.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Craftsman.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\DataAccess\\Models\\Craftsman.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\Craftsman.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\DataAccess\\Models\\Craftsman.cs",
+              "RelativeToolTip": "DataAccess\\Models\\Craftsman.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAuwB4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T11:54:05.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\Sanay3yMasr\\Program.cs",
+              "RelativeDocumentMoniker": "Sanay3yMasr\\Program.cs",
+              "ToolTip": "C:\\Users\\Computer Market\\Desktop\\GraduationProject\\Graduation-Project-Api-master\\Sanay3yMasr\\Program.cs*",
+              "RelativeToolTip": "Sanay3yMasr\\Program.cs*",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAQwEwAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T11:41:21.335Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
