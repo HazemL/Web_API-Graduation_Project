@@ -208,6 +208,150 @@
         }
       }
     },
+    "/api/craftsmen/{craftsmanId}/skills": {
+      "get": {
+        "tags": [
+          "CraftsmanSkills"
+        ],
+        "parameters": [
+          {
+            "name": "craftsmanId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CraftsmanSkills"
+        ],
+        "parameters": [
+          {
+            "name": "craftsmanId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCraftsmanSkillDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCraftsmanSkillDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCraftsmanSkillDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/craftsmen/{craftsmanId}/skills/{skillId}": {
+      "put": {
+        "tags": [
+          "CraftsmanSkills"
+        ],
+        "parameters": [
+          {
+            "name": "craftsmanId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "skillId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCraftsmanSkillDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCraftsmanSkillDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCraftsmanSkillDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CraftsmanSkills"
+        ],
+        "parameters": [
+          {
+            "name": "craftsmanId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "skillId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Craftsmen": {
       "get": {
         "tags": [
@@ -912,6 +1056,25 @@
         },
         "additionalProperties": false
       },
+      "CreateCraftsmanSkillDto": {
+        "required": [
+          "proficiencyLevel",
+          "skillId"
+        ],
+        "type": "object",
+        "properties": {
+          "skillId": {
+            "maximum": 2147483647,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "proficiencyLevel": {
+            "$ref": "#/components/schemas/ProficiencyLevel"
+          }
+        },
+        "additionalProperties": false
+      },
       "CreatePaymentDto": {
         "required": [
           "amount",
@@ -980,6 +1143,16 @@
           }
         },
         "additionalProperties": false
+      },
+      "ProficiencyLevel": {
+        "enum": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "RegisterRequestDto": {
         "type": "object",
@@ -1078,6 +1251,18 @@
               "type": "string"
             },
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateCraftsmanSkillDto": {
+        "required": [
+          "proficiencyLevel"
+        ],
+        "type": "object",
+        "properties": {
+          "proficiencyLevel": {
+            "$ref": "#/components/schemas/ProficiencyLevel"
           }
         },
         "additionalProperties": false

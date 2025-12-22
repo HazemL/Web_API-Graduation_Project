@@ -179,6 +179,90 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Sanay3yMasr.Controllers.CraftsmanSkillsController",
+    "Method": "Get",
+    "RelativePath": "api/craftsmen/{craftsmanId}/skills",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "craftsmanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.CraftsmanSkillsController",
+    "Method": "Create",
+    "RelativePath": "api/craftsmen/{craftsmanId}/skills",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "craftsmanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "CreateCraftsmanSkillDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.CraftsmanSkillsController",
+    "Method": "Update",
+    "RelativePath": "api/craftsmen/{craftsmanId}/skills/{skillId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "craftsmanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "skillId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "UpdateCraftsmanSkillDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.CraftsmanSkillsController",
+    "Method": "Delete",
+    "RelativePath": "api/craftsmen/{craftsmanId}/skills/{skillId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "craftsmanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "skillId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Sanay3yMasr.Controllers.SubscriptionsController",
     "Method": "GetByCraftsman",
     "RelativePath": "api/craftsmen/{craftsmanId}/subscriptions",

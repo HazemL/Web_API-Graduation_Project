@@ -1645,9 +1645,9 @@ namespace Sanay3yMasr.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("ProficiencyLevel")
+                    b.Property<int>("ProficiencyLevel")
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("int");
 
                     b.Property<int>("SkillId")
                         .HasColumnType("int");
@@ -1674,7 +1674,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 1,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 2,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1684,7 +1684,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 1,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 3,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1694,7 +1694,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 1,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 4,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1704,7 +1704,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 2,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 3,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1714,7 +1714,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 2,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 4,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1724,7 +1724,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 2,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 5,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1734,7 +1734,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 3,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 4,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1744,7 +1744,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 3,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 5,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1754,7 +1754,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 3,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 6,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1764,7 +1764,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 4,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 5,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1774,7 +1774,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 4,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 6,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1784,7 +1784,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 4,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 7,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1794,7 +1794,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 5,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 6,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1804,7 +1804,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 5,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 7,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1814,7 +1814,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 5,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 8,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1824,7 +1824,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 6,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 7,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1834,7 +1834,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 6,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 8,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1844,7 +1844,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 6,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 9,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1854,7 +1854,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 7,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 8,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1864,7 +1864,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 7,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 9,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1874,7 +1874,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 7,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 10,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1884,7 +1884,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 8,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 9,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1894,7 +1894,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 8,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 10,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1904,7 +1904,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 8,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 11,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1914,7 +1914,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 9,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 10,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1924,7 +1924,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 9,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 11,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1934,7 +1934,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 9,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 12,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1944,7 +1944,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 10,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 11,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1954,7 +1954,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 10,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 12,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1964,7 +1964,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 10,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 13,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1974,7 +1974,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 11,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 12,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1984,7 +1984,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 11,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 13,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -1994,7 +1994,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 11,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 14,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2004,7 +2004,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 12,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 13,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2014,7 +2014,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 12,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 14,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2024,7 +2024,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 12,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 15,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2034,7 +2034,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 13,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 14,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2044,7 +2044,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 13,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 15,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2054,7 +2054,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 13,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 16,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2064,7 +2064,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 14,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 15,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2074,7 +2074,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 14,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 16,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2084,7 +2084,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 14,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 17,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2094,7 +2094,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 15,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 16,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2104,7 +2104,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 15,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 17,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2114,7 +2114,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 15,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 18,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2124,7 +2124,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 16,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 17,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2134,7 +2134,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 16,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 18,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2144,7 +2144,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 16,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 19,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2154,7 +2154,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 17,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 18,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2164,7 +2164,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 17,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 19,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2174,7 +2174,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 17,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 20,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2184,7 +2184,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 18,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 19,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2194,7 +2194,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 18,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 20,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2204,7 +2204,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 18,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 21,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2214,7 +2214,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 19,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 20,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2224,7 +2224,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 19,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 21,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2234,7 +2234,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 19,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 22,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2244,7 +2244,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 20,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 21,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2254,7 +2254,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 20,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 22,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2264,7 +2264,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 20,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 23,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2274,7 +2274,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 21,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 22,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2284,7 +2284,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 21,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 23,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2294,7 +2294,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 21,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 24,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2304,7 +2304,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 22,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 23,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2314,7 +2314,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 22,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 24,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2324,7 +2324,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 22,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 25,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2334,7 +2334,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 23,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 24,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2344,7 +2344,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 23,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 25,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2354,7 +2354,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 23,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 26,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2364,7 +2364,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 24,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 25,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2374,7 +2374,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 24,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 26,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2384,7 +2384,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 24,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 27,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2394,7 +2394,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 25,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 26,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2404,7 +2404,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 25,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 27,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2414,7 +2414,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 25,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 28,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2424,7 +2424,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 26,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 27,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2434,7 +2434,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 26,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 28,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2444,7 +2444,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 26,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 29,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2454,7 +2454,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 27,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 28,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2464,7 +2464,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 27,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 29,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2474,7 +2474,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 27,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 30,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2484,7 +2484,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 28,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 29,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2494,7 +2494,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 28,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 30,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2504,7 +2504,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 28,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 31,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2514,7 +2514,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 29,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 30,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2524,7 +2524,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 29,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 31,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2534,7 +2534,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 29,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 32,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2544,7 +2544,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 30,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Beginner",
+                            ProficiencyLevel = 1,
                             SkillId = 31,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2554,7 +2554,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 30,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Good",
+                            ProficiencyLevel = 2,
                             SkillId = 32,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -2564,7 +2564,7 @@ namespace Sanay3yMasr.Migrations
                             CraftsmanId = 30,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            ProficiencyLevel = "Expert",
+                            ProficiencyLevel = 4,
                             SkillId = 33,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });

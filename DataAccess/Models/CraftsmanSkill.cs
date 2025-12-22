@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -17,7 +18,7 @@ namespace DataAccess.Models
         public int SkillId { get; set; }
         public Skill? Skill { get; set; }
 
-        public string? ProficiencyLevel { get; set; }
+        public ProficiencyLevel ProficiencyLevel { get; set; }
     }
 
 }

@@ -78,11 +78,13 @@ namespace Sanay3yMasr
             builder.Services.AddAutoMapper(typeof(ProfessionProfile));
 
             //register payment
-            builder.Services.AddScoped<IGeneralRepository<Payment>, PaymentRepository>();
+          
             builder.Services.AddScoped<IPaymentService, PaymentService>();
             //register Subscription
             builder.Services.AddScoped<ISubscriptionService, SubscriptionService>();
-            builder.Services.AddScoped<IPaymentService, PaymentService>();
+           
+            //register CraftsmanSkill
+            builder.Services.AddScoped<ICraftsmanSkillService, CraftsmanSkillService>();
 
             //=======================================
             //To Run Swagger

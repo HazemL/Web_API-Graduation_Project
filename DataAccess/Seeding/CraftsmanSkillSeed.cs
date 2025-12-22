@@ -1,4 +1,5 @@
-﻿using DataAccess.Models;
+﻿using DataAccess.Enums;
+using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -21,21 +22,26 @@ namespace DataAccess.Seeding
 
             for (int craftsmanId = 1; craftsmanId <= craftsmanCount; craftsmanId++)
             {
-                // 3 Skills ثابتة لكل Craftsman
+                // كل Craftsman عنده 3 Skills
                 for (int offset = 0; offset < 3; offset++)
                 {
                     int skillId = ((craftsmanId + offset) % skillCount) + 1;
+
+                    ProficiencyLevel level;
+
+                    if (offset == 0)
+                        level = ProficiencyLevel.Beginner;
+                    else if (offset == 1)
+                        level = ProficiencyLevel.Intermediate;
+                    else
+                        level = ProficiencyLevel.Expert;
 
                     list.Add(new CraftsmanSkill
                     {
                         Id = id++,
                         CraftsmanId = craftsmanId,
                         SkillId = skillId,
-                        ProficiencyLevel = offset == 0
-                            ? "Beginner"
-                            : offset == 1
-                                ? "Good"
-                                : "Expert",
+                        ProficiencyLevel = level,
 
                         // BaseModel
                         IsDeleted = false,
