@@ -1,5 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
 using DataAccess.Seeding;
+using Microsoft.EntityFrameworkCore;
 namespace DataAccess.Seeding
 {
     public static partial class ModelBuilderExtensions
@@ -31,6 +32,8 @@ namespace DataAccess.Seeding
             // 6) Feedback & moderation
             SeedReviews(modelBuilder);
             SeedReports(modelBuilder);
+
+            
         }
     }
 }

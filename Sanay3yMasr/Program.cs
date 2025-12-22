@@ -80,7 +80,9 @@ namespace Sanay3yMasr
             //register payment
             builder.Services.AddScoped<IGeneralRepository<Payment>, PaymentRepository>();
             builder.Services.AddScoped<IPaymentService, PaymentService>();
-
+            //register Subscription
+            builder.Services.AddScoped<ISubscriptionService, SubscriptionService>();
+            builder.Services.AddScoped<IPaymentService, PaymentService>();
 
             //=======================================
             //To Run Swagger

@@ -179,6 +179,43 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Sanay3yMasr.Controllers.SubscriptionsController",
+    "Method": "GetByCraftsman",
+    "RelativePath": "api/craftsmen/{craftsmanId}/subscriptions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "craftsmanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.SubscriptionsController",
+    "Method": "Create",
+    "RelativePath": "api/craftsmen/{craftsmanId}/subscriptions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "craftsmanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "BusinessLogic.DTOs.Subscriptions.CreateSubscriptionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Sanay3yMasr.Controllers.CraftsmenController",
     "Method": "DeleteCraftsman",
     "RelativePath": "api/Craftsmen/{id}",
@@ -426,6 +463,22 @@
       {
         "Name": "dto",
         "Type": "BusinessLogic.DTOs.UpdateSkillAllDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.SubscriptionsController",
+    "Method": "Cancel",
+    "RelativePath": "api/subscriptions/{id}/cancel",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
