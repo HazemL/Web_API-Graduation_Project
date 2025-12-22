@@ -163,6 +163,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Sanay3yMasr.Controllers.CraftsmanCitiesController",
+    "Method": "Get",
+    "RelativePath": "api/craftsmen/{craftsmanId}/cities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "craftsmanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.CraftsmanCitiesController",
+    "Method": "Create",
+    "RelativePath": "api/craftsmen/{craftsmanId}/cities",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "craftsmanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "BusinessLogic.DTOs.Craftsmen.CreateCraftsmanCityDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.CraftsmanCitiesController",
+    "Method": "Delete",
+    "RelativePath": "api/craftsmen/{craftsmanId}/cities/{cityId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "craftsmanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cityId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.CraftsmanCitiesController",
+    "Method": "SetPrimary",
+    "RelativePath": "api/craftsmen/{craftsmanId}/cities/{cityId}/set-primary",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "craftsmanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cityId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Sanay3yMasr.Controllers.PaymentsController",
     "Method": "GetByCraftsman",
     "RelativePath": "api/craftsmen/{craftsmanId}/payments",

@@ -86,6 +86,9 @@ namespace Sanay3yMasr
             //register CraftsmanSkill
             builder.Services.AddScoped<ICraftsmanSkillService, CraftsmanSkillService>();
 
+            //register CraftsmanCity
+            builder.Services.AddScoped<ICraftsmanCityService, CraftsmanCityService>();
+
             //=======================================
             //To Run Swagger
             builder.Services.AddEndpointsApiExplorer();
