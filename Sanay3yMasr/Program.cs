@@ -5,6 +5,7 @@ using BusinessLogic.Repository;
 using BusinessLogic.Security;
 using BusinessLogic.Service;
 using DataAccess.Context;
+using DataAccess.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
@@ -75,6 +76,12 @@ namespace Sanay3yMasr
             builder.Services.AddAutoMapper(typeof(CraftsmanProfile));
             builder.Services.AddAutoMapper(typeof(SkillProfile));
             builder.Services.AddAutoMapper(typeof(ProfessionProfile));
+
+            //register payment
+            builder.Services.AddScoped<IGeneralRepository<Payment>, PaymentRepository>();
+            builder.Services.AddScoped<IPaymentService, PaymentService>();
+
+
             //=======================================
             //To Run Swagger
             builder.Services.AddEndpointsApiExplorer();

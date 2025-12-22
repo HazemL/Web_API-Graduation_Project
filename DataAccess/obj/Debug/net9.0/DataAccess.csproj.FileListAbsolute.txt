@@ -13,3 +13,18 @@ C:\Users\Computer Market\Desktop\GraduationProject\Graduation-Project-Api-master
 C:\Users\Computer Market\Desktop\GraduationProject\Graduation-Project-Api-master\DataAccess\obj\Debug\net9.0\DataAccess.pdb
 C:\Users\Computer Market\Desktop\GraduationProject\Graduation-Project-Api-master\DataAccess\obj\Debug\net9.0\DataAccess.genruntimeconfig.cache
 C:\Users\Computer Market\Desktop\GraduationProject\Graduation-Project-Api-master\DataAccess\obj\Debug\net9.0\ref\DataAccess.dll
+C:\Users\welcome\source\repos\Graduation-Project-Api\DataAccess\bin\Debug\net9.0\DataAccess.deps.json
+C:\Users\welcome\source\repos\Graduation-Project-Api\DataAccess\bin\Debug\net9.0\DataAccess.runtimeconfig.json
+C:\Users\welcome\source\repos\Graduation-Project-Api\DataAccess\bin\Debug\net9.0\DataAccess.dll
+C:\Users\welcome\source\repos\Graduation-Project-Api\DataAccess\bin\Debug\net9.0\DataAccess.pdb
+C:\Users\welcome\source\repos\Graduation-Project-Api\DataAccess\obj\Debug\net9.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\welcome\source\repos\Graduation-Project-Api\DataAccess\obj\Debug\net9.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\welcome\source\repos\Graduation-Project-Api\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\welcome\source\repos\Graduation-Project-Api\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfo.cs
+C:\Users\welcome\source\repos\Graduation-Project-Api\DataAccess\obj\Debug\net9.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\welcome\source\repos\Graduation-Project-Api\DataAccess\obj\Debug\net9.0\DataAccess.sourcelink.json
+C:\Users\welcome\source\repos\Graduation-Project-Api\DataAccess\obj\Debug\net9.0\DataAccess.dll
+C:\Users\welcome\source\repos\Graduation-Project-Api\DataAccess\obj\Debug\net9.0\refint\DataAccess.dll
+C:\Users\welcome\source\repos\Graduation-Project-Api\DataAccess\obj\Debug\net9.0\DataAccess.pdb
+C:\Users\welcome\source\repos\Graduation-Project-Api\DataAccess\obj\Debug\net9.0\DataAccess.genruntimeconfig.cache
+C:\Users\welcome\source\repos\Graduation-Project-Api\DataAccess\obj\Debug\net9.0\ref\DataAccess.dll
