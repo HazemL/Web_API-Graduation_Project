@@ -42,5 +42,28 @@ namespace BusinessLogic.Service
             var res = _mapper.Map<GetByIdSkillDTO>(query);
             return res;
         }
+        public async Task<int> AddSkill(AddSkillDTO dto)
+        {
+            var skill = _mapper.Map<Skill>(dto);
+            if (skill == null) throw new Exception("Skill not valid");
+            await  _skillRepository.Add(skill);
+            return skill.Id;
+        }
+        public async Task<bool> DeleteSkill(int id) { 
+            if(id<=0) return false;
+            await  _skillRepository.Delete(id);
+            return true;
+        }
+        public async Task<bool> UpdateSkill(int id,UpdateSkillAllDTO dto)
+        {
+            
+            var existSkill = await _skillRepository.IsExist(id);
+            if(!existSkill) return false;
+            var newSkill = _mapper.Map<Skill>(existSkill);
+            if (newSkill == null) return false;
+            await _skillRepository.Update(newSkill);
+            return true;
+
+        }
     }
 }

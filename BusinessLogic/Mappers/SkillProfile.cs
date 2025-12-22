@@ -19,7 +19,10 @@ namespace BusinessLogic.Mappers
             CreateMap<Skill, GetByIdSkillDTO>()
                 .ForMember(dest => dest.CraftsmenCount,
                            opt => opt.MapFrom(src => src.CraftsmanSkills != null ? src.CraftsmanSkills.Count : 0));
-
+            //map to add
+            CreateMap<AddSkillDTO,Skill>().ReverseMap();
+            //map to update
+            CreateMap<UpdateSkillAllDTO,Skill>().ReverseMap();
 
 
         }

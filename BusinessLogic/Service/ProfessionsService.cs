@@ -40,5 +40,32 @@ namespace BusinessLogic.Service
             
             return res;
         }
+        public async Task<int> AddProfession(AddProfessionsDTO dto)
+        {
+            var profession = _mapper.Map<Profession>(dto);
+
+            await _professionRepository.Add(profession);
+            return profession.Id;
+        }
+        public async Task<bool> DeleteProfession(int id) {
+            if (id <= 0) throw new Exception("Id is not valid");
+            await _professionRepository.Delete(id);
+            return true;
+        }
+        public async Task<bool> UpdateProfession(int id,UpdateProfessionAllDTO dto)
+        {
+            var existProfession = await _professionRepository.IsExist(id);
+            if(!existProfession) return false;
+            var newProfession = _mapper.Map<Profession>(dto);
+            await _professionRepository.Update(newProfession);
+            return true;
+
+
+        }
+
+
+
+
+
     }
 }

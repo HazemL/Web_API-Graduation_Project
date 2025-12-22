@@ -47,10 +47,36 @@ namespace BusinessLogic.Service
             var res = _mapper.Map<GetByIdCityDTO>(query);
 
             return res;
-
-
+        }
+        public async Task<bool> AddCity(AddCityDTO addCityDTO)
+        {
+            
+            if (addCityDTO == null) return false;
+            var city = _mapper.Map<City>(addCityDTO);
+            if(city == null) return false;
+            var exists = await _cityRepository.IsExist(city.GovernorateId);
+            if (!exists) throw new Exception("City already exists in this governorate");
+            await  _cityRepository.Add(city);
+            return true;
 
         }
+        public async Task<bool> DeleteCity(int id)
+        {
+            if(id <= 0) return false;
+            await _cityRepository.Delete(id);
+            return true;  
+        }
+        public async Task<bool> UpdateCity(int id, UpdateCityAllDTO updateCityDTO)
+        {
+            var existCity =await _cityRepository.IsExist(id);
+            if(!existCity) return false;
+            var newCity = _mapper.Map<City>(updateCityDTO);
+            if (newCity == null) return false;
+            await _cityRepository.Update(newCity);
+            return true;
+
+        }
+
 
 
 

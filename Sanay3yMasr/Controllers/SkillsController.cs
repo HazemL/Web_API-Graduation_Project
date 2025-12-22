@@ -1,5 +1,7 @@
 ﻿using System.Threading.Tasks;
+using BusinessLogic.DTOs;
 using BusinessLogic.Service;
+using DataAccess.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -35,5 +37,27 @@ namespace Sanay3yMasr.Controllers
             }
             return Ok(skill);
         }
+        [HttpPost]
+        public async Task<IActionResult> AddSkill(AddSkillDTO dto)
+        {
+            if(!ModelState.IsValid) return BadRequest();
+            var newSkill = await _skillsService.AddSkill(dto);
+            return Ok(new { id = _skillsService.AddSkill(dto), message = "Skill added successfully" });
+
+        }
+        [HttpDelete("id")]
+        public async Task<IActionResult> DeleteSkill(int id)
+        {
+            await _skillsService.DeleteSkill(id);
+            return Ok("Skill is Deleted");
+        }
+        [HttpPut("id")]
+        public async Task<IActionResult> UpdateSkill(int id , UpdateSkillAllDTO dto)
+        {
+            if(!ModelState.IsValid) return BadRequest();
+            await _skillsService.UpdateSkill(id, dto);
+            return Ok("Skill is updated");
+        }
+
     }
 }

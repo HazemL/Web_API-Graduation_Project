@@ -21,8 +21,13 @@ namespace BusinessLogic.Mappers
             CreateMap<City, GetByIdCityDTO>()
                 .ForMember(dest => dest.GovernorateName, opt => opt.MapFrom(src => src.Governorate.Name))
                 .ForMember(dest => dest.CraftsmenCount, opt => opt.MapFrom(src => src.CraftsmanCities != null ? src.CraftsmanCities.Count : 0));
+            //map to add
+            CreateMap<City, AddCityDTO>().ReverseMap();
+            //map to update
+            CreateMap<UpdateCityAllDTO , City>().ReverseMap();
+       
 
 
-        }
+    }
     }
 }

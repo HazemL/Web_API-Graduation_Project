@@ -20,6 +20,10 @@ namespace BusinessLogic.Mappers
             CreateMap<Profession, GetByIdProfessionDTO>()
                 .ForMember(dest => dest.CraftsmenCount,
                            opt => opt.MapFrom(src => src.Craftsmen.Count));
+            //map to add
+            CreateMap<AddProfessionsDTO, Profession>().ReverseMap();
+            //map to update
+            CreateMap<UpdateProfessionAllDTO, Profession>().ReverseMap();
         }
     }
 }
