@@ -9,10 +9,10 @@ namespace DataAccess.Models
 {
     public class Governorate : BaseModel
     {
-        public string Name { get; set; }
-        public string ArabicName { get; set; }
+        public string Name { get; set; } = null!;
+        public string ArabicName { get; set; } = null!;
 
-        public ICollection<City>? Cities { get; set; }
+        public virtual ICollection<City>? Cities { get; set; }
     }
 
 }

@@ -88,6 +88,25 @@ namespace Sanay3yMasr
 
             //register CraftsmanCity
             builder.Services.AddScoped<ICraftsmanCityService, CraftsmanCityService>();
+            //register Gallery
+            builder.Services.AddScoped<IGeneralRepository<Gallery>, GeneralRepository<Gallery>>();
+            builder.Services.AddScoped<GalleryService>();
+
+            //register Review
+            builder.Services.AddScoped<IGeneralRepository<Review>, GeneralRepository<Review>>();
+            builder.Services.AddScoped<ReviewsService>();
+
+            //register Report
+            builder.Services.AddScoped<IGeneralRepository<Report>, GeneralRepository<Report>>();
+            builder.Services.AddScoped<ReportsService>();
+
+            //register SubscriptionPlan
+            builder.Services.AddScoped<IGeneralRepository<SubscriptionPlan>, GeneralRepository<SubscriptionPlan>>();
+            builder.Services.AddScoped<SubscriptionPlansService>();
+
+
+
+
 
             //=======================================
             //To Run Swagger

@@ -5104,23 +5104,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\welcome\\.nuget\\packages\\": {},
+    "C:\\Users\\Hazem\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\welcome\\source\\repos\\Graduation-Project-Api\\Sanay3yMasr\\Sanay3yMasr.csproj",
+      "projectUniqueName": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\Sanay3yMasr\\Sanay3yMasr.csproj",
       "projectName": "Sanay3yMasr",
-      "projectPath": "C:\\Users\\welcome\\source\\repos\\Graduation-Project-Api\\Sanay3yMasr\\Sanay3yMasr.csproj",
-      "packagesPath": "C:\\Users\\welcome\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\welcome\\source\\repos\\Graduation-Project-Api\\Sanay3yMasr\\obj\\",
+      "projectPath": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\Sanay3yMasr\\Sanay3yMasr.csproj",
+      "packagesPath": "C:\\Users\\Hazem\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\Sanay3yMasr\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hazem\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5135,8 +5135,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\welcome\\source\\repos\\Graduation-Project-Api\\BusinessLogic\\BusinessLogic.csproj": {
-              "projectPath": "C:\\Users\\welcome\\source\\repos\\Graduation-Project-Api\\BusinessLogic\\BusinessLogic.csproj"
+            "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\BusinessLogic\\BusinessLogic.csproj": {
+              "projectPath": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\BusinessLogic\\BusinessLogic.csproj"
             }
           }
         }

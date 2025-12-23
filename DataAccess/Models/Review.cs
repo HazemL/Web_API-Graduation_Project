@@ -11,5 +11,6 @@
         public int Stars { get; set; }
         public string Comment { get; set; } = null!;
         public bool IsVerified { get; set; }
+        public bool IsApproved { get; set; } 
     }
 }

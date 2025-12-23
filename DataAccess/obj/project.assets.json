@@ -4712,23 +4712,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\welcome\\.nuget\\packages\\": {},
+    "C:\\Users\\Hazem\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\welcome\\source\\repos\\Graduation-Project-Api\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\welcome\\source\\repos\\Graduation-Project-Api\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\welcome\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\welcome\\source\\repos\\Graduation-Project-Api\\DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Hazem\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hazem\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
