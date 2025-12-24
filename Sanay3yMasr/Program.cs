@@ -81,6 +81,10 @@ namespace Sanay3yMasr
             //Auto mapper  لكل الملفات 
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+            //register User
+            builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IGeneralRepository<User>, GeneralRepository<User>>();
+
             //register payment
             builder.Services.AddScoped<IPaymentService, PaymentService>();
             builder.Services.AddScoped<IGeneralRepository<Payment>, PaymentRepository>();
