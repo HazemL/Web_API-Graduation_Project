@@ -8,7 +8,7 @@ namespace Sanay3yMasr.Controllers
 {
     [ApiController]
     [Route("api/users")]
-    [Authorize(Roles = "Admin")] // كله Admin
+    //[Authorize(Roles = "Admin")] // كله Admin
     public class UsersController : ControllerBase
     {
         private readonly IUserService _service;
