@@ -1,56 +1,77 @@
-﻿using BusinessLogic.DTOs;
-using BusinessLogic.DTOs.SubscriptionPlan;
-using BusinessLogic.Service;
+﻿using BusinessLogic.DTOs.SubscriptionPlans;
+using BusinessLogic.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Sanay3yMasr.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/subscription-plans")]
     public class SubscriptionPlansController : ControllerBase
     {
-        private readonly SubscriptionPlansService _service;
+        private readonly ISubscriptionPlanService _service;
 
-        public SubscriptionPlansController(SubscriptionPlansService service)
+        public SubscriptionPlansController(ISubscriptionPlanService service)
         {
             _service = service;
         }
 
+        // GET /api/subscription-plans
         [HttpGet]
-        public async Task<IActionResult> Plans()
-        {
-            return Ok(await _service.GetAllPlans());
-        }
+        public async Task<IActionResult> GetAll()
+            => Ok(await _service.GetAllAsync());
 
+        // GET /api/subscription-plans/{id}
         [HttpGet("{id}")]
-        public IActionResult Plan(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var result = _service.GetPlanById(id);
+            var result = await _service.GetByIdAsync(id);
             if (result == null) return NotFound();
             return Ok(result);
         }
 
+        // POST (ADMIN ONLY)
+        //[Authorize(Roles = "Admin")]
         [HttpPost]
-        public async Task<IActionResult> AddPlan(AddSubscriptionPlanDTO dto)
+        public async Task<IActionResult> Create(CreateSubscriptionPlanDto dto)
         {
-            if (!ModelState.IsValid) return BadRequest();
-            var id = await _service.AddPlan(dto);
-            return Ok(new { id, message = "Subscription plan added successfully" });
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var adminId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
+
+            var id = await _service.CreateAsync(dto, adminId);
+            return CreatedAtAction(nameof(GetById), new { id }, null);
         }
 
+        // PUT (ADMIN ONLY)
+        //[Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdatePlan(int id, UpdateSubscriptionPlanDTO dto)
+        public async Task<IActionResult> Update(int id, UpdateSubscriptionPlanDto dto)
         {
-            if (!ModelState.IsValid) return BadRequest();
-            await _service.UpdatePlan(id, dto);
-            return Ok("Subscription plan updated successfully");
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var adminId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
+
+            var updated = await _service.UpdateAsync(id, dto, adminId);
+            if (!updated) return NotFound();
+
+            return NoContent();
         }
 
+        // DELETE (ADMIN ONLY)
+        //[Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeletePlan(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            await _service.DeletePlan(id);
-            return Ok("Subscription plan deleted successfully");
+            var adminId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
+
+            var deleted = await _service.DeleteAsync(id, adminId);
+            if (!deleted) return NotFound();
+
+            return NoContent();
         }
     }
 }

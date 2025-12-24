@@ -1,58 +1,76 @@
-﻿using BusinessLogic.DTOs;
-using BusinessLogic.DTOs.Report;
-using BusinessLogic.Service;
+﻿using BusinessLogic.DTOs.Reports;
+using BusinessLogic.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Sanay3yMasr.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/reports")]
     public class ReportsController : ControllerBase
     {
-        private readonly ReportsService _reportsService;
+        private readonly IReportService _service;
 
-        public ReportsController(ReportsService reportsService)
+        public ReportsController(IReportService service)
         {
-            _reportsService = reportsService;
+            _service = service;
         }
 
+        // =====================================
+        // GET /api/reports
+        // مفتوح (من غير تسجيل دخول)
+        // =====================================
         [HttpGet]
-        public async Task<IActionResult> Reports()
+        public async Task<IActionResult> GetAll()
         {
-            var result = await _reportsService.GetAllReports();
-            if (result == null) return NotFound();
-            return Ok(result);
+            return Ok(await _service.GetAllAsync());
         }
 
+        // =====================================
+        // GET /api/reports/{id}
+        // =====================================
         [HttpGet("{id}")]
-        public IActionResult Report(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var result = _reportsService.GetReportById(id);
-            if (result == null) return NotFound();
-            return Ok(result);
+            var report = await _service.GetByIdAsync(id);
+            return report == null ? NotFound() : Ok(report);
         }
 
+        // =====================================
+        // POST /api/reports
+        // لازم JWT Token
+        // =====================================
+        //[Authorize]
         [HttpPost]
-        public async Task<IActionResult> AddReport(AddReportDTO dto)
+        public async Task<IActionResult> Create([FromBody] AddReportDto dto)
         {
-            if (!ModelState.IsValid) return BadRequest();
-            var id = await _reportsService.AddReport(dto);
-            return Ok(new { id, message = "Report submitted successfully" });
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            // حماية إضافية (حتى لو Authorize موجود)
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
+
+            if (userIdClaim == null)
+                return Unauthorized("User is not authenticated");
+
+            int userId = int.Parse(userIdClaim.Value);
+
+            await _service.AddAsync(userId, dto);
+
+            return Ok("Report submitted successfully");
         }
 
+        // =====================================
+        // PUT /api/reports/{id}/resolve
+        // Admin فقط
+        // =====================================
+        //[Authorize(Roles = "Admin")]
         [HttpPut("{id}/resolve")]
-        public async Task<IActionResult> ResolveReport(int id)
+        public async Task<IActionResult> Resolve(int id)
         {
-            await _reportsService.ResolveReport(id);
-            return Ok("Report resolved successfully");
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteReport(int id)
-        {
-            await _reportsService.DeleteReport(id);
-            return Ok("Report deleted successfully");
+            await _service.ResolveAsync(id);
+            return Ok("Report resolved");
         }
     }
 }
-

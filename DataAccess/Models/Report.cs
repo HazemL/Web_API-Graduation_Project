@@ -1,17 +1,23 @@
 ﻿namespace DataAccess.Models
 {
+    // كيان البلاغ
     public class Report : BaseModel
     {
+        // المستخدم اللي عمل البلاغ
         public int ReporterUserId { get; set; }
-        public virtual User Reporter { get; set; }
+        public User Reporter { get; set; }
 
+        // الصنايعي المبلغ عنه
         public int CraftsmanId { get; set; }
-        public virtual Craftsman ReportedCraftsman { get; set; }
+        public Craftsman ReportedCraftsman { get; set; }
 
+        // نص الشكوى
         public string Message { get; set; }
-        public string Status { get; set; }
 
-      
-        public bool IsResolved { get; set; }
+        // Pending | Resolved
+        public string Status { get; set; } = "Pending";
+
+        // هل تم الحل
+        public bool IsResolved { get; set; } = false;
     }
 }

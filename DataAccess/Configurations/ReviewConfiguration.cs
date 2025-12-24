@@ -14,15 +14,16 @@ public class ReviewConfiguration : IEntityTypeConfiguration<Review>
                .IsRequired();
 
         builder.Property(x => x.Comment)
-               .HasMaxLength(1000);
+               .HasMaxLength(1000)
+               .IsRequired();
 
-        // User → Reviews (SET NULL ✔)
+        // User → Reviews (SET NULL)
         builder.HasOne(x => x.Reviewer)
                .WithMany(u => u.ReviewsWritten)
                .HasForeignKey(x => x.UserId)
                .OnDelete(DeleteBehavior.SetNull);
 
-        // Craftsman → Reviews (NO ACTION ❗)
+        // Craftsman → Reviews
         builder.HasOne(x => x.Craftsman)
                .WithMany(c => c.Reviews)
                .HasForeignKey(x => x.CraftsmanId)

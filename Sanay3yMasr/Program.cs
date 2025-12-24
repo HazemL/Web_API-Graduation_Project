@@ -1,9 +1,11 @@
 ﻿
 using BusinessLogic.Interface;
+using BusinessLogic.Interfaces;
 using BusinessLogic.Mappers;
 using BusinessLogic.Repository;
 using BusinessLogic.Security;
 using BusinessLogic.Service;
+using BusinessLogic.Services;
 using DataAccess.Context;
 using DataAccess.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -62,47 +64,77 @@ namespace Sanay3yMasr
              
              ====================================================
              */
+
+
+
+
+           // ????????????????????????/
             builder.Services.AddScoped(typeof(IGeneralRepository<>), typeof(GeneralRepository<>));
 
-            builder.Services.AddScoped<ICityRepository, CityRepository>();
+            
 
-            builder.Services.AddScoped<CraftsmanService>();
-            builder.Services.AddScoped<ProfessionsService>();
-            builder.Services.AddScoped<SkillsService>();
+           
+          
+            
             builder.Services.AddScoped<CityService>();
-            //Auto mapper 
-            builder.Services.AddAutoMapper(typeof(Program));
-            builder.Services.AddAutoMapper(typeof(CityProfile));
-            builder.Services.AddAutoMapper(typeof(CraftsmanProfile));
-            builder.Services.AddAutoMapper(typeof(SkillProfile));
-            builder.Services.AddAutoMapper(typeof(ProfessionProfile));
+          
+            //Auto mapper  لكل الملفات 
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             //register payment
-          
             builder.Services.AddScoped<IPaymentService, PaymentService>();
+            builder.Services.AddScoped<IGeneralRepository<Payment>, PaymentRepository>();
+
+            //register craftman
+
+            builder.Services.AddScoped<ICraftsmanService, CraftsmanService>();
+            builder.Services.AddScoped<IGeneralRepository<Craftsman>, CraftsmanRepository>();
+
+            //register city
+
+            builder.Services.AddScoped<ICityService, CityService>();
+            builder.Services.AddScoped<IGeneralRepository<City>, CityRepository>();
+
+
             //register Subscription
             builder.Services.AddScoped<ISubscriptionService, SubscriptionService>();
-           
+            builder.Services.AddScoped<IGeneralRepository<CraftsmanSubscription>, CraftsmanSubscriptionRepository>();
+
+            //register Skill
+            builder.Services.AddScoped<ISkillService, SkillService>();
+            builder.Services.AddScoped<IGeneralRepository<Skill>, SkillRepository>();
+
+            //register Gallery
+            builder.Services.AddScoped<IGalleryService, GalleryService>();
+            builder.Services.AddScoped<IGeneralRepository<Gallery>, GalleryRepository>();
+
+            //register Profession
+            builder.Services.AddScoped<IProfessionService, ProfessionService>();
+            builder.Services.AddScoped<IGeneralRepository<Profession>, ProfessionRepository>();
+
+            //register Governorate
+            builder.Services.AddScoped<IGovernorateService, GovernorateService>();
+            builder.Services.AddScoped<IGeneralRepository<Governorate>, GovernorateRepository>();
+
+
             //register CraftsmanSkill
             builder.Services.AddScoped<ICraftsmanSkillService, CraftsmanSkillService>();
+            builder.Services.AddScoped<IGeneralRepository<CraftsmanSkill>, CraftsmanSkillRepository>();
 
             //register CraftsmanCity
             builder.Services.AddScoped<ICraftsmanCityService, CraftsmanCityService>();
-            //register Gallery
-            builder.Services.AddScoped<IGeneralRepository<Gallery>, GeneralRepository<Gallery>>();
-            builder.Services.AddScoped<GalleryService>();
+            builder.Services.AddScoped<IGeneralRepository<CraftsmanCity>, CraftsmanCityRepository>();
 
             //register Review
-            builder.Services.AddScoped<IGeneralRepository<Review>, GeneralRepository<Review>>();
-            builder.Services.AddScoped<ReviewsService>();
+            builder.Services.AddScoped<IGeneralRepository<Review>, ReviewRepository>();
+            builder.Services.AddScoped<IReviewService, ReviewService>();
 
             //register Report
-            builder.Services.AddScoped<IGeneralRepository<Report>, GeneralRepository<Report>>();
-            builder.Services.AddScoped<ReportsService>();
+            builder.Services.AddScoped<IReportService, ReportService>();
 
             //register SubscriptionPlan
+            builder.Services.AddScoped<ISubscriptionPlanService, SubscriptionPlanService>();
             builder.Services.AddScoped<IGeneralRepository<SubscriptionPlan>, GeneralRepository<SubscriptionPlan>>();
-            builder.Services.AddScoped<SubscriptionPlansService>();
 
 
 
@@ -152,13 +184,7 @@ namespace Sanay3yMasr
 
             var app = builder.Build();
 
-            //// Configure the HTTP request pipeline.
-            //if (app.Environment.IsDevelopment())
-            //{
-            //    app.MapOpenApi();
-            //}
-            //using Swagger
-            // Configure the HTTP request pipeline.
+           
             if (app.Environment.IsDevelopment())
             {
 

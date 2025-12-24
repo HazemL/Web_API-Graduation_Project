@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
-using BusinessLogic.DTOs;
-using BusinessLogic.DTOs.Report;
+using BusinessLogic.DTOs.Reports;
 using DataAccess.Models;
 
 namespace BusinessLogic.Mappers
@@ -9,10 +8,18 @@ namespace BusinessLogic.Mappers
     {
         public ReportProfile()
         {
-            CreateMap<Report, GetAllReportDTO>();
-            CreateMap<Report, GetReportByIdDTO>();
+            // DTO -> Entity
+            CreateMap<AddReportDto, Report>();
 
-            CreateMap<AddReportDTO, Report>().ReverseMap();
+            // Entity -> List DTO
+            CreateMap<Report, GetAllReportDto>()
+                .ForMember(d => d.ReporterName,
+                    o => o.MapFrom(s => s.Reporter.FullName))
+                .ForMember(d => d.CraftsmanName,
+                    o => o.MapFrom(s => s.ReportedCraftsman.User.FullName));
+
+            // Entity -> Details DTO
+            CreateMap<Report, GetReportByIdDto>();
         }
     }
 }

@@ -18,10 +18,13 @@ namespace DataAccess.Seeding
                 reports.Add(new Report
                 {
                     Id = id++,
+
                     CraftsmanId = (i % 30) + 1,
-                    ReporterUserId = ((i + 3) % 50) + 1,
-                    Message = $"Report reason #{i + 1}",
+                    ReporterUserId = ((i + 5) % 50) + 1,
+
+                    Message = $"بلاغ رقم {i + 1} بسبب سوء تعامل",
                     Status = (i % 3 == 0) ? "Pending" : "Resolved",
+                    IsResolved = i % 3 != 0,
 
                     IsDeleted = false,
                     CreatedAt = baseDate.AddDays(i),

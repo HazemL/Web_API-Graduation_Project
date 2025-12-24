@@ -1,23 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace BusinessLogic.DTOs.Review
+namespace BusinessLogic.DTOs.Reviews
 {
-    public class AddReviewDTO
+    public class AddReviewDto
     {
-        [Required]
-        public int CraftsmanId { get; set; }
+        [Range(1, 5, ErrorMessage = "Stars must be between 1 and 5")]
+        public int Stars { get; set; }
 
         [Required]
-        public int UserId { get; set; }
-
-        [Range(1, 5)]
-        public int Rate { get; set; }
-
-        public string? Comment { get; set; }
+        [MinLength(1)]
+        public string Comment { get; set; } = null!;
     }
 }

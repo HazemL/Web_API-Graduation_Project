@@ -1,85 +1,78 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
-using BusinessLogic.DTOs;
+﻿using AutoMapper;
+using BusinessLogic.DTOs.City;
 using BusinessLogic.Interface;
-using BusinessLogic.Repository;
 using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BusinessLogic.Service
 {
-    public class CityService
+    // تنفيذ منطق المدن
+    public class CityService : ICityService
     {
-        IGeneralRepository<City> _cityRepository;
-        IMapper _mapper;
-        public CityService(IGeneralRepository<City> cityRepository,IMapper mapper)
-        {
-            _cityRepository = cityRepository;
-            _mapper  = mapper;
-        }
-        //Get all City
+        private readonly IGeneralRepository<City> _repo;
+        private readonly IMapper _mapper;
 
-        public async Task<IEnumerable<GetAllCityDTO>> GetAllCity()
+        public CityService(IGeneralRepository<City> repo, IMapper mapper)
         {
-            var query =await  _cityRepository.GetAll()
-                .Include(q => q.Governorate)
+            _repo = repo;
+            _mapper = mapper;
+        }
+
+        // GET /api/cities
+        public async Task<IEnumerable<GetAllCityDto>> GetAllAsync()
+        {
+            var cities = await _repo.GetAll()
+                .Include(x => x.Governorate)
                 .ToListAsync();
-            if(query == null)
-            {
-                return null;
-            }
-            var res = _mapper.Map<IEnumerable<GetAllCityDTO>>(query);
-            return res;
 
+            return _mapper.Map<IEnumerable<GetAllCityDto>>(cities);
         }
-        //Get city by id
-        public async Task<GetByIdCityDTO> GetCityById(int id) {
-            var query = await _cityRepository.GetAll()
-                .Include(q => q.Governorate)
-                .Include(q => q.CraftsmanCities)
-                .FirstOrDefaultAsync(q => q.Id==id);
 
-            if (query == null) return null;
-            var res = _mapper.Map<GetByIdCityDTO>(query);
-
-            return res;
-        }
-        public async Task<bool> AddCity(AddCityDTO addCityDTO)
+        // GET /api/cities/{id}
+        public async Task<GetCityByIdDto?> GetByIdAsync(int id)
         {
-            
-            if (addCityDTO == null) return false;
-            var city = _mapper.Map<City>(addCityDTO);
-            if(city == null) return false;
-            var exists = await _cityRepository.IsExist(city.GovernorateId);
-            if (!exists) throw new Exception("City already exists in this governorate");
-            await  _cityRepository.Add(city);
-            return true;
+            var city = await _repo.GetAll()
+                .Include(x => x.Governorate)
+                .FirstOrDefaultAsync(x => x.Id == id);
 
+            return city == null ? null : _mapper.Map<GetCityByIdDto>(city);
         }
-        public async Task<bool> DeleteCity(int id)
+
+        // GET /api/governorates/{govId}/cities
+        public async Task<IEnumerable<GetAllCityDto>> GetByGovernorateAsync(int governorateId)
         {
-            if(id <= 0) return false;
-            await _cityRepository.Delete(id);
-            return true;  
+            var cities = await _repo.GetAll()
+                .Include(x => x.Governorate)
+                .Where(x => x.GovernorateId == governorateId)
+                .ToListAsync();
+
+            return _mapper.Map<IEnumerable<GetAllCityDto>>(cities);
         }
-        public async Task<bool> UpdateCity(int id, UpdateCityAllDTO updateCityDTO)
+
+        // POST
+        public async Task AddAsync(AddCityDto dto)
         {
-            var existCity =await _cityRepository.IsExist(id);
-            if(!existCity) return false;
-            var newCity = _mapper.Map<City>(updateCityDTO);
-            if (newCity == null) return false;
-            await _cityRepository.Update(newCity);
-            return true;
-
+            var city = _mapper.Map<City>(dto);
+            await _repo.Add(city);
         }
 
+        // PUT
+        public async Task UpdateAsync(int id, UpdateCityDto dto)
+        {
+            var city = await _repo.GetByIDWithTracking(id);
+            if (city == null)
+                throw new Exception("City not found");
 
+            _mapper.Map(dto, city);
+            city.UpdatedAt = DateTime.UtcNow;
 
+            await _repo.Update(city);
+        }
 
-
-     }
+        // DELETE (Soft)
+        public async Task DeleteAsync(int id)
+        {
+            await _repo.Delete(id);
+        }
+    }
 }

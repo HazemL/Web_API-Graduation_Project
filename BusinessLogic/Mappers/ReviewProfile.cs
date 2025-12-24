@@ -1,23 +1,23 @@
 ﻿using AutoMapper;
 using BusinessLogic.DTOs.Review;
+using BusinessLogic.DTOs.Reviews;
 using DataAccess.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLogic.Mappers
 {
-    internal class ReviewProfile :Profile
+    public class ReviewProfile : Profile
     {
         public ReviewProfile()
         {
-            CreateMap<Review, GetAllReviewDTO>();
-            CreateMap<Review, GetReviewByIdDTO>();
-
-            CreateMap<AddReviewDTO, Review>().ReverseMap();
-            CreateMap<UpdateReviewDTO, Review>().ReverseMap();
+            CreateMap<Review, GetReviewDto>()
+                .ForMember(
+                    dest => dest.ReviewerName,
+                    opt => opt.MapFrom(src =>
+                        src.Reviewer != null
+                            ? src.Reviewer.FullName
+                            : "Guest"
+                    )
+                );
         }
     }
 }

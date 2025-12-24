@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\Sanay3yMasr\\Sanay3yMasr.csproj": {}
+    "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\Sanay3yMasr\\Sanay3yMasr.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\BusinessLogic\\BusinessLogic.csproj": {
+    "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\BusinessLogic\\BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\BusinessLogic\\BusinessLogic.csproj",
+        "projectUniqueName": "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\BusinessLogic\\BusinessLogic.csproj",
         "projectName": "BusinessLogic",
-        "projectPath": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\BusinessLogic\\BusinessLogic.csproj",
-        "packagesPath": "C:\\Users\\Hazem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\BusinessLogic\\obj\\",
+        "projectPath": "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\BusinessLogic\\BusinessLogic.csproj",
+        "packagesPath": "C:\\Users\\welcome\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Hazem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -89,20 +89,20 @@
         }
       }
     },
-    "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Hazem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\welcome\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Hazem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -176,20 +176,20 @@
         }
       }
     },
-    "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\Sanay3yMasr\\Sanay3yMasr.csproj": {
+    "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\Sanay3yMasr\\Sanay3yMasr.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\Sanay3yMasr\\Sanay3yMasr.csproj",
+        "projectUniqueName": "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\Sanay3yMasr\\Sanay3yMasr.csproj",
         "projectName": "Sanay3yMasr",
-        "projectPath": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\Sanay3yMasr\\Sanay3yMasr.csproj",
-        "packagesPath": "C:\\Users\\Hazem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\Sanay3yMasr\\obj\\",
+        "projectPath": "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\Sanay3yMasr\\Sanay3yMasr.csproj",
+        "packagesPath": "C:\\Users\\welcome\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\Sanay3yMasr\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Hazem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\welcome\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -204,8 +204,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\BusinessLogic\\BusinessLogic.csproj": {
-                "projectPath": "C:\\Users\\Hazem\\OneDrive\\Desktop\\Sanay3yMasr\\GraduationProject\\BusinessLogic\\BusinessLogic.csproj"
+              "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\BusinessLogic\\BusinessLogic.csproj": {
+                "projectPath": "C:\\Users\\welcome\\source\\repos\\Web_API-Graduation_Project\\BusinessLogic\\BusinessLogic.csproj"
               }
             }
           }

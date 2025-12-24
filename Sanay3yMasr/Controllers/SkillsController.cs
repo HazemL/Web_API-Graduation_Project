@@ -1,63 +1,80 @@
-﻿using System.Threading.Tasks;
-using BusinessLogic.DTOs;
-using BusinessLogic.Service;
-using DataAccess.Models;
-using Microsoft.AspNetCore.Http;
+﻿
+using BusinessLogic.DTOs.Skills;
+using BusinessLogic.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Sanay3yMasr.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/skills")]
+    //[Authorize] 
     public class SkillsController : ControllerBase
     {
-        SkillsService _skillsService;
-        public SkillsController(SkillsService skillsService) { 
-            _skillsService = skillsService;
-        
+        private readonly ISkillService _skillService;
+
+        public SkillsController(ISkillService skillService)
+        {
+            _skillService = skillService;
         }
+
+        // GET /api/skills
         [HttpGet]
-        public async Task<IActionResult> Skills() {
-            var skills =await _skillsService.GetAllSkill();
-            if (skills == null) {
-                return NotFound();
-           
-            }
-            return Ok(skills);
-
-        }
-        [HttpGet("id")]
-
-        public IActionResult Skill(int id)
+        [AllowAnonymous] // 👀 متاح للكل
+        public async Task<IActionResult> GetAll()
         {
-            var skill = _skillsService.GetSkillById(id);
-            if (skill == null)
-            {
-                return NotFound();
-            }
-            return Ok(skill);
+            var result = await _skillService.GetAllAsync();
+            return Ok(result);
         }
+
+        // GET /api/skills/{id}
+        [HttpGet("{id}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var result = await _skillService.GetByIdAsync(id);
+            if (result == null)
+                return NotFound();
+
+            return Ok(result);
+        }
+
+        // POST /api/skills
         [HttpPost]
-        public async Task<IActionResult> AddSkill(AddSkillDTO dto)
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Create(AddSkillDto dto)
         {
-            if(!ModelState.IsValid) return BadRequest();
-            var newSkill = await _skillsService.AddSkill(dto);
-            return Ok(new { id = _skillsService.AddSkill(dto), message = "Skill added successfully" });
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-        }
-        [HttpDelete("id")]
-        public async Task<IActionResult> DeleteSkill(int id)
-        {
-            await _skillsService.DeleteSkill(id);
-            return Ok("Skill is Deleted");
-        }
-        [HttpPut("id")]
-        public async Task<IActionResult> UpdateSkill(int id , UpdateSkillAllDTO dto)
-        {
-            if(!ModelState.IsValid) return BadRequest();
-            await _skillsService.UpdateSkill(id, dto);
-            return Ok("Skill is updated");
+            var userName = User.FindFirstValue(ClaimTypes.Name);
+
+            await _skillService.AddAsync(dto, userName!);
+            return Ok();
         }
 
+        // PUT /api/skills/{id}
+        [HttpPut("{id}")]
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Update(int id, UpdateSkillDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var userName = User.FindFirstValue(ClaimTypes.Name);
+
+            await _skillService.UpdateAsync(id, dto, userName!);
+            return Ok();
+        }
+
+        // DELETE /api/skills/{id}
+        [HttpDelete("{id}")]
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _skillService.DeleteAsync(id);
+            return Ok();
+        }
     }
 }

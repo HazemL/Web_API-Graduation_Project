@@ -1,63 +1,64 @@
-﻿using System.Threading.Tasks;
-using BusinessLogic.DTOs;
-using BusinessLogic.Service;
-using DataAccess.Models;
+﻿using BusinessLogic.DTOs.City;
+using BusinessLogic.Interface;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Sanay3yMasr.Controllers
 {
-    [Route("api/[controller]/[Action]")]
     [ApiController]
+    [Route("api")]
     public class CityController : ControllerBase
     {
-        CityService _cityService;
-        public CityController(CityService cityService)
-        {
-            _cityService = cityService;
-        }
-        [HttpGet]
-        public async Task<IActionResult> Cities()
-        {
-            var cities =await _cityService.GetAllCity();
-            if (cities == null) return NoContent();
-            return Ok(cities);
-        }
-        [HttpGet("id")]
-        public IActionResult City(int id)
-        {
-            var city = _cityService.GetCityById(id);
-            if (city == null) return NoContent();
-            return Ok(city);
-        }
-        [HttpPost]
-        public async Task<IActionResult> AddCity([FromBody] AddCityDTO dto)
-        {
-            if(!ModelState.IsValid) return BadRequest();
-            var result = await _cityService.AddCity(dto);
-            if (!result) return BadRequest("Could not add city");
-            return Ok("City added successfully");
-        }
-        [Authorize(Roles = "Admin")]
-        [HttpDelete("id")]
-        public async Task<IActionResult> Delete(int id) { 
-           await _cityService.DeleteCity(id);
-           return Ok("City is Deleted");
-        }
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] UpdateCityAllDTO dto)
-        {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
+        private readonly ICityService _service;
 
-            var isUpdated = await _cityService.UpdateCity(id, dto);
-
-            if (!isUpdated)
-                return NotFound($"City with ID {id} not found or no changes occurred.");
-
-            return Ok(new { message = "City updated successfully" });
+        public CityController(ICityService service)
+        {
+            _service = service;
         }
 
+        [HttpGet("cities")]
+        public async Task<IActionResult> GetAll()
+            => Ok(await _service.GetAllAsync());
 
+        [HttpGet("cities/{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var city = await _service.GetByIdAsync(id);
+            return city == null ? NotFound() : Ok(city);
+        }
+
+        [HttpGet("governorates/{govId}/cities")]
+        public async Task<IActionResult> GetByGovernorate(int govId)
+            => Ok(await _service.GetByGovernorateAsync(govId));
+
+        //[Authorize(Roles = "Admin")]
+        [HttpPost("cities")]
+        public async Task<IActionResult> Create(AddCityDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            await _service.AddAsync(dto);
+            return Ok();
+        }
+
+        //[Authorize(Roles = "Admin")]
+        [HttpPut("cities/{id}")]
+        public async Task<IActionResult> Update(int id, UpdateCityDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            await _service.UpdateAsync(id, dto);
+            return Ok();
+        }
+
+        //[Authorize(Roles = "Admin")]
+        [HttpDelete("cities/{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _service.DeleteAsync(id);
+            return Ok();
+        }
     }
 }

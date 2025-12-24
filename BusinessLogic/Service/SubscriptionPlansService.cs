@@ -1,67 +1,77 @@
 ﻿using AutoMapper;
-using BusinessLogic.DTOs;
-using BusinessLogic.DTOs.SubscriptionPlan;
+using BusinessLogic.DTOs.SubscriptionPlans;
 using BusinessLogic.Interface;
 using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BusinessLogic.Service
 {
-    public class SubscriptionPlansService
+    public class SubscriptionPlanService : ISubscriptionPlanService
     {
-        private readonly IGeneralRepository<SubscriptionPlan> _repository;
+        private readonly IGeneralRepository<SubscriptionPlan> _repo;
         private readonly IMapper _mapper;
 
-        public SubscriptionPlansService(
-            IGeneralRepository<SubscriptionPlan> repository,
+        public SubscriptionPlanService(
+            IGeneralRepository<SubscriptionPlan> repo,
             IMapper mapper)
         {
-            _repository = repository;
+            _repo = repo;
             _mapper = mapper;
         }
 
-        // Get All
-        public async Task<IEnumerable<GetAllSubscriptionPlanDTO>> GetAllPlans()
+        // GET ALL
+        public async Task<IEnumerable<GetSubscriptionPlanDto>> GetAllAsync()
         {
-            var plans = await _repository.GetAll().ToListAsync();
-            return _mapper.Map<IEnumerable<GetAllSubscriptionPlanDTO>>(plans);
+            var plans = await _repo.GetAll().ToListAsync();
+            return _mapper.Map<IEnumerable<GetSubscriptionPlanDto>>(plans);
         }
 
-        // Get By Id
-        public GetSubscriptionPlanByIdDTO GetPlanById(int id)
+        // GET BY ID
+        public async Task<GetSubscriptionPlanDto?> GetByIdAsync(int id)
         {
-            var plan = _repository.GetByID(id);
+            var plan = await _repo.GetByID(id);
             if (plan == null) return null;
 
-            return _mapper.Map<GetSubscriptionPlanByIdDTO>(plan);
+            return _mapper.Map<GetSubscriptionPlanDto>(plan);
         }
 
-        // Add
-        public async Task<int> AddPlan(AddSubscriptionPlanDTO dto)
+        // CREATE
+        public async Task<int> CreateAsync(CreateSubscriptionPlanDto dto, string createdBy)
         {
             var plan = _mapper.Map<SubscriptionPlan>(dto);
-            await _repository.Add(plan);
+
+            plan.CreatedBy = createdBy;
+            plan.IsActive = true;
+
+            await _repo.Add(plan);
             return plan.Id;
         }
 
-        // Update
-        public async Task<bool> UpdatePlan(int id, UpdateSubscriptionPlanDTO dto)
+        // UPDATE
+        public async Task<bool> UpdateAsync(int id, UpdateSubscriptionPlanDto dto, string updatedBy)
         {
-            var exists = await _repository.IsExist(id);
-            if (!exists) return false;
+            var plan = await _repo.GetByIDWithTracking(id);
+            if (plan == null) return false;
 
-            var plan = _mapper.Map<SubscriptionPlan>(dto);
-            plan.Id = id;
+            _mapper.Map(dto, plan);
+            plan.UpdatedBy = updatedBy;
+            plan.UpdatedAt = DateTime.Now;
 
-            await _repository.Update(plan);
+            await _repo.Update(plan);
             return true;
         }
 
-        // Delete
-        public async Task<bool> DeletePlan(int id)
+        // DELETE (Soft Delete)
+        public async Task<bool> DeleteAsync(int id, string deletedBy)
         {
-            if (id <= 0) return false;
-            await _repository.Delete(id);
+            var plan = await _repo.GetByIDWithTracking(id);
+            if (plan == null) return false;
+
+            plan.IsDeleted = true;
+            plan.UpdatedBy = deletedBy;
+            plan.UpdatedAt = DateTime.Now;
+
+            await _repo.Update(plan);
             return true;
         }
     }

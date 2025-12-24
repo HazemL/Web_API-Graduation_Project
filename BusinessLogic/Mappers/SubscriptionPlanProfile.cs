@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
-using BusinessLogic.DTOs;
-using BusinessLogic.DTOs.SubscriptionPlan;
+using BusinessLogic.DTOs.SubscriptionPlans;
 using DataAccess.Models;
 
 namespace BusinessLogic.Mappers
@@ -9,15 +8,11 @@ namespace BusinessLogic.Mappers
     {
         public SubscriptionPlanProfile()
         {
-            CreateMap<SubscriptionPlan, GetAllSubscriptionPlanDTO>();
+            CreateMap<SubscriptionPlan, GetSubscriptionPlanDto>();
 
-           
-            CreateMap<SubscriptionPlan, GetSubscriptionPlanByIdDTO>()
-                .ForMember(dest => dest.SubscribersCount,
-                    opt => opt.MapFrom(src => 0));
+            CreateMap<CreateSubscriptionPlanDto, SubscriptionPlan>();
 
-            CreateMap<AddSubscriptionPlanDTO, SubscriptionPlan>().ReverseMap();
-            CreateMap<UpdateSubscriptionPlanDTO, SubscriptionPlan>().ReverseMap();
+            CreateMap<UpdateSubscriptionPlanDto, SubscriptionPlan>();
         }
     }
 }

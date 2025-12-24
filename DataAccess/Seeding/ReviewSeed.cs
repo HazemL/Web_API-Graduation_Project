@@ -17,7 +17,7 @@ namespace DataAccess.Seeding
             for (int i = 0; i < 120; i++)
             {
                 int craftsmanId = (i % 30) + 1;
-                int userId = (i % 50) + 1;
+                int? userId = (i % 10 == 0) ? null : (i % 50) + 1;
 
                 reviews.Add(new Review
                 {
@@ -26,8 +26,8 @@ namespace DataAccess.Seeding
                     UserId = userId,
                     Stars = rnd.Next(3, 6),
                     Comment = $"Review {i + 1} for craftsman {craftsmanId}",
-                    IsVerified = rnd.NextDouble() > 0.2,
-
+                    IsVerified = rnd.NextDouble() > 0.3,
+                    IsApproved = true,
                     IsDeleted = false,
                     CreatedAt = baseDate.AddDays(i),
                     UpdatedAt = baseDate.AddDays(i)

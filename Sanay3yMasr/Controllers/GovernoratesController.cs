@@ -1,53 +1,64 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BusinessLogic.DTOs.Governorates;
+using BusinessLogic.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using BusinessLogic.DTOs.Governorate;
-using BusinessLogic.Service;
-
 
 namespace Sanay3yMasr.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/governorates")]
     public class GovernoratesController : ControllerBase
     {
-        private readonly GovernoratesService _governoratesService;
-        public GovernoratesController(GovernoratesService governoratesService)
+        private readonly IGovernorateService _service;
+
+        public GovernoratesController(IGovernorateService service)
         {
-            _governoratesService = governoratesService;
+            _service = service;
         }
+
+        // ================= GET ALL =================
         [HttpGet]
-        public async Task<IActionResult> GetAllGovernorates()
-        {
-            var governorates = await _governoratesService.GetAllGovernorates();
-            if (governorates == null)
-            {
-                return NotFound();
-            }
-            return Ok(governorates);
-        }
+        [AllowAnonymous]
+        public async Task<IActionResult> GetAll()
+            => Ok(await _service.GetAllAsync());
+
+        // ================= GET BY ID =================
         [HttpGet("{id}")]
-        public IActionResult GetGovernorateById(int id)
+        [AllowAnonymous]
+        public async Task<IActionResult> Get(int id)
         {
-            var governorate = _governoratesService.GetGovernorateById(id);
-            if (governorate == null)
-            {
-                return NotFound();
-            }
-            return Ok(governorate);
+            var result = await _service.GetByIdAsync(id);
+            return result == null ? NotFound() : Ok(result);
         }
+
+        // ================= CREATE =================
+        //[Authorize(Roles = "Admin")]
         [HttpPost]
-        public async Task<IActionResult> AddGovernorate(AddGovernorateDTO dto)
+        public async Task<IActionResult> Create(AddGovernorateDto dto)
         {
-            if (!ModelState.IsValid) return BadRequest();
-            var newGovernorateId = await _governoratesService.AddGovernorate(dto);
-            return Ok(new { id = newGovernorateId, message = "Governorate added successfully" });
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            await _service.AddAsync(dto);
+            return Ok("Governorate created");
         }
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteGovernorate(int id)
+
+        // ================= UPDATE =================
+        //[Authorize(Roles = "Admin")]
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, UpdateGovernorateDto dto)
         {
-            var result = await _governoratesService.DeleteGovernorate(id);
-            if (!result) return BadRequest();
-            return Ok("Governorate is Deleted");
+            await _service.UpdateAsync(id, dto);
+            return Ok("Governorate updated");
+        }
+
+        // ================= DELETE =================
+        //[Authorize(Roles = "Admin")]
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _service.DeleteAsync(id);
+            return Ok("Governorate deleted");
         }
     }
 }

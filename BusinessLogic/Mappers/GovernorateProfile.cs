@@ -1,33 +1,18 @@
 ﻿using AutoMapper;
-using BusinessLogic.DTOs.Governorate;
+using BusinessLogic.DTOs.Governorates;
 using DataAccess.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BusinessLogic.Mappers
+namespace BusinessLogic.Mapping
 {
-    internal class GovernorateProfile: Profile
+    public class GovernorateProfile : Profile
     {
         public GovernorateProfile()
         {
-            // Get All
-            CreateMap<Governorate, GetAllGovernorateDTO>();
+            CreateMap<Governorate, GovernorateListDto>();
+            CreateMap<Governorate, GovernorateDetailsDto>();
 
-            // Get By Id
-            CreateMap<Governorate, GetByIdGovernorateDTO>()
-                .ForMember(dest => dest.CitiesCount,
-                    opt => opt.MapFrom(src =>
-                        src.Cities != null ? src.Cities.Count : 0));
-
-            // Add
-            CreateMap<AddGovernorateDTO, Governorate>().ReverseMap();
-
-            // Update
-            CreateMap<UpdateGovernorateDTO, Governorate>().ReverseMap();
+            CreateMap<AddGovernorateDto, Governorate>();
+            CreateMap<UpdateGovernorateDto, Governorate>();
         }
-
     }
 }

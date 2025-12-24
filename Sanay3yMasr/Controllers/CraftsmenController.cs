@@ -1,70 +1,67 @@
-﻿using System.Threading.Tasks;
-using AutoMapper;
-using BusinessLogic.DTOs;
-using BusinessLogic.Service;
-using BusinessLogic.ViewModel;
+﻿using BusinessLogic.DTOs.Craftsmen;
+using BusinessLogic.Interface;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Sanay3yMasr.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/craftsmen")]
+    //[Authorize]
     public class CraftsmenController : ControllerBase
     {
-        CraftsmanService _craftsmanService;
-        IMapper _mapper;
-        public CraftsmenController(CraftsmanService craftsmanService,IMapper mapper)
+        private readonly ICraftsmanService _service;
+
+        public CraftsmenController(ICraftsmanService service)
         {
-            _craftsmanService = craftsmanService;
-            _mapper = mapper;
+            _service = service;
         }
+
+        // GET /api/craftsmen
         [HttpGet]
-        public async Task<IActionResult> Craftsmen() {
-            var Craftsmen = await _craftsmanService.GetAllCraftsmen();
-            if (Craftsmen == null)
-            {
-                return NoContent();
-            }
-            return Ok(Craftsmen);
-        }
-        [HttpGet("id")]
-        public async Task<IActionResult> Craftsman(int id) {
-            var Craftsman = await _craftsmanService.GetByIdCraftsman(id);
-            if (Craftsman == null)
-            {
-                return NoContent();
-            }
-            return Ok(Craftsman);
-        }
-       
-        [Authorize(Roles = "Admin")]
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCraftsman(int id)
+        public async Task<IActionResult> GetAll()
         {
-            _craftsmanService?.DeleteCraftsman(id);
-            return Ok(new { message = "Craftsman deleted successfully (Soft Delete)." });
+            var result = await _service.GetAllAsync();
+            return Ok(result);
         }
-        [HttpPut("id")]
-        public async Task<IActionResult> update(int id, UpdateCraftsmanAllDTO dto)
+
+        // GET /api/craftsmen/{id}
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
         {
-            if (!ModelState.IsValid) return BadRequest();
-            if (dto == null) throw new Exception("Not valid");
-            if (id <= 0) throw new Exception("Id not valid");
-            await _craftsmanService.UpdateCraftsman(id, dto);
-            return Ok(new {message = "Craftsman is updated."});
+            var result = await _service.GetByIdAsync(id);
+            return result == null ? NotFound() : Ok(result);
         }
-        //add
+
+        // POST /api/craftsmen
         [HttpPost]
-        public async Task<IActionResult> AddCraftsman(AddCraftsmanViewModel vm)
+        public async Task<IActionResult> Create([FromBody] CreateCraftsmanDto dto)
         {
-            if (!ModelState.IsValid) { return BadRequest(); }
-            var craftsman = _mapper.Map<AddCraftsmanDTO>(vm);
-            if (craftsman == null) throw new Exception("Craftsman not found");
-            await _craftsmanService.AddCraftsman(craftsman);
-            return Ok(vm);
-              
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var id = await _service.CreateAsync(dto);
+            return Ok(new { id });
+        }
+
+        // PUT /api/craftsmen/{id}
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, UpdateCraftsmanDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var updated = await _service.UpdateAsync(id, dto);
+            return updated ? Ok() : NotFound();
+        }
+
+        // DELETE /api/craftsmen/{id}
+        [HttpDelete("{id}")]
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var deleted = await _service.DeleteAsync(id);
+            return deleted ? Ok() : NotFound();
         }
     }
 }

@@ -1,68 +1,60 @@
 ﻿using AutoMapper;
-using BusinessLogic.DTOs;
+using BusinessLogic.DTOs.Gallery;
 using BusinessLogic.Interface;
+using BusinessLogic.Interfaces;
+using BusinessLogic.Repository;
 using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BusinessLogic.Service
+namespace BusinessLogic.Services
 {
-    public class GalleryService
+    // Service يحتوي على منطق العمل الخاص بالجاليري
+    public class GalleryService : IGalleryService
     {
-        private readonly IGeneralRepository<Gallery> _galleryRepository;
+        private readonly IGeneralRepository<Gallery> _galleryRepo;
         private readonly IMapper _mapper;
 
         public GalleryService(
-            IGeneralRepository<Gallery> galleryRepository,
+            IGeneralRepository<Gallery> galleryRepo,
             IMapper mapper)
         {
-            _galleryRepository = galleryRepository;
+            _galleryRepo = galleryRepo;
             _mapper = mapper;
         }
 
-        // Get All
-        public async Task<IEnumerable<GetAllGalleryDTO>> GetAllGallery()
+        // جلب كل صور/فيديوهات حرفي معين
+        public async Task<IEnumerable<GetGalleryDTO>> GetByCraftsmanId(int craftsmanId)
         {
-            var list = await _galleryRepository.GetAll().ToListAsync();
-            if (list == null) return null;
+            var gallery = await _galleryRepo.GetAll()
+                .Where(g => g.CraftsmanId == craftsmanId)
+                .ToListAsync();
 
-            return _mapper.Map<IEnumerable<GetAllGalleryDTO>>(list);
+            return _mapper.Map<IEnumerable<GetGalleryDTO>>(gallery);
         }
 
-        // Get By Id
-        public GetGalleryByIdDTO GetGalleryById(int id)
+        // جلب عنصر واحد
+        public async Task<GalleryDetailsDTO?> GetById(int galleryId)
         {
-            var gallery = _galleryRepository.GetByID(id);
-            if (gallery == null) return null;
+            var item = await _galleryRepo.GetByID(galleryId);
+            if (item == null) return null;
 
-            return _mapper.Map<GetGalleryByIdDTO>(gallery);
+            return _mapper.Map<GalleryDetailsDTO>(item);
         }
 
-        // Add
-        public async Task<int> AddGallery(AddGalleryDTO dto)
+        // إضافة صورة/فيديو
+        public async Task<bool> Add(int craftsmanId, AddGalleryDTO dto)
         {
-            var gallery = _mapper.Map<Gallery>(dto);
-            await _galleryRepository.Add(gallery);
-            return gallery.Id;
-        }
+            var entity = _mapper.Map<Gallery>(dto);
+            entity.CraftsmanId = craftsmanId;
 
-        // Delete
-        public async Task<bool> DeleteGallery(int id)
-        {
-            if (id <= 0) return false;
-            await _galleryRepository.Delete(id);
+            await _galleryRepo.Add(entity);
             return true;
         }
 
-        // Update
-        public async Task<bool> UpdateGallery(int id, UpdateGalleryDTO dto)
+        // حذف (Soft Delete)
+        public async Task<bool> Delete(int galleryId)
         {
-            var exists = await _galleryRepository.IsExist(id);
-            if (!exists) return false;
-
-            var gallery = _mapper.Map<Gallery>(dto);
-            gallery.Id = id;
-
-            await _galleryRepository.Update(gallery);
+            await _galleryRepo.Delete(galleryId);
             return true;
         }
     }

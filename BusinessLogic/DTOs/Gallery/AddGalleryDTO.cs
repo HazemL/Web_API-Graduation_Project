@@ -1,19 +1,22 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BusinessLogic.DTOs
+namespace BusinessLogic.DTOs.Gallery
 {
+    // DTO لإضافة صورة/فيديو جديد
     public class AddGalleryDTO
     {
         [Required]
-        public int CraftsmanId { get; set; }
+        public string MediaUrl { get; set; } = null!;
 
         [Required]
-        public string MediaUrl { get; set; }
+        [RegularExpression("Image|Video", ErrorMessage = "MediaType must be Image or Video")]
+        public string MediaType { get; set; } = null!;
 
         [Required]
-        public string MediaType { get; set; }
+        [StringLength(100)]
+        public string Title { get; set; } = null!;
 
-        public string? Title { get; set; }
-        public string? Description { get; set; }
+        [StringLength(500)]
+        public string Description { get; set; } = null!;
     }
 }

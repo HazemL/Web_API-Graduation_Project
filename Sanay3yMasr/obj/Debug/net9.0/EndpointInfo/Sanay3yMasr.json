@@ -79,7 +79,7 @@
         }
       }
     },
-    "/api/City/Cities": {
+    "/api/cities": {
       "get": {
         "tags": [
           "City"
@@ -89,31 +89,7 @@
             "description": "Success"
           }
         }
-      }
-    },
-    "/api/City/City/id": {
-      "get": {
-        "tags": [
-          "City"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/City/AddCity": {
+      },
       "post": {
         "tags": [
           "City"
@@ -122,17 +98,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddCityDTO"
+                "$ref": "#/components/schemas/AddCityDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddCityDTO"
+                "$ref": "#/components/schemas/AddCityDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/AddCityDTO"
+                "$ref": "#/components/schemas/AddCityDto"
               }
             }
           }
@@ -144,15 +120,16 @@
         }
       }
     },
-    "/api/City/Delete/id": {
-      "delete": {
+    "/api/cities/{id}": {
+      "get": {
         "tags": [
           "City"
         ],
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -164,9 +141,7 @@
             "description": "Success"
           }
         }
-      }
-    },
-    "/api/City/Update/{id}": {
+      },
       "put": {
         "tags": [
           "City"
@@ -186,21 +161,65 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCityAllDTO"
+                "$ref": "#/components/schemas/UpdateCityDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCityAllDTO"
+                "$ref": "#/components/schemas/UpdateCityDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCityAllDTO"
+                "$ref": "#/components/schemas/UpdateCityDto"
               }
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "City"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/governorates/{govId}/cities": {
+      "get": {
+        "tags": [
+          "City"
+        ],
+        "parameters": [
+          {
+            "name": "govId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -479,7 +498,7 @@
         }
       }
     },
-    "/api/Craftsmen": {
+    "/api/craftsmen": {
       "get": {
         "tags": [
           "Craftsmen"
@@ -498,17 +517,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddCraftsmanViewModel"
+                "$ref": "#/components/schemas/CreateCraftsmanDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddCraftsmanViewModel"
+                "$ref": "#/components/schemas/CreateCraftsmanDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/AddCraftsmanViewModel"
+                "$ref": "#/components/schemas/CreateCraftsmanDto"
               }
             }
           }
@@ -520,7 +539,7 @@
         }
       }
     },
-    "/api/Craftsmen/id": {
+    "/api/craftsmen/{id}": {
       "get": {
         "tags": [
           "Craftsmen"
@@ -528,7 +547,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -548,7 +568,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -559,17 +580,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCraftsmanAllDTO"
+                "$ref": "#/components/schemas/UpdateCraftsmanDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCraftsmanAllDTO"
+                "$ref": "#/components/schemas/UpdateCraftsmanDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCraftsmanAllDTO"
+                "$ref": "#/components/schemas/UpdateCraftsmanDto"
               }
             }
           }
@@ -579,9 +600,7 @@
             "description": "Success"
           }
         }
-      }
-    },
-    "/api/Craftsmen/{id}": {
+      },
       "delete": {
         "tags": [
           "Craftsmen"
@@ -604,10 +623,21 @@
         }
       }
     },
-    "/api/Gallery": {
+    "/api/craftsmen/{craftsmanId}/gallery": {
       "get": {
         "tags": [
           "Gallery"
+        ],
+        "parameters": [
+          {
+            "name": "craftsmanId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -618,6 +648,17 @@
       "post": {
         "tags": [
           "Gallery"
+        ],
+        "parameters": [
+          {
+            "name": "craftsmanId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "requestBody": {
           "content": {
@@ -645,10 +686,74 @@
         }
       }
     },
-    "/api/Gallery/{id}": {
-      "get": {
+    "/api/gallery/{galleryId}": {
+      "delete": {
         "tags": [
           "Gallery"
+        ],
+        "parameters": [
+          {
+            "name": "galleryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/governorates": {
+      "get": {
+        "tags": [
+          "Governorates"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Governorates"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddGovernorateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddGovernorateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddGovernorateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/governorates/{id}": {
+      "get": {
+        "tags": [
+          "Governorates"
         ],
         "parameters": [
           {
@@ -669,7 +774,7 @@
       },
       "put": {
         "tags": [
-          "Gallery"
+          "Governorates"
         ],
         "parameters": [
           {
@@ -686,106 +791,21 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateGalleryDTO"
+                "$ref": "#/components/schemas/UpdateGovernorateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateGalleryDTO"
+                "$ref": "#/components/schemas/UpdateGovernorateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateGalleryDTO"
+                "$ref": "#/components/schemas/UpdateGovernorateDto"
               }
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Gallery"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/Governorates": {
-      "get": {
-        "tags": [
-          "Governorates"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Governorates"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddGovernorateDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddGovernorateDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddGovernorateDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/Governorates/{id}": {
-      "get": {
-        "tags": [
-          "Governorates"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -901,7 +921,7 @@
         }
       }
     },
-    "/api/Professions": {
+    "/api/professions": {
       "get": {
         "tags": [
           "Professions"
@@ -920,17 +940,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddProfessionsDTO"
+                "$ref": "#/components/schemas/CreateProfessionDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddProfessionsDTO"
+                "$ref": "#/components/schemas/CreateProfessionDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/AddProfessionsDTO"
+                "$ref": "#/components/schemas/CreateProfessionDto"
               }
             }
           }
@@ -942,7 +962,7 @@
         }
       }
     },
-    "/api/Professions/id": {
+    "/api/professions/{id}": {
       "get": {
         "tags": [
           "Professions"
@@ -950,27 +970,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Professions"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -990,7 +991,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -1001,17 +1003,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateProfessionAllDTO"
+                "$ref": "#/components/schemas/UpdateProfessionDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateProfessionAllDTO"
+                "$ref": "#/components/schemas/UpdateProfessionDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateProfessionAllDTO"
+                "$ref": "#/components/schemas/UpdateProfessionDto"
               }
             }
           }
@@ -1021,9 +1023,30 @@
             "description": "Success"
           }
         }
+      },
+      "delete": {
+        "tags": [
+          "Professions"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
       }
     },
-    "/api/Reports": {
+    "/api/reports": {
       "get": {
         "tags": [
           "Reports"
@@ -1042,17 +1065,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddReportDTO"
+                "$ref": "#/components/schemas/AddReportDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddReportDTO"
+                "$ref": "#/components/schemas/AddReportDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/AddReportDTO"
+                "$ref": "#/components/schemas/AddReportDto"
               }
             }
           }
@@ -1064,7 +1087,7 @@
         }
       }
     },
-    "/api/Reports/{id}": {
+    "/api/reports/{id}": {
       "get": {
         "tags": [
           "Reports"
@@ -1085,30 +1108,9 @@
             "description": "Success"
           }
         }
-      },
-      "delete": {
-        "tags": [
-          "Reports"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
       }
     },
-    "/api/Reports/{id}/resolve": {
+    "/api/reports/{id}/resolve": {
       "put": {
         "tags": [
           "Reports"
@@ -1131,10 +1133,33 @@
         }
       }
     },
-    "/api/Reviews": {
+    "/api/reviews": {
       "get": {
         "tags": [
           "Reviews"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/craftsmen/{craftsmanId}/reviews": {
+      "get": {
+        "tags": [
+          "Reviews"
+        ],
+        "parameters": [
+          {
+            "name": "craftsmanId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -1146,21 +1171,32 @@
         "tags": [
           "Reviews"
         ],
+        "parameters": [
+          {
+            "name": "craftsmanId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddReviewDTO"
+                "$ref": "#/components/schemas/AddReviewDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddReviewDTO"
+                "$ref": "#/components/schemas/AddReviewDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/AddReviewDTO"
+                "$ref": "#/components/schemas/AddReviewDto"
               }
             }
           }
@@ -1172,14 +1208,14 @@
         }
       }
     },
-    "/api/Reviews/{id}": {
+    "/api/craftsmen/{craftsmanId}/reviews/average": {
       "get": {
         "tags": [
           "Reviews"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "craftsmanId",
             "in": "path",
             "required": true,
             "schema": {
@@ -1193,48 +1229,10 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/reviews/{id}/verify": {
       "put": {
-        "tags": [
-          "Reviews"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateReviewDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateReviewDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateReviewDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "delete": {
         "tags": [
           "Reviews"
         ],
@@ -1256,8 +1254,8 @@
         }
       }
     },
-    "/api/Reviews/{id}/approve": {
-      "put": {
+    "/api/reviews/{id}": {
+      "delete": {
         "tags": [
           "Reviews"
         ],
@@ -1291,7 +1289,7 @@
         }
       }
     },
-    "/api/Skills": {
+    "/api/skills": {
       "get": {
         "tags": [
           "Skills"
@@ -1310,17 +1308,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddSkillDTO"
+                "$ref": "#/components/schemas/AddSkillDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddSkillDTO"
+                "$ref": "#/components/schemas/AddSkillDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/AddSkillDTO"
+                "$ref": "#/components/schemas/AddSkillDto"
               }
             }
           }
@@ -1332,7 +1330,7 @@
         }
       }
     },
-    "/api/Skills/id": {
+    "/api/skills/{id}": {
       "get": {
         "tags": [
           "Skills"
@@ -1340,13 +1338,54 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Skills"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSkillDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSkillDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSkillDto"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success"
@@ -1360,52 +1399,14 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
             }
           }
         ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Skills"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateSkillAllDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateSkillAllDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateSkillAllDTO"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "Success"
@@ -1413,7 +1414,7 @@
         }
       }
     },
-    "/api/SubscriptionPlans": {
+    "/api/subscription-plans": {
       "get": {
         "tags": [
           "SubscriptionPlans"
@@ -1432,17 +1433,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddSubscriptionPlanDTO"
+                "$ref": "#/components/schemas/CreateSubscriptionPlanDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddSubscriptionPlanDTO"
+                "$ref": "#/components/schemas/CreateSubscriptionPlanDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/AddSubscriptionPlanDTO"
+                "$ref": "#/components/schemas/CreateSubscriptionPlanDto"
               }
             }
           }
@@ -1454,7 +1455,7 @@
         }
       }
     },
-    "/api/SubscriptionPlans/{id}": {
+    "/api/subscription-plans/{id}": {
       "get": {
         "tags": [
           "SubscriptionPlans"
@@ -1495,17 +1496,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateSubscriptionPlanDTO"
+                "$ref": "#/components/schemas/UpdateSubscriptionPlanDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateSubscriptionPlanDTO"
+                "$ref": "#/components/schemas/UpdateSubscriptionPlanDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateSubscriptionPlanDTO"
+                "$ref": "#/components/schemas/UpdateSubscriptionPlanDto"
               }
             }
           }
@@ -1648,7 +1649,7 @@
   },
   "components": {
     "schemas": {
-      "AddCityDTO": {
+      "AddCityDto": {
         "required": [
           "arabicName",
           "governorateId",
@@ -1671,113 +1672,52 @@
             "type": "string"
           },
           "latitude": {
+            "maximum": 90,
+            "minimum": -90,
             "type": "number",
             "format": "double"
           },
           "longitude": {
+            "maximum": 180,
+            "minimum": -180,
             "type": "number",
             "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "AddCraftsmanViewModel": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "professionName": {
-            "type": "string",
-            "nullable": true
-          },
-          "bio": {
-            "type": "string",
-            "nullable": true
-          },
-          "experienceYears": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "minPrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "maxPrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "isVerified": {
-            "type": "boolean"
-          },
-          "cities": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
-          },
-          "skills": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
       },
       "AddGalleryDTO": {
         "required": [
-          "craftsmanId",
           "mediaType",
-          "mediaUrl"
+          "mediaUrl",
+          "title"
         ],
         "type": "object",
         "properties": {
-          "craftsmanId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "mediaUrl": {
             "minLength": 1,
             "type": "string"
           },
           "mediaType": {
             "minLength": 1,
+            "pattern": "Image|Video",
             "type": "string"
           },
           "title": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
           },
           "description": {
+            "maxLength": 500,
+            "minLength": 0,
             "type": "string",
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "AddGovernorateDTO": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "arabicName": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "AddProfessionsDTO": {
+      "AddGovernorateDto": {
         "required": [
           "arabicName",
           "name"
@@ -1785,52 +1725,22 @@
         "type": "object",
         "properties": {
           "name": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "arabicName": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "AddReportDTO": {
-        "required": [
-          "craftsmanId",
-          "reason",
-          "userId"
-        ],
-        "type": "object",
-        "properties": {
-          "craftsmanId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "reason": {
-            "maxLength": 200,
+            "maxLength": 100,
             "minLength": 0,
             "type": "string"
           },
-          "description": {
-            "type": "string",
-            "nullable": true
+          "arabicName": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
           }
         },
         "additionalProperties": false
       },
-      "AddReviewDTO": {
+      "AddReportDto": {
         "required": [
           "craftsmanId",
-          "userId"
+          "message"
         ],
         "type": "object",
         "properties": {
@@ -1838,24 +1748,34 @@
             "type": "integer",
             "format": "int32"
           },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "rate": {
+          "message": {
+            "maxLength": 1000,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddReviewDto": {
+        "required": [
+          "comment"
+        ],
+        "type": "object",
+        "properties": {
+          "stars": {
             "maximum": 5,
             "minimum": 1,
             "type": "integer",
             "format": "int32"
           },
           "comment": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
       },
-      "AddSkillDTO": {
+      "AddSkillDto": {
         "required": [
           "arabicName",
           "name"
@@ -1863,43 +1783,12 @@
         "type": "object",
         "properties": {
           "name": {
-            "maxLength": 100,
-            "minLength": 0,
+            "minLength": 3,
             "type": "string"
           },
           "arabicName": {
-            "maxLength": 100,
-            "minLength": 0,
+            "minLength": 3,
             "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "AddSubscriptionPlanDTO": {
-        "required": [
-          "arabicName",
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "arabicName": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "price": {
-            "minimum": 0,
-            "type": "number",
-            "format": "double"
-          },
-          "durationInDays": {
-            "maximum": 1000,
-            "minimum": 1,
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -1913,6 +1802,46 @@
           "cityId": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateCraftsmanDto": {
+        "required": [
+          "bio",
+          "professionId",
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "professionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bio": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string"
+          },
+          "experienceYears": {
+            "maximum": 60,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32"
+          },
+          "minPrice": {
+            "minimum": 0,
+            "type": "number",
+            "format": "double"
+          },
+          "maxPrice": {
+            "minimum": 0,
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
@@ -1976,6 +1905,31 @@
         },
         "additionalProperties": false
       },
+      "CreateProfessionDto": {
+        "required": [
+          "arabicName",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "arabicName": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 500,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateSubscriptionDto": {
         "required": [
           "planId"
@@ -1987,6 +1941,38 @@
             "minimum": 1,
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateSubscriptionPlanDto": {
+        "required": [
+          "arabicName",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "arabicName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "price": {
+            "maximum": 100000,
+            "minimum": 0,
+            "type": "number",
+            "format": "double"
+          },
+          "durationDays": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "features": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2041,77 +2027,64 @@
         },
         "additionalProperties": false
       },
-      "UpdateCityAllDTO": {
+      "UpdateCityDto": {
+        "required": [
+          "arabicName",
+          "name"
+        ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
           },
           "arabicName": {
-            "type": "string",
-            "nullable": true
-          },
-          "governorateId": {
-            "type": "integer",
-            "format": "int32"
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
           },
           "latitude": {
+            "maximum": 90,
+            "minimum": -90,
             "type": "number",
             "format": "double"
           },
           "longitude": {
+            "maximum": 180,
+            "minimum": -180,
             "type": "number",
             "format": "double"
           }
         },
         "additionalProperties": false
       },
-      "UpdateCraftsmanAllDTO": {
+      "UpdateCraftsmanDto": {
+        "required": [
+          "bio"
+        ],
         "type": "object",
         "properties": {
           "bio": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string"
           },
           "experienceYears": {
+            "maximum": 60,
+            "minimum": 0,
             "type": "integer",
             "format": "int32"
           },
           "minPrice": {
+            "minimum": 0,
             "type": "number",
             "format": "double"
           },
           "maxPrice": {
+            "minimum": 0,
             "type": "number",
             "format": "double"
-          },
-          "professionId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "cityIds": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
-          },
-          "skillIds": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "nullable": true
-          },
-          "galleryImageUrls": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2128,73 +2101,7 @@
         },
         "additionalProperties": false
       },
-      "UpdateGalleryDTO": {
-        "required": [
-          "mediaType",
-          "mediaUrl"
-        ],
-        "type": "object",
-        "properties": {
-          "mediaUrl": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "mediaType": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateProfessionAllDTO": {
-        "required": [
-          "arabicName",
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string"
-          },
-          "arabicName": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string"
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateReviewDTO": {
-        "type": "object",
-        "properties": {
-          "rate": {
-            "maximum": 5,
-            "minimum": 1,
-            "type": "integer",
-            "format": "int32"
-          },
-          "comment": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateSkillAllDTO": {
+      "UpdateGovernorateDto": {
         "required": [
           "arabicName",
           "name"
@@ -2214,7 +2121,50 @@
         },
         "additionalProperties": false
       },
-      "UpdateSubscriptionPlanDTO": {
+      "UpdateProfessionDto": {
+        "required": [
+          "arabicName",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "arabicName": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 500,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateSkillDto": {
+        "required": [
+          "arabicName",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 3,
+            "type": "string"
+          },
+          "arabicName": {
+            "minLength": 3,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateSubscriptionPlanDto": {
         "required": [
           "arabicName",
           "name"
@@ -2230,15 +2180,16 @@
             "type": "string"
           },
           "price": {
-            "minimum": 0,
             "type": "number",
             "format": "double"
           },
-          "durationInDays": {
-            "maximum": 1000,
-            "minimum": 1,
+          "durationDays": {
             "type": "integer",
             "format": "int32"
+          },
+          "features": {
+            "type": "string",
+            "nullable": true
           },
           "isActive": {
             "type": "boolean"

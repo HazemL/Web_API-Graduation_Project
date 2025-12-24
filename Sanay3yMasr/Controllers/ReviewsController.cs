@@ -1,65 +1,69 @@
-﻿using BusinessLogic.DTOs;
-using BusinessLogic.DTOs.Review;
-using BusinessLogic.Service;
+﻿using BusinessLogic.DTOs.Reviews;
+using BusinessLogic.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Sanay3yMasr.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api")]
     public class ReviewsController : ControllerBase
     {
-        private readonly ReviewsService _reviewsService;
+        private readonly IReviewService _service;
 
-        public ReviewsController(ReviewsService reviewsService)
+        public ReviewsController(IReviewService service)
         {
-            _reviewsService = reviewsService;
+            _service = service;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Reviews()
+        
+        //[Authorize(Roles = "Admin")]
+        [HttpGet("reviews")]
+        public async Task<IActionResult> GetAll()
+            => Ok(await _service.GetAllAsync());
+
+        // GET reviews by craftsman
+        [HttpGet("craftsmen/{craftsmanId}/reviews")]
+        public async Task<IActionResult> GetByCraftsman(int craftsmanId)
+            => Ok(await _service.GetByCraftsmanAsync(craftsmanId));
+
+        // GET average rating
+        [HttpGet("craftsmen/{craftsmanId}/reviews/average")]
+        public async Task<IActionResult> Average(int craftsmanId)
+            => Ok(await _service.GetAverageAsync(craftsmanId));
+
+        // POST review
+        //[Authorize]
+        [HttpPost("craftsmen/{craftsmanId}/reviews")]
+        public async Task<IActionResult> Create(
+            int craftsmanId,
+            AddReviewDto dto)
         {
-            var result = await _reviewsService.GetAllReviews();
-            if (result == null) return NotFound();
-            return Ok(result);
+            var userId = int.Parse(
+                User.FindFirstValue(ClaimTypes.NameIdentifier)!
+            );
+
+            await _service.AddAsync(craftsmanId, userId, dto);
+            return Ok();
         }
 
-        [HttpGet("{id}")]
-        public IActionResult Review(int id)
+        // PUT verify
+        //[Authorize(Roles = "Admin")]
+        [HttpPut("reviews/{id}/verify")]
+        public async Task<IActionResult> Verify(int id)
         {
-            var result = _reviewsService.GetReviewById(id);
-            if (result == null) return NotFound();
-            return Ok(result);
+            await _service.VerifyAsync(id);
+            return Ok();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddReview(AddReviewDTO dto)
+        // DELETE review
+        //[Authorize(Roles = "Admin")]
+        [HttpDelete("reviews/{id}")]
+        public async Task<IActionResult> Delete(int id)
         {
-            if (!ModelState.IsValid) return BadRequest();
-            var id = await _reviewsService.AddReview(dto);
-            return Ok(new { id, message = "Review added successfully" });
-        }
-
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateReview(int id, UpdateReviewDTO dto)
-        {
-            if (!ModelState.IsValid) return BadRequest();
-            await _reviewsService.UpdateReview(id, dto);
-            return Ok("Review updated successfully");
-        }
-
-        [HttpPut("{id}/approve")]
-        public async Task<IActionResult> ApproveReview(int id)
-        {
-            await _reviewsService.ApproveReview(id);
-            return Ok("Review approved");
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteReview(int id)
-        {
-            await _reviewsService.DeleteReview(id);
-            return Ok("Review deleted successfully");
+            await _service.DeleteAsync(id);
+            return Ok();
         }
     }
 }

@@ -59,24 +59,8 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.CityController",
-    "Method": "AddCity",
-    "RelativePath": "api/City/AddCity",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "BusinessLogic.DTOs.AddCityDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sanay3yMasr.Controllers.CityController",
-    "Method": "Cities",
-    "RelativePath": "api/City/Cities",
+    "Method": "GetAll",
+    "RelativePath": "api/cities",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -85,8 +69,24 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.CityController",
-    "Method": "City",
-    "RelativePath": "api/City/City/id",
+    "Method": "Create",
+    "RelativePath": "api/cities",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "BusinessLogic.DTOs.City.AddCityDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.CityController",
+    "Method": "GetById",
+    "RelativePath": "api/cities/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -94,23 +94,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sanay3yMasr.Controllers.CityController",
-    "Method": "Delete",
-    "RelativePath": "api/City/Delete/id",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -118,7 +102,7 @@
   {
     "ContainingType": "Sanay3yMasr.Controllers.CityController",
     "Method": "Update",
-    "RelativePath": "api/City/Update/{id}",
+    "RelativePath": "api/cities/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -130,7 +114,23 @@
       },
       {
         "Name": "dto",
-        "Type": "BusinessLogic.DTOs.UpdateCityAllDTO",
+        "Type": "BusinessLogic.DTOs.City.UpdateCityDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.CityController",
+    "Method": "Delete",
+    "RelativePath": "api/cities/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -138,8 +138,8 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.CraftsmenController",
-    "Method": "Craftsmen",
-    "RelativePath": "api/Craftsmen",
+    "Method": "GetAll",
+    "RelativePath": "api/craftsmen",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -148,15 +148,15 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.CraftsmenController",
-    "Method": "AddCraftsman",
-    "RelativePath": "api/Craftsmen",
+    "Method": "Create",
+    "RelativePath": "api/craftsmen",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "vm",
-        "Type": "BusinessLogic.ViewModel.AddCraftsmanViewModel",
+        "Name": "dto",
+        "Type": "BusinessLogic.DTOs.Craftsmen.CreateCraftsmanDto",
         "IsRequired": true
       }
     ],
@@ -242,9 +242,99 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Sanay3yMasr.Controllers.GalleryController",
+    "Method": "GetByCraftsman",
+    "RelativePath": "api/craftsmen/{craftsmanId}/gallery",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "craftsmanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.GalleryController",
+    "Method": "Add",
+    "RelativePath": "api/craftsmen/{craftsmanId}/gallery",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "craftsmanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "BusinessLogic.DTOs.Gallery.AddGalleryDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Sanay3yMasr.Controllers.PaymentsController",
     "Method": "GetByCraftsman",
     "RelativePath": "api/craftsmen/{craftsmanId}/payments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "craftsmanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.ReviewsController",
+    "Method": "GetByCraftsman",
+    "RelativePath": "api/craftsmen/{craftsmanId}/reviews",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "craftsmanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.ReviewsController",
+    "Method": "Create",
+    "RelativePath": "api/craftsmen/{craftsmanId}/reviews",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "craftsmanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "BusinessLogic.DTOs.Reviews.AddReviewDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.ReviewsController",
+    "Method": "Average",
+    "RelativePath": "api/craftsmen/{craftsmanId}/reviews/average",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -380,9 +470,9 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.CraftsmenController",
-    "Method": "DeleteCraftsman",
-    "RelativePath": "api/Craftsmen/{id}",
-    "HttpMethod": "DELETE",
+    "Method": "GetById",
+    "RelativePath": "api/craftsmen/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -396,108 +486,29 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.CraftsmenController",
-    "Method": "Craftsman",
-    "RelativePath": "api/Craftsmen/id",
-    "HttpMethod": "GET",
+    "Method": "Update",
+    "RelativePath": "api/craftsmen/{id}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "BusinessLogic.DTOs.Craftsmen.UpdateCraftsmanDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.CraftsmenController",
-    "Method": "update",
-    "RelativePath": "api/Craftsmen/id",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "dto",
-        "Type": "BusinessLogic.DTOs.UpdateCraftsmanAllDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sanay3yMasr.Controllers.GalleryController",
-    "Method": "Gallery",
-    "RelativePath": "api/Gallery",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sanay3yMasr.Controllers.GalleryController",
-    "Method": "AddGallery",
-    "RelativePath": "api/Gallery",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "BusinessLogic.DTOs.AddGalleryDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sanay3yMasr.Controllers.GalleryController",
-    "Method": "GalleryItem",
-    "RelativePath": "api/Gallery/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sanay3yMasr.Controllers.GalleryController",
-    "Method": "UpdateGallery",
-    "RelativePath": "api/Gallery/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "BusinessLogic.DTOs.UpdateGalleryDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sanay3yMasr.Controllers.GalleryController",
-    "Method": "DeleteGallery",
-    "RelativePath": "api/Gallery/{id}",
+    "Method": "Delete",
+    "RelativePath": "api/craftsmen/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -511,9 +522,25 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Sanay3yMasr.Controllers.GalleryController",
+    "Method": "Delete",
+    "RelativePath": "api/gallery/{galleryId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "galleryId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Sanay3yMasr.Controllers.GovernoratesController",
-    "Method": "GetAllGovernorates",
-    "RelativePath": "api/Governorates",
+    "Method": "GetAll",
+    "RelativePath": "api/governorates",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -522,15 +549,31 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.GovernoratesController",
-    "Method": "AddGovernorate",
-    "RelativePath": "api/Governorates",
+    "Method": "Create",
+    "RelativePath": "api/governorates",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "BusinessLogic.DTOs.Governorate.AddGovernorateDTO",
+        "Type": "BusinessLogic.DTOs.Governorates.AddGovernorateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.CityController",
+    "Method": "GetByGovernorate",
+    "RelativePath": "api/governorates/{govId}/cities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "govId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -538,8 +581,8 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.GovernoratesController",
-    "Method": "GetGovernorateById",
-    "RelativePath": "api/Governorates/{id}",
+    "Method": "Get",
+    "RelativePath": "api/governorates/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -554,8 +597,29 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.GovernoratesController",
-    "Method": "DeleteGovernorate",
-    "RelativePath": "api/Governorates/{id}",
+    "Method": "Update",
+    "RelativePath": "api/governorates/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "BusinessLogic.DTOs.Governorates.UpdateGovernorateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.GovernoratesController",
+    "Method": "Delete",
+    "RelativePath": "api/governorates/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -612,8 +676,8 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.ProfessionsController",
-    "Method": "Professions",
-    "RelativePath": "api/Professions",
+    "Method": "GetAll",
+    "RelativePath": "api/professions",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -623,14 +687,14 @@
   {
     "ContainingType": "Sanay3yMasr.Controllers.ProfessionsController",
     "Method": "Create",
-    "RelativePath": "api/Professions",
+    "RelativePath": "api/professions",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "BusinessLogic.DTOs.AddProfessionsDTO",
+        "Type": "BusinessLogic.DTOs.Professions.CreateProfessionDto",
         "IsRequired": true
       }
     ],
@@ -638,8 +702,8 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.ProfessionsController",
-    "Method": "Profession",
-    "RelativePath": "api/Professions/id",
+    "Method": "GetById",
+    "RelativePath": "api/professions/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -647,23 +711,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sanay3yMasr.Controllers.ProfessionsController",
-    "Method": "Delete",
-    "RelativePath": "api/Professions/id",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -671,7 +719,7 @@
   {
     "ContainingType": "Sanay3yMasr.Controllers.ProfessionsController",
     "Method": "Update",
-    "RelativePath": "api/Professions/id",
+    "RelativePath": "api/professions/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -679,62 +727,20 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
         "Name": "dto",
-        "Type": "BusinessLogic.DTOs.UpdateProfessionAllDTO",
+        "Type": "BusinessLogic.DTOs.Professions.UpdateProfessionDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Sanay3yMasr.Controllers.ReportsController",
-    "Method": "Reports",
-    "RelativePath": "api/Reports",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sanay3yMasr.Controllers.ReportsController",
-    "Method": "AddReport",
-    "RelativePath": "api/Reports",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "BusinessLogic.DTOs.Report.AddReportDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sanay3yMasr.Controllers.ReportsController",
-    "Method": "Report",
-    "RelativePath": "api/Reports/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sanay3yMasr.Controllers.ReportsController",
-    "Method": "DeleteReport",
-    "RelativePath": "api/Reports/{id}",
+    "ContainingType": "Sanay3yMasr.Controllers.ProfessionsController",
+    "Method": "Delete",
+    "RelativePath": "api/professions/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -749,8 +755,50 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.ReportsController",
-    "Method": "ResolveReport",
-    "RelativePath": "api/Reports/{id}/resolve",
+    "Method": "GetAll",
+    "RelativePath": "api/reports",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.ReportsController",
+    "Method": "Create",
+    "RelativePath": "api/reports",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "BusinessLogic.DTOs.Reports.AddReportDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.ReportsController",
+    "Method": "GetById",
+    "RelativePath": "api/reports/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.ReportsController",
+    "Method": "Resolve",
+    "RelativePath": "api/reports/{id}/resolve",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -765,8 +813,8 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.ReviewsController",
-    "Method": "Reviews",
-    "RelativePath": "api/Reviews",
+    "Method": "GetAll",
+    "RelativePath": "api/reviews",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -775,61 +823,8 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.ReviewsController",
-    "Method": "AddReview",
-    "RelativePath": "api/Reviews",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "BusinessLogic.DTOs.Review.AddReviewDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sanay3yMasr.Controllers.ReviewsController",
-    "Method": "Review",
-    "RelativePath": "api/Reviews/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sanay3yMasr.Controllers.ReviewsController",
-    "Method": "UpdateReview",
-    "RelativePath": "api/Reviews/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "BusinessLogic.DTOs.Review.UpdateReviewDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sanay3yMasr.Controllers.ReviewsController",
-    "Method": "DeleteReview",
-    "RelativePath": "api/Reviews/{id}",
+    "Method": "Delete",
+    "RelativePath": "api/reviews/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -844,8 +839,8 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.ReviewsController",
-    "Method": "ApproveReview",
-    "RelativePath": "api/Reviews/{id}/approve",
+    "Method": "Verify",
+    "RelativePath": "api/reviews/{id}/verify",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -860,8 +855,8 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.SkillsController",
-    "Method": "Skills",
-    "RelativePath": "api/Skills",
+    "Method": "GetAll",
+    "RelativePath": "api/skills",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -870,15 +865,15 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.SkillsController",
-    "Method": "AddSkill",
-    "RelativePath": "api/Skills",
+    "Method": "Create",
+    "RelativePath": "api/skills",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "BusinessLogic.DTOs.AddSkillDTO",
+        "Type": "BusinessLogic.DTOs.Skills.AddSkillDto",
         "IsRequired": true
       }
     ],
@@ -886,8 +881,8 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.SkillsController",
-    "Method": "Skill",
-    "RelativePath": "api/Skills/id",
+    "Method": "GetById",
+    "RelativePath": "api/skills/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -895,15 +890,36 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.SkillsController",
-    "Method": "DeleteSkill",
-    "RelativePath": "api/Skills/id",
+    "Method": "Update",
+    "RelativePath": "api/skills/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "BusinessLogic.DTOs.Skills.UpdateSkillDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.SkillsController",
+    "Method": "Delete",
+    "RelativePath": "api/skills/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -911,27 +927,6 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sanay3yMasr.Controllers.SkillsController",
-    "Method": "UpdateSkill",
-    "RelativePath": "api/Skills/id",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "dto",
-        "Type": "BusinessLogic.DTOs.UpdateSkillAllDTO",
         "IsRequired": true
       }
     ],
@@ -939,8 +934,8 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.SubscriptionPlansController",
-    "Method": "Plans",
-    "RelativePath": "api/SubscriptionPlans",
+    "Method": "GetAll",
+    "RelativePath": "api/subscription-plans",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -949,15 +944,15 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.SubscriptionPlansController",
-    "Method": "AddPlan",
-    "RelativePath": "api/SubscriptionPlans",
+    "Method": "Create",
+    "RelativePath": "api/subscription-plans",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "BusinessLogic.DTOs.SubscriptionPlan.AddSubscriptionPlanDTO",
+        "Type": "BusinessLogic.DTOs.SubscriptionPlans.CreateSubscriptionPlanDto",
         "IsRequired": true
       }
     ],
@@ -965,8 +960,8 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.SubscriptionPlansController",
-    "Method": "Plan",
-    "RelativePath": "api/SubscriptionPlans/{id}",
+    "Method": "GetById",
+    "RelativePath": "api/subscription-plans/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -981,8 +976,8 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.SubscriptionPlansController",
-    "Method": "UpdatePlan",
-    "RelativePath": "api/SubscriptionPlans/{id}",
+    "Method": "Update",
+    "RelativePath": "api/subscription-plans/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -994,7 +989,7 @@
       },
       {
         "Name": "dto",
-        "Type": "BusinessLogic.DTOs.SubscriptionPlan.UpdateSubscriptionPlanDTO",
+        "Type": "BusinessLogic.DTOs.SubscriptionPlans.UpdateSubscriptionPlanDto",
         "IsRequired": true
       }
     ],
@@ -1002,8 +997,8 @@
   },
   {
     "ContainingType": "Sanay3yMasr.Controllers.SubscriptionPlansController",
-    "Method": "DeletePlan",
-    "RelativePath": "api/SubscriptionPlans/{id}",
+    "Method": "Delete",
+    "RelativePath": "api/subscription-plans/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

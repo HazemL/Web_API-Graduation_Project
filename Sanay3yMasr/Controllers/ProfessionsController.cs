@@ -1,67 +1,68 @@
-﻿using System.Threading.Tasks;
-using BusinessLogic.DTOs;
-using BusinessLogic.Service;
+﻿using BusinessLogic.DTOs.Professions;
+using BusinessLogic.Interface;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Sanay3yMasr.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/professions")]
+    //[Authorize] 
     public class ProfessionsController : ControllerBase
     {
-        ProfessionsService _professionsService;
-        public ProfessionsController(ProfessionsService professionsService)
+        private readonly IProfessionService _service;
+
+        public ProfessionsController(IProfessionService service)
         {
-            _professionsService = professionsService;
+            _service = service;
         }
+
+        // GET /api/professions
         [HttpGet]
-        public async Task<IActionResult> Professions() {
-            var professions =await _professionsService.GetAllProfessions();
-            if (professions == null)
-            {
-                return NotFound();
-            }
-            return Ok(professions);
-        }
-        [HttpGet("id")]
-        public IActionResult Profession(int id) { 
+        public async Task<IActionResult> GetAll()
+            => Ok(await _service.GetAllAsync());
 
-            var profession = _professionsService.GetProfessionByID(id);
-            if(profession == null)
-            {
-                return NotFound();
-            }
-            return Ok(profession);
-        }
-        [HttpPost]
-        public async Task<IActionResult> Create([FromBody] AddProfessionsDTO dto)
+        // GET /api/professions/{id}
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
         {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var result = await _service.GetByIdAsync(id);
+            if (result == null) return NotFound();
 
-            var id = await _professionsService.AddProfession(dto);
-
-            return CreatedAtAction(nameof(_professionsService.GetProfessionByID), new { id = id }, dto);
-        }
-        [HttpDelete("id")]
-        public async Task<IActionResult> Delete(int id) { 
-           await _professionsService.DeleteProfession(id);
-            return Ok("Profession is Deleted");
-        
-        }
-        [Authorize(Roles ="Admin")]
-        [HttpPut("id")]
-        public async Task<IActionResult> Update(int id, UpdateProfessionAllDTO dto) {
-
-            if (!ModelState.IsValid) return BadRequest("Profession not valid");
-            var sucess =await _professionsService.UpdateProfession(id, dto);
-            if (!sucess)
-                return NotFound($"Profession with ID {id} not found.");
-
-            return Ok(new { message = "Profession updated successfully" });
+            return Ok(result);
         }
 
+        // POST /api/professions
+        //[Authorize(Roles = "Admin")]
+        [HttpPost]
+        public async Task<IActionResult> Create(CreateProfessionDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
+            await _service.CreateAsync(dto);
+            return Ok("Profession created successfully");
+        }
+
+        // PUT /api/professions/{id}
+        //[Authorize(Roles = "Admin")]
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, UpdateProfessionDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            await _service.UpdateAsync(id, dto);
+            return Ok("Profession updated successfully");
+        }
+
+        // DELETE /api/professions/{id}
+        //[Authorize(Roles = "Admin")]
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _service.DeleteAsync(id);
+            return Ok("Profession deleted successfully");
+        }
     }
 }

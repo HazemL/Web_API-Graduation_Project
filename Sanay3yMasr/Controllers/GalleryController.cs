@@ -1,57 +1,57 @@
-﻿using BusinessLogic.DTOs;
-using BusinessLogic.Service;
+﻿using BusinessLogic.DTOs.Gallery;
+using BusinessLogic.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Sanay3yMasr.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api")]
     public class GalleryController : ControllerBase
     {
-        private readonly GalleryService _galleryService;
+        private readonly IGalleryService _galleryService;
 
-        public GalleryController(GalleryService galleryService)
+        public GalleryController(IGalleryService galleryService)
         {
             _galleryService = galleryService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Gallery()
+        // ===========================
+        // GET → مفتوح للجميع
+        // ===========================
+        [HttpGet("craftsmen/{craftsmanId}/gallery")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetByCraftsman(int craftsmanId)
         {
-            var result = await _galleryService.GetAllGallery();
-            if (result == null) return NotFound();
+            var result = await _galleryService.GetByCraftsmanId(craftsmanId);
             return Ok(result);
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GalleryItem(int id)
+        // ===========================
+        // POST → Craftsman أو Admin
+        // ===========================
+        //[Authorize(Policy = "CraftsmanOrAdmin")]
+        [HttpPost("craftsmen/{craftsmanId}/gallery")]
+        public async Task<IActionResult> Add(
+            int craftsmanId,
+            [FromBody] AddGalleryDTO dto)
         {
-            var result = _galleryService.GetGalleryById(id);
-            if (result == null) return NotFound();
-            return Ok(result);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            await _galleryService.Add(craftsmanId, dto);
+            return Ok(new { message = "Gallery item added successfully" });
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddGallery(AddGalleryDTO dto)
+        // ===========================
+        // DELETE → Craftsman أو Admin
+        // ===========================
+        //[Authorize(Policy = "CraftsmanOrAdmin")]
+        [HttpDelete("gallery/{galleryId}")]
+        public async Task<IActionResult> Delete(int galleryId)
         {
-            if (!ModelState.IsValid) return BadRequest();
-            var id = await _galleryService.AddGallery(dto);
-            return Ok(new { id, message = "Gallery item added successfully" });
-        }
-
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateGallery(int id, UpdateGalleryDTO dto)
-        {
-            if (!ModelState.IsValid) return BadRequest();
-            await _galleryService.UpdateGallery(id, dto);
-            return Ok("Gallery updated successfully");
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteGallery(int id)
-        {
-            await _galleryService.DeleteGallery(id);
-            return Ok("Gallery deleted successfully");
+            await _galleryService.Delete(galleryId);
+            return Ok(new { message = "Gallery item deleted successfully" });
         }
     }
 }
