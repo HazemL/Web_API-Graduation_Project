@@ -2,21 +2,23 @@
 using BusinessLogic.DTOs.Craftsmen;
 using DataAccess.Models;
 
-namespace BusinessLogic.Mapping
+public class CraftsmanProfile : Profile
 {
-    // Mapping بين Entity و DTOs
-    public class CraftsmanProfile : Profile
+    public CraftsmanProfile()
     {
-        public CraftsmanProfile()
-        {
-            // Create
-            CreateMap<CreateCraftsmanDto, Craftsman>();
+        CreateMap<CreateCraftsmanDto, Craftsman>();
+        CreateMap<UpdateCraftsmanDto, Craftsman>();
 
-            // Update
-            CreateMap<UpdateCraftsmanDto, Craftsman>();
-
-            // Get
-            CreateMap<Craftsman, GetCraftsmanDto>();
-        }
+        CreateMap<Craftsman, GetCraftsmanDto>()
+            .ForMember(d => d.FullName,
+                o => o.MapFrom(s => s.User.FullName))
+            .ForMember(d => d.GovernorateName,
+                o => o.MapFrom(s => s.User.Governorate != null
+                    ? s.User.Governorate.Name
+                    : null))
+            .ForMember(d => d.CityName,
+                o => o.MapFrom(s => s.User.City != null
+                    ? s.User.City.Name
+                    : null));
     }
 }

@@ -1,44 +1,39 @@
-﻿using BusinessLogic.DTOs.Auth;
-using BusinessLogic.Interface;
+﻿using BusinessLogic.Interface;
+using DataAccess.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
-namespace Sanay3yMasr.Controllers
+
+[ApiController]
+[Route("api/auth")]
+public class AuthController : ControllerBase
 {
-    [ApiController]
-    [Route("api/auth")]
-    public class AuthController : ControllerBase
+    private readonly IAuthService _authService;
+
+    public AuthController(IAuthService authService)
     {
-        private readonly IAuthService _auth;
+        _authService = authService;
+    }
 
-        public AuthController(IAuthService auth)
-        {
-            _auth = auth;
-        }
+    [HttpPost("register")]
+    public async Task<IActionResult> Register(RegisterRequestDto dto)
+        => Ok(await _authService.RegisterAsync(dto));
 
-        // ===================== REGISTER =====================
-        [HttpPost("register")]
-        public async Task<IActionResult> Register(RegisterRequestDto dto)
-        {
-            var result = await _auth.RegisterAsync(dto);
-            return Ok(result);
-        }
+    [HttpPost("login")]
+    public async Task<IActionResult> Login(LoginRequestDto dto)
+        => Ok(await _authService.LoginAsync(dto));
 
-        // ===================== LOGIN =====================
-        [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginRequestDto dto)
-        {
-            var result = await _auth.LoginAsync(dto);
-            return Ok(result);
-        }
+    [HttpPost("refresh-token")]
+    public async Task<IActionResult> Refresh(RefreshTokenRequestDto dto)
+        => Ok(await _authService.RefreshTokenAsync(dto.RefreshToken));
 
-        // ===================== LOGOUT =====================
-        [Authorize]
-        [HttpPost("logout")]
-        public async Task<IActionResult> Logout()
-        {
-            await _auth.LogoutAsync(User);
-            return Ok(new { message = "Logged out successfully" });
-        }
+    [Authorize]
+    [HttpPost("logout")]
+    public async Task<IActionResult> Logout()
+    {
+        int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+        await _authService.LogoutAsync(userId);
+        return Ok("Logged out");
     }
 }

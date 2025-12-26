@@ -1,80 +1,87 @@
 ﻿using AutoMapper;
+using BusinessLogic.Common;
 using BusinessLogic.DTOs.Craftsmen;
 using BusinessLogic.Interface;
 using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BusinessLogic.Service
+public class CraftsmanService : ICraftsmanService
 {
-    public class CraftsmanService : ICraftsmanService
+    private readonly IGeneralRepository<Craftsman> _repo;
+    private readonly IMapper _mapper;
+
+    public CraftsmanService(
+        IGeneralRepository<Craftsman> repo,
+        IMapper mapper)
     {
-        private readonly IGeneralRepository<Craftsman> _repo;
-        private readonly IMapper _mapper;
+        _repo = repo;
+        _mapper = mapper;
+    }
 
-        public CraftsmanService(
-            IGeneralRepository<Craftsman> repo,
-            IMapper mapper)
-        {
-            _repo = repo;
-            _mapper = mapper;
-        }
+    public async Task<ServiceResult<IEnumerable<GetCraftsmanDto>>> GetAllAsync()
+    {
+        var entities = await _repo.GetAll()
+            .Include(x => x.User)
+                .ThenInclude(u => u.Governorate)
+            .Include(x => x.User)
+                .ThenInclude(u => u.City)
+            .ToListAsync();
 
-        // GET ALL
-        public async Task<IEnumerable<GetCraftsmanDto>> GetAllAsync()
-        {
-            var entities = await _repo.GetAll().ToListAsync();
-            return _mapper.Map<IEnumerable<GetCraftsmanDto>>(entities);
-        }
+        var data = _mapper.Map<IEnumerable<GetCraftsmanDto>>(entities);
+        return ServiceResult<IEnumerable<GetCraftsmanDto>>.Ok(data);
+    }
 
-        // GET BY ID
-        public async Task<GetCraftsmanDto?> GetByIdAsync(int id)
-        {
-            var entity = await _repo.GetAll()
-                .FirstOrDefaultAsync(x => x.Id == id);
+    public async Task<ServiceResult<GetCraftsmanDto>> GetByIdAsync(int id)
+    {
+        var entity = await _repo.GetAll()
+            .Include(x => x.User)
+                .ThenInclude(u => u.Governorate)
+            .Include(x => x.User)
+                .ThenInclude(u => u.City)
+            .FirstOrDefaultAsync(x => x.Id == id);
 
-            return entity == null ? null : _mapper.Map<GetCraftsmanDto>(entity);
-        }
+        if (entity == null)
+            return ServiceResult<GetCraftsmanDto>.Fail("Craftsman not found");
 
-        // CREATE
-        public async Task<int> CreateAsync(CreateCraftsmanDto dto)
-        {
-            var entity = _mapper.Map<Craftsman>(dto);
+        return ServiceResult<GetCraftsmanDto>.Ok(
+            _mapper.Map<GetCraftsmanDto>(entity));
+    }
 
-            entity.IsVerified = false;
-            entity.CreatedAt = DateTime.UtcNow;
+    public async Task<ServiceResult<int>> CreateAsync(CreateCraftsmanDto dto)
+    {
+        var entity = _mapper.Map<Craftsman>(dto);
+        entity.IsVerified = false;
+        entity.CreatedAt = DateTime.UtcNow;
 
-            await _repo.Add(entity);
-            return entity.Id;
-        }
+        await _repo.Add(entity);
+        return ServiceResult<int>.Ok(entity.Id, "Craftsman created successfully");
+    }
 
-        // UPDATE
-        public async Task<bool> UpdateAsync(int id, UpdateCraftsmanDto dto)
-        {
-            var entity = await _repo.GetAll()
-                .FirstOrDefaultAsync(x => x.Id == id);
+    public async Task<ServiceResult<bool>> UpdateAsync(int id, UpdateCraftsmanDto dto)
+    {
+        var entity = await _repo.GetAll()
+            .FirstOrDefaultAsync(x => x.Id == id);
 
-            if (entity == null)
-                return false;
+        if (entity == null)
+            return ServiceResult<bool>.Fail("Craftsman not found");
 
-            _mapper.Map(dto, entity);
-            entity.UpdatedAt = DateTime.UtcNow;
+        _mapper.Map(dto, entity);
+        entity.UpdatedAt = DateTime.UtcNow;
 
-            return true;
-        }
+        return ServiceResult<bool>.Ok(true, "Updated successfully");
+    }
 
-        // DELETE (Soft Delete)
-        public async Task<bool> DeleteAsync(int id)
-        {
-            var entity = await _repo.GetAll()
-                .FirstOrDefaultAsync(x => x.Id == id);
+    public async Task<ServiceResult<bool>> DeleteAsync(int id)
+    {
+        var entity = await _repo.GetAll()
+            .FirstOrDefaultAsync(x => x.Id == id);
 
-            if (entity == null)
-                return false;
+        if (entity == null)
+            return ServiceResult<bool>.Fail("Craftsman not found");
 
-            entity.IsDeleted = true;
-            entity.UpdatedAt = DateTime.UtcNow;
+        entity.IsDeleted = true;
+        entity.UpdatedAt = DateTime.UtcNow;
 
-            return true;
-        }
+        return ServiceResult<bool>.Ok(true, "Deleted successfully");
     }
 }

@@ -67,6 +67,37 @@
         }
       }
     },
+    "/api/auth/refresh-token": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/auth/logout": {
       "post": {
         "tags": [
@@ -824,6 +855,28 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/test/hash/{password}": {
+      "get": {
+        "tags": [
+          "HashTest"
+        ],
+        "parameters": [
+          {
+            "name": "password",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -1625,27 +1678,6 @@
         }
       }
     },
-    "/api/Test/hash": {
-      "get": {
-        "tags": [
-          "Test"
-        ],
-        "parameters": [
-          {
-            "name": "password",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/api/users": {
       "get": {
         "tags": [
@@ -1919,22 +1951,23 @@
             "format": "int32"
           },
           "bio": {
-            "maxLength": 1000,
-            "minLength": 0,
+            "minLength": 10,
             "type": "string"
           },
           "experienceYears": {
-            "maximum": 60,
+            "maximum": 50,
             "minimum": 0,
             "type": "integer",
             "format": "int32"
           },
           "minPrice": {
+            "maximum": 100000,
             "minimum": 0,
             "type": "number",
             "format": "double"
           },
           "maxPrice": {
+            "maximum": 100000,
             "minimum": 0,
             "type": "number",
             "format": "double"
@@ -2074,15 +2107,20 @@
         "additionalProperties": false
       },
       "LoginRequestDto": {
+        "required": [
+          "email",
+          "password"
+        ],
         "type": "object",
         "properties": {
           "email": {
+            "minLength": 1,
             "type": "string",
-            "nullable": true
+            "format": "email"
           },
           "password": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -2097,27 +2135,57 @@
         "type": "integer",
         "format": "int32"
       },
-      "RegisterRequestDto": {
+      "RefreshTokenRequestDto": {
+        "required": [
+          "refreshToken"
+        ],
         "type": "object",
         "properties": {
-          "fullName": {
-            "type": "string",
-            "nullable": true
-          },
+          "refreshToken": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterRequestDto": {
+        "required": [
+          "email",
+          "fullName",
+          "password",
+          "role"
+        ],
+        "type": "object",
+        "properties": {
           "email": {
+            "minLength": 1,
             "type": "string",
-            "nullable": true
+            "format": "email"
           },
           "password": {
-            "type": "string",
-            "nullable": true
+            "minLength": 6,
+            "type": "string"
+          },
+          "fullName": {
+            "minLength": 1,
+            "type": "string"
           },
           "phone": {
             "type": "string",
             "nullable": true
           },
           "role": {
-            "type": "string",
+            "minLength": 1,
+            "type": "string"
+          },
+          "governorateId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "cityId": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           }
         },
@@ -2162,22 +2230,23 @@
         "type": "object",
         "properties": {
           "bio": {
-            "maxLength": 1000,
-            "minLength": 0,
+            "minLength": 10,
             "type": "string"
           },
           "experienceYears": {
-            "maximum": 60,
+            "maximum": 50,
             "minimum": 0,
             "type": "integer",
             "format": "int32"
           },
           "minPrice": {
+            "maximum": 100000,
             "minimum": 0,
             "type": "number",
             "format": "double"
           },
           "maxPrice": {
+            "maximum": 100000,
             "minimum": 0,
             "type": "number",
             "format": "double"
@@ -2326,7 +2395,7 @@
     "securitySchemes": {
       "Bearer": {
         "type": "http",
-        "description": "اكتب: Bearer + space + token",
+        "description": "Bearer {JWT Token}",
         "scheme": "bearer",
         "bearerFormat": "JWT"
       }

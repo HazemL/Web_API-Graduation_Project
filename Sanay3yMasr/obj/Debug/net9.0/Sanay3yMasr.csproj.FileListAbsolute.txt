@@ -662,3 +662,6 @@ C:\Users\welcome\source\repos\Web_API-Graduation_Project\Sanay3yMasr\obj\Debug\n
 C:\Users\welcome\source\repos\Web_API-Graduation_Project\Sanay3yMasr\obj\Debug\net9.0\Sanay3yMasr.pdb
 C:\Users\welcome\source\repos\Web_API-Graduation_Project\Sanay3yMasr\obj\Debug\net9.0\Sanay3yMasr.genruntimeconfig.cache
 C:\Users\welcome\source\repos\Web_API-Graduation_Project\Sanay3yMasr\obj\Debug\net9.0\ref\Sanay3yMasr.dll
+C:\Users\welcome\source\repos\Web_API-Graduation_Project\Sanay3yMasr\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\welcome\source\repos\Web_API-Graduation_Project\Sanay3yMasr\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
+C:\Users\welcome\source\repos\Web_API-Graduation_Project\Sanay3yMasr\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll

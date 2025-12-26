@@ -10,28 +10,35 @@ namespace DataAccess.Seeding
         public static void SeedUsers(ModelBuilder modelBuilder)
         {
             var baseDate = new DateTime(2024, 1, 1);
-
             var users = new List<User>();
 
-            // ===================== ADMIN (ثابت) =====================
+            // ===================== ADMIN (FIXED) =====================
+            // Email    : admin@gmail.com
+            // Password : 123456
             users.Add(new User
             {
                 Id = 1,
-                FullName = "Mohamednasr",
-                Email = "Mohamednasr@gmail.com",
-                PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
-                // Admin@123
+                FullName = "Admin",
+                Email = "admin@gmail.com",
+
+                // Password: 123456
+                PasswordHash =
+                    "O2Esdae1BIpDX7bsgeUv+S1teVqLWpwXBw9qY8l6U7I=",
+
                 Phone = "01000000000",
                 Role = "Admin",
                 IsActive = true,
                 ProfileImage = "default-user.png",
 
-                IsDeleted = false,
+                // Admin is not location-bound
+                GovernorateId = null,
+                CityId = null,
+
                 CreatedAt = baseDate,
                 UpdatedAt = baseDate
             });
 
-            // ===================== باقي المستخدمين =====================
+            // ===================== OTHER USERS (DEMO) =====================
             var names = new[]
             {
                 "أحمد علي","محمد حسن","محمود إبراهيم","عبدالله محمود","عمر سامي",
@@ -50,21 +57,30 @@ namespace DataAccess.Seeding
 
             foreach (var fullName in names)
             {
-                var role =
-                    id <= 6 ? "Craftsman" : "Customer";
+                // NOTE:
+                // First users are Craftsmen for demo purposes
+                // Other users are Customers
+                var role = id <= 31 ? "Craftsman" : "Customer";
 
                 users.Add(new User
                 {
                     Id = id,
                     FullName = fullName,
                     Email = $"user{id}@example.com",
-                    PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+
+                    // Password: 123456
+                    PasswordHash =
+                        "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
+
                     Phone = $"010{id:00000000}",
                     Role = role,
                     IsActive = true,
                     ProfileImage = "default-user.png",
 
-                    IsDeleted = false,
+                    // Location (must exist in SeedCities)
+                    GovernorateId = 1,
+                    CityId = (id % 5) + 1,
+
                     CreatedAt = baseDate,
                     UpdatedAt = baseDate
                 });

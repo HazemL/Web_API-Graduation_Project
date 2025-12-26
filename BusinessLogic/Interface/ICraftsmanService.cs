@@ -1,13 +1,11 @@
-﻿using BusinessLogic.DTOs.Craftsmen;
+﻿using BusinessLogic.Common;
+using BusinessLogic.DTOs.Craftsmen;
 
-namespace BusinessLogic.Interface
+public interface ICraftsmanService
 {
-    public interface ICraftsmanService
-    {
-        Task<IEnumerable<GetCraftsmanDto>> GetAllAsync();
-        Task<GetCraftsmanDto?> GetByIdAsync(int id);
-        Task<int> CreateAsync(CreateCraftsmanDto dto);
-        Task<bool> UpdateAsync(int id, UpdateCraftsmanDto dto);
-        Task<bool> DeleteAsync(int id);
-    }
+    Task<ServiceResult<IEnumerable<GetCraftsmanDto>>> GetAllAsync();
+    Task<ServiceResult<GetCraftsmanDto>> GetByIdAsync(int id);
+    Task<ServiceResult<int>> CreateAsync(CreateCraftsmanDto dto);
+    Task<ServiceResult<bool>> UpdateAsync(int id, UpdateCraftsmanDto dto);
+    Task<ServiceResult<bool>> DeleteAsync(int id);
 }

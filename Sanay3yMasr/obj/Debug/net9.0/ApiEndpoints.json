@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "Sanay3yMasr.Program\u002B\u003C\u003Ec",
-    "Method": "\u003CMain\u003Eb__0_3",
+    "Method": "\u003CMain\u003Eb__0_4",
     "RelativePath": "",
     "HttpMethod": "GET",
     "IsController": false,
@@ -16,7 +16,7 @@
     ]
   },
   {
-    "ContainingType": "Sanay3yMasr.Controllers.AuthController",
+    "ContainingType": "AuthController",
     "Method": "Login",
     "RelativePath": "api/auth/login",
     "HttpMethod": "POST",
@@ -25,14 +25,14 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "BusinessLogic.DTOs.Auth.LoginRequestDto",
+        "Type": "LoginRequestDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Sanay3yMasr.Controllers.AuthController",
+    "ContainingType": "AuthController",
     "Method": "Logout",
     "RelativePath": "api/auth/logout",
     "HttpMethod": "POST",
@@ -42,7 +42,23 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Sanay3yMasr.Controllers.AuthController",
+    "ContainingType": "AuthController",
+    "Method": "Refresh",
+    "RelativePath": "api/auth/refresh-token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "RefreshTokenRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthController",
     "Method": "Register",
     "RelativePath": "api/auth/register",
     "HttpMethod": "POST",
@@ -51,7 +67,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "BusinessLogic.DTOs.Auth.RegisterRequestDto",
+        "Type": "RegisterRequestDto",
         "IsRequired": true
       }
     ],
@@ -156,7 +172,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "BusinessLogic.DTOs.Craftsmen.CreateCraftsmanDto",
+        "Type": "CreateCraftsmanDto",
         "IsRequired": true
       }
     ],
@@ -499,7 +515,7 @@
       },
       {
         "Name": "dto",
-        "Type": "BusinessLogic.DTOs.Craftsmen.UpdateCraftsmanDto",
+        "Type": "UpdateCraftsmanDto",
         "IsRequired": true
       }
     ],
@@ -1028,9 +1044,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Sanay3yMasr.Controllers.TestController",
-    "Method": "GenerateHash",
-    "RelativePath": "api/Test/hash",
+    "ContainingType": "HashTestController",
+    "Method": "Hash",
+    "RelativePath": "api/test/hash/{password}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -1038,7 +1054,7 @@
       {
         "Name": "password",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

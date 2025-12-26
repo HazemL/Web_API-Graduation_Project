@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Sanay3yMasr.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20251224042818_SeedReviews")]
-    partial class SeedReviews
+    [Migration("20251226145816_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -621,6 +621,18 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 20,
+                            ArabicName = "الضبعة",
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GovernorateId = 22,
+                            IsDeleted = false,
+                            Latitude = 31.0460m,
+                            Longitude = 28.4400m,
+                            Name = "El Dabaa",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 21,
                             ArabicName = "شرم الشيخ",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             GovernorateId = 24,
@@ -632,7 +644,7 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 21,
+                            Id = 22,
                             ArabicName = "طابا",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             GovernorateId = 24,
@@ -1678,7 +1690,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 2,
+                            SkillId = 1,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1688,7 +1700,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 3,
+                            SkillId = 2,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1698,7 +1710,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 4,
+                            SkillId = 3,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1708,7 +1720,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 3,
+                            SkillId = 4,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1718,7 +1730,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 4,
+                            SkillId = 5,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1728,7 +1740,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 5,
+                            SkillId = 6,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1738,7 +1750,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 4,
+                            SkillId = 7,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1748,7 +1760,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 5,
+                            SkillId = 8,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1758,7 +1770,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 6,
+                            SkillId = 9,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1768,7 +1780,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 5,
+                            SkillId = 10,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1778,7 +1790,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 6,
+                            SkillId = 11,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1788,7 +1800,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 7,
+                            SkillId = 12,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1798,7 +1810,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 6,
+                            SkillId = 13,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1808,7 +1820,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 7,
+                            SkillId = 14,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1818,7 +1830,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 8,
+                            SkillId = 15,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1828,7 +1840,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 7,
+                            SkillId = 16,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1838,7 +1850,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 8,
+                            SkillId = 17,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1848,7 +1860,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 9,
+                            SkillId = 18,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1858,7 +1870,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 8,
+                            SkillId = 19,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1868,7 +1880,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 9,
+                            SkillId = 20,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1878,7 +1890,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 10,
+                            SkillId = 21,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1888,7 +1900,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 9,
+                            SkillId = 22,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1898,7 +1910,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 10,
+                            SkillId = 23,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1908,7 +1920,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 11,
+                            SkillId = 24,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1918,7 +1930,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 10,
+                            SkillId = 25,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1928,7 +1940,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 11,
+                            SkillId = 26,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1938,7 +1950,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 12,
+                            SkillId = 27,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1948,7 +1960,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 11,
+                            SkillId = 28,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1958,7 +1970,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 12,
+                            SkillId = 29,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1968,7 +1980,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 13,
+                            SkillId = 30,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1978,7 +1990,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 12,
+                            SkillId = 31,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1988,7 +2000,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 13,
+                            SkillId = 32,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -1998,7 +2010,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 14,
+                            SkillId = 33,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2008,7 +2020,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 13,
+                            SkillId = 34,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2018,7 +2030,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 14,
+                            SkillId = 35,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2028,7 +2040,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 15,
+                            SkillId = 36,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2038,7 +2050,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 14,
+                            SkillId = 37,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2048,7 +2060,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 15,
+                            SkillId = 38,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2058,7 +2070,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 16,
+                            SkillId = 39,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2068,7 +2080,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 15,
+                            SkillId = 40,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2078,7 +2090,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 16,
+                            SkillId = 41,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2088,7 +2100,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 17,
+                            SkillId = 42,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2098,7 +2110,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 16,
+                            SkillId = 43,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2108,7 +2120,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 17,
+                            SkillId = 44,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2118,7 +2130,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 18,
+                            SkillId = 45,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2128,7 +2140,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 17,
+                            SkillId = 46,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2138,7 +2150,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 18,
+                            SkillId = 47,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2148,7 +2160,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 19,
+                            SkillId = 48,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2158,7 +2170,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 18,
+                            SkillId = 49,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2168,7 +2180,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 19,
+                            SkillId = 50,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2178,7 +2190,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 20,
+                            SkillId = 51,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2188,7 +2200,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 19,
+                            SkillId = 52,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2198,7 +2210,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 20,
+                            SkillId = 53,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2208,7 +2220,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 21,
+                            SkillId = 54,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2218,7 +2230,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 20,
+                            SkillId = 55,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2228,7 +2240,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 21,
+                            SkillId = 56,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2238,7 +2250,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 22,
+                            SkillId = 57,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2248,7 +2260,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 21,
+                            SkillId = 58,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2258,7 +2270,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 22,
+                            SkillId = 59,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2268,7 +2280,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 23,
+                            SkillId = 60,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2278,7 +2290,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 22,
+                            SkillId = 1,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2288,7 +2300,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 23,
+                            SkillId = 2,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2298,7 +2310,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 24,
+                            SkillId = 3,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2308,7 +2320,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 23,
+                            SkillId = 4,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2318,7 +2330,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 24,
+                            SkillId = 5,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2328,7 +2340,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 25,
+                            SkillId = 6,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2338,7 +2350,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 24,
+                            SkillId = 7,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2348,7 +2360,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 25,
+                            SkillId = 8,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2358,7 +2370,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 26,
+                            SkillId = 9,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2368,7 +2380,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 25,
+                            SkillId = 10,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2378,7 +2390,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 26,
+                            SkillId = 11,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2388,7 +2400,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 27,
+                            SkillId = 12,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2398,7 +2410,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 26,
+                            SkillId = 13,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2408,7 +2420,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 27,
+                            SkillId = 14,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2418,7 +2430,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 28,
+                            SkillId = 15,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2428,7 +2440,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 27,
+                            SkillId = 16,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2438,7 +2450,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 28,
+                            SkillId = 17,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2448,7 +2460,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 29,
+                            SkillId = 18,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2458,7 +2470,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 28,
+                            SkillId = 19,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2468,7 +2480,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 29,
+                            SkillId = 20,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2478,7 +2490,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 30,
+                            SkillId = 21,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2488,7 +2500,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 29,
+                            SkillId = 22,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2498,7 +2510,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 30,
+                            SkillId = 23,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2508,7 +2520,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 31,
+                            SkillId = 24,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2518,7 +2530,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 30,
+                            SkillId = 25,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2528,7 +2540,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 31,
+                            SkillId = 26,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2538,7 +2550,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 32,
+                            SkillId = 27,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2548,7 +2560,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 1,
-                            SkillId = 31,
+                            SkillId = 28,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2558,7 +2570,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 2,
-                            SkillId = 32,
+                            SkillId = 29,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -2568,7 +2580,7 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             ProficiencyLevel = 4,
-                            SkillId = 33,
+                            SkillId = 30,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -3767,10 +3779,10 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 3,
-                            ArabicName = "الإسكندرية",
+                            ArabicName = "القليوبية",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Alexandria",
+                            Name = "Qalyubia",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -3794,10 +3806,10 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 6,
-                            ArabicName = "دمياط",
+                            ArabicName = "الإسماعيلية",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Damietta",
+                            Name = "Ismailia",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -3806,7 +3818,7 @@ namespace Sanay3yMasr.Migrations
                             ArabicName = "الدقهلية",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Daqahlia",
+                            Name = "Dakahlia",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -3830,10 +3842,10 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 10,
-                            ArabicName = "كفر الشيخ",
+                            ArabicName = "المنوفية",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Kafr El Sheikh",
+                            Name = "Monufia",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -3848,6 +3860,24 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 12,
+                            ArabicName = "كفر الشيخ",
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "Kafr El Sheikh",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 13,
+                            ArabicName = "دمياط",
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "Damietta",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 14,
                             ArabicName = "الفيوم",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -3856,7 +3886,7 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 13,
+                            Id = 15,
                             ArabicName = "بني سويف",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -3865,7 +3895,7 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 14,
+                            Id = 16,
                             ArabicName = "المنيا",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -3874,7 +3904,7 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 15,
+                            Id = 17,
                             ArabicName = "أسيوط",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -3883,7 +3913,7 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 16,
+                            Id = 18,
                             ArabicName = "سوهاج",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -3892,7 +3922,7 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 17,
+                            Id = 19,
                             ArabicName = "قنا",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -3901,7 +3931,7 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 18,
+                            Id = 20,
                             ArabicName = "الأقصر",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -3910,7 +3940,7 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 19,
+                            Id = 21,
                             ArabicName = "أسوان",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -3919,7 +3949,7 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 20,
+                            Id = 22,
                             ArabicName = "البحر الأحمر",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -3928,7 +3958,7 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 21,
+                            Id = 23,
                             ArabicName = "الوادي الجديد",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -3937,7 +3967,7 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 22,
+                            Id = 24,
                             ArabicName = "مطروح",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -3946,7 +3976,7 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 23,
+                            Id = 25,
                             ArabicName = "شمال سيناء",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -3955,20 +3985,11 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 24,
+                            Id = 26,
                             ArabicName = "جنوب سيناء",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             Name = "South Sinai",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 25,
-                            ArabicName = "الإسماعيلية",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Ismailia",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -4045,7 +4066,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 2,
-                            Amount = 120m,
+                            Amount = 50m,
                             CreatedAt = new DateTime(2024, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "EGP",
                             IsDeleted = false,
@@ -4071,7 +4092,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 4,
-                            Amount = 120m,
+                            Amount = 50m,
                             CreatedAt = new DateTime(2024, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "EGP",
                             IsDeleted = false,
@@ -4097,7 +4118,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 6,
-                            Amount = 120m,
+                            Amount = 50m,
                             CreatedAt = new DateTime(2024, 1, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "EGP",
                             IsDeleted = false,
@@ -4123,7 +4144,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 8,
-                            Amount = 120m,
+                            Amount = 50m,
                             CreatedAt = new DateTime(2024, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "EGP",
                             IsDeleted = false,
@@ -4149,7 +4170,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 10,
-                            Amount = 120m,
+                            Amount = 50m,
                             CreatedAt = new DateTime(2024, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "EGP",
                             IsDeleted = false,
@@ -4175,7 +4196,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 12,
-                            Amount = 120m,
+                            Amount = 50m,
                             CreatedAt = new DateTime(2024, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "EGP",
                             IsDeleted = false,
@@ -4201,7 +4222,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 14,
-                            Amount = 120m,
+                            Amount = 50m,
                             CreatedAt = new DateTime(2024, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "EGP",
                             IsDeleted = false,
@@ -4227,7 +4248,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 16,
-                            Amount = 120m,
+                            Amount = 50m,
                             CreatedAt = new DateTime(2024, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "EGP",
                             IsDeleted = false,
@@ -4253,7 +4274,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 18,
-                            Amount = 120m,
+                            Amount = 50m,
                             CreatedAt = new DateTime(2024, 1, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "EGP",
                             IsDeleted = false,
@@ -4279,7 +4300,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 20,
-                            Amount = 120m,
+                            Amount = 50m,
                             CreatedAt = new DateTime(2024, 1, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Currency = "EGP",
                             IsDeleted = false,
@@ -4339,16 +4360,6 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 1,
-                            ArabicName = "فني كهرباء",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Electrical installation & repair",
-                            IsDeleted = false,
-                            Name = "Electrician",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 2,
                             ArabicName = "سباك",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Plumbing & pipe repair",
@@ -4358,12 +4369,22 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 3,
+                            Id = 2,
                             ArabicName = "نجار",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Wood works & furniture",
                             IsDeleted = false,
                             Name = "Carpenter",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ArabicName = "فني كهرباء",
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "Electrical installation & repair",
+                            IsDeleted = false,
+                            Name = "Electrician",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -4379,7 +4400,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 5,
-                            ArabicName = "فنى تكييف",
+                            ArabicName = "فني تكييف",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "AC repair & maintenance",
                             IsDeleted = false,
@@ -4399,21 +4420,21 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 7,
-                            ArabicName = "عامل سقوف",
+                            ArabicName = "تخصص سيراميك",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Roofing and waterproofing",
+                            Description = "Ceramic work",
                             IsDeleted = false,
-                            Name = "Roofer",
+                            Name = "Ceramic Specialist",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 8,
-                            ArabicName = "مفتاحجي",
+                            ArabicName = "فني أجهزة منزلية",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Locks & keys services",
+                            Description = "Appliance repair",
                             IsDeleted = false,
-                            Name = "Locksmith",
+                            Name = "Home Appliance Tech",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -4499,31 +4520,31 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 17,
-                            ArabicName = "تخصص سيراميك",
+                            ArabicName = "عامل سقوف",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Ceramic work",
+                            Description = "Roofing and waterproofing",
                             IsDeleted = false,
-                            Name = "Ceramic Specialist",
+                            Name = "Roofer",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 18,
-                            ArabicName = "مهندس تكييف",
+                            ArabicName = "مفتاحجي",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "HVAC systems",
+                            Description = "Locks & keys services",
                             IsDeleted = false,
-                            Name = "HVAC Engineer",
+                            Name = "Locksmith",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 19,
-                            ArabicName = "فني أجهزة منزلية",
+                            ArabicName = "مهندس تكييف",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Appliance repair",
+                            Description = "HVAC systems",
                             IsDeleted = false,
-                            Name = "Home Appliance Tech",
+                            Name = "HVAC Engineer",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -4536,6 +4557,49 @@ namespace Sanay3yMasr.Migrations
                             Name = "Painter (Spray)",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
+                });
+
+            modelBuilder.Entity("DataAccess.Models.RefreshToken", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ExpiresAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsRevoked")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RefreshTokens");
                 });
 
             modelBuilder.Entity("DataAccess.Models.Report", b =>
@@ -4597,7 +4661,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = false,
                             Message = "بلاغ رقم 1 بسبب سوء تعامل",
-                            ReporterUserId = 6,
+                            ReporterUserId = 32,
                             Status = "Pending",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4609,7 +4673,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 2 بسبب سوء تعامل",
-                            ReporterUserId = 7,
+                            ReporterUserId = 33,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4621,7 +4685,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 3 بسبب سوء تعامل",
-                            ReporterUserId = 8,
+                            ReporterUserId = 34,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4633,7 +4697,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = false,
                             Message = "بلاغ رقم 4 بسبب سوء تعامل",
-                            ReporterUserId = 9,
+                            ReporterUserId = 35,
                             Status = "Pending",
                             UpdatedAt = new DateTime(2024, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4645,7 +4709,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 5 بسبب سوء تعامل",
-                            ReporterUserId = 10,
+                            ReporterUserId = 36,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4657,7 +4721,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 6 بسبب سوء تعامل",
-                            ReporterUserId = 11,
+                            ReporterUserId = 37,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4669,7 +4733,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = false,
                             Message = "بلاغ رقم 7 بسبب سوء تعامل",
-                            ReporterUserId = 12,
+                            ReporterUserId = 38,
                             Status = "Pending",
                             UpdatedAt = new DateTime(2024, 1, 7, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4681,7 +4745,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 8 بسبب سوء تعامل",
-                            ReporterUserId = 13,
+                            ReporterUserId = 39,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4693,7 +4757,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 9 بسبب سوء تعامل",
-                            ReporterUserId = 14,
+                            ReporterUserId = 40,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4705,7 +4769,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = false,
                             Message = "بلاغ رقم 10 بسبب سوء تعامل",
-                            ReporterUserId = 15,
+                            ReporterUserId = 41,
                             Status = "Pending",
                             UpdatedAt = new DateTime(2024, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4717,7 +4781,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 11 بسبب سوء تعامل",
-                            ReporterUserId = 16,
+                            ReporterUserId = 42,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4729,7 +4793,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 12 بسبب سوء تعامل",
-                            ReporterUserId = 17,
+                            ReporterUserId = 43,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4741,7 +4805,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = false,
                             Message = "بلاغ رقم 13 بسبب سوء تعامل",
-                            ReporterUserId = 18,
+                            ReporterUserId = 44,
                             Status = "Pending",
                             UpdatedAt = new DateTime(2024, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4753,7 +4817,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 14 بسبب سوء تعامل",
-                            ReporterUserId = 19,
+                            ReporterUserId = 45,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4765,7 +4829,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 15 بسبب سوء تعامل",
-                            ReporterUserId = 20,
+                            ReporterUserId = 46,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4777,7 +4841,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = false,
                             Message = "بلاغ رقم 16 بسبب سوء تعامل",
-                            ReporterUserId = 21,
+                            ReporterUserId = 47,
                             Status = "Pending",
                             UpdatedAt = new DateTime(2024, 1, 16, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4789,7 +4853,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 17 بسبب سوء تعامل",
-                            ReporterUserId = 22,
+                            ReporterUserId = 48,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4801,7 +4865,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 18 بسبب سوء تعامل",
-                            ReporterUserId = 23,
+                            ReporterUserId = 49,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 18, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4813,7 +4877,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = false,
                             Message = "بلاغ رقم 19 بسبب سوء تعامل",
-                            ReporterUserId = 24,
+                            ReporterUserId = 32,
                             Status = "Pending",
                             UpdatedAt = new DateTime(2024, 1, 19, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4825,7 +4889,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 20 بسبب سوء تعامل",
-                            ReporterUserId = 25,
+                            ReporterUserId = 33,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4837,7 +4901,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 21 بسبب سوء تعامل",
-                            ReporterUserId = 26,
+                            ReporterUserId = 34,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 21, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4849,7 +4913,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = false,
                             Message = "بلاغ رقم 22 بسبب سوء تعامل",
-                            ReporterUserId = 27,
+                            ReporterUserId = 35,
                             Status = "Pending",
                             UpdatedAt = new DateTime(2024, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4861,7 +4925,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 23 بسبب سوء تعامل",
-                            ReporterUserId = 28,
+                            ReporterUserId = 36,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4873,7 +4937,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 24 بسبب سوء تعامل",
-                            ReporterUserId = 29,
+                            ReporterUserId = 37,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4885,7 +4949,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = false,
                             Message = "بلاغ رقم 25 بسبب سوء تعامل",
-                            ReporterUserId = 30,
+                            ReporterUserId = 38,
                             Status = "Pending",
                             UpdatedAt = new DateTime(2024, 1, 25, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4897,7 +4961,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 26 بسبب سوء تعامل",
-                            ReporterUserId = 31,
+                            ReporterUserId = 39,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4909,7 +4973,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 27 بسبب سوء تعامل",
-                            ReporterUserId = 32,
+                            ReporterUserId = 40,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 27, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4921,7 +4985,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = false,
                             Message = "بلاغ رقم 28 بسبب سوء تعامل",
-                            ReporterUserId = 33,
+                            ReporterUserId = 41,
                             Status = "Pending",
                             UpdatedAt = new DateTime(2024, 1, 28, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4933,7 +4997,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 29 بسبب سوء تعامل",
-                            ReporterUserId = 34,
+                            ReporterUserId = 42,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 29, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4945,7 +5009,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 30 بسبب سوء تعامل",
-                            ReporterUserId = 35,
+                            ReporterUserId = 43,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 1, 30, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4957,7 +5021,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = false,
                             Message = "بلاغ رقم 31 بسبب سوء تعامل",
-                            ReporterUserId = 36,
+                            ReporterUserId = 44,
                             Status = "Pending",
                             UpdatedAt = new DateTime(2024, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4969,7 +5033,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 32 بسبب سوء تعامل",
-                            ReporterUserId = 37,
+                            ReporterUserId = 45,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4981,7 +5045,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 33 بسبب سوء تعامل",
-                            ReporterUserId = 38,
+                            ReporterUserId = 46,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -4993,7 +5057,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = false,
                             Message = "بلاغ رقم 34 بسبب سوء تعامل",
-                            ReporterUserId = 39,
+                            ReporterUserId = 47,
                             Status = "Pending",
                             UpdatedAt = new DateTime(2024, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -5005,7 +5069,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 35 بسبب سوء تعامل",
-                            ReporterUserId = 40,
+                            ReporterUserId = 48,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 2, 4, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -5017,7 +5081,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 36 بسبب سوء تعامل",
-                            ReporterUserId = 41,
+                            ReporterUserId = 49,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 2, 5, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -5029,7 +5093,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = false,
                             Message = "بلاغ رقم 37 بسبب سوء تعامل",
-                            ReporterUserId = 42,
+                            ReporterUserId = 32,
                             Status = "Pending",
                             UpdatedAt = new DateTime(2024, 2, 6, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -5041,7 +5105,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 38 بسبب سوء تعامل",
-                            ReporterUserId = 43,
+                            ReporterUserId = 33,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 2, 7, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -5053,7 +5117,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = true,
                             Message = "بلاغ رقم 39 بسبب سوء تعامل",
-                            ReporterUserId = 44,
+                            ReporterUserId = 34,
                             Status = "Resolved",
                             UpdatedAt = new DateTime(2024, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -5065,7 +5129,7 @@ namespace Sanay3yMasr.Migrations
                             IsDeleted = false,
                             IsResolved = false,
                             Message = "بلاغ رقم 40 بسبب سوء تعامل",
-                            ReporterUserId = 45,
+                            ReporterUserId = 35,
                             Status = "Pending",
                             UpdatedAt = new DateTime(2024, 2, 9, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
@@ -5126,45 +5190,45 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 1,
-                            Comment = "Review 1 for craftsman 1",
+                            Comment = "Review #1 for craftsman 1",
                             CraftsmanId = 1,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = false,
-                            Stars = 5,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 2,
-                            Comment = "Review 2 for craftsman 2",
+                            Comment = "Review #2 for craftsman 2",
                             CraftsmanId = 2,
                             CreatedAt = new DateTime(2024, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 2
+                            UserId = 33
                         },
                         new
                         {
                             Id = 3,
-                            Comment = "Review 3 for craftsman 3",
+                            Comment = "Review #3 for craftsman 3",
                             CraftsmanId = 3,
                             CreatedAt = new DateTime(2024, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
                             Stars = 5,
                             UpdatedAt = new DateTime(2024, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 3
+                            UserId = 34
                         },
                         new
                         {
                             Id = 4,
-                            Comment = "Review 4 for craftsman 4",
+                            Comment = "Review #4 for craftsman 4",
                             CraftsmanId = 4,
                             CreatedAt = new DateTime(2024, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -5172,51 +5236,51 @@ namespace Sanay3yMasr.Migrations
                             IsVerified = true,
                             Stars = 3,
                             UpdatedAt = new DateTime(2024, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 4
+                            UserId = 35
                         },
                         new
                         {
                             Id = 5,
-                            Comment = "Review 5 for craftsman 5",
+                            Comment = "Review #5 for craftsman 5",
                             CraftsmanId = 5,
                             CreatedAt = new DateTime(2024, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
+                            IsVerified = false,
                             Stars = 4,
                             UpdatedAt = new DateTime(2024, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
+                            UserId = 36
                         },
                         new
                         {
                             Id = 6,
-                            Comment = "Review 6 for craftsman 6",
+                            Comment = "Review #6 for craftsman 6",
                             CraftsmanId = 6,
                             CreatedAt = new DateTime(2024, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 4,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 6
+                            UserId = 37
                         },
                         new
                         {
                             Id = 7,
-                            Comment = "Review 7 for craftsman 7",
+                            Comment = "Review #7 for craftsman 7",
                             CraftsmanId = 7,
                             CreatedAt = new DateTime(2024, 1, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 4,
+                            IsVerified = true,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 1, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 7
+                            UserId = 38
                         },
                         new
                         {
                             Id = 8,
-                            Comment = "Review 8 for craftsman 8",
+                            Comment = "Review #8 for craftsman 8",
                             CraftsmanId = 8,
                             CreatedAt = new DateTime(2024, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -5224,450 +5288,450 @@ namespace Sanay3yMasr.Migrations
                             IsVerified = true,
                             Stars = 4,
                             UpdatedAt = new DateTime(2024, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 8
+                            UserId = 39
                         },
                         new
                         {
                             Id = 9,
-                            Comment = "Review 9 for craftsman 9",
+                            Comment = "Review #9 for craftsman 9",
                             CraftsmanId = 9,
                             CreatedAt = new DateTime(2024, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
-                            Stars = 4,
+                            IsVerified = false,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 9
+                            UserId = 40
                         },
                         new
                         {
                             Id = 10,
-                            Comment = "Review 10 for craftsman 10",
+                            Comment = "Review #10 for craftsman 10",
                             CraftsmanId = 10,
                             CreatedAt = new DateTime(2024, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 4,
+                            IsVerified = true,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
+                            UserId = 41
                         },
                         new
                         {
                             Id = 11,
-                            Comment = "Review 11 for craftsman 11",
+                            Comment = "Review #11 for craftsman 11",
                             CraftsmanId = 11,
                             CreatedAt = new DateTime(2024, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 3,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 12,
-                            Comment = "Review 12 for craftsman 12",
+                            Comment = "Review #12 for craftsman 12",
                             CraftsmanId = 12,
                             CreatedAt = new DateTime(2024, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 4,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 12
+                            UserId = 43
                         },
                         new
                         {
                             Id = 13,
-                            Comment = "Review 13 for craftsman 13",
+                            Comment = "Review #13 for craftsman 13",
                             CraftsmanId = 13,
                             CreatedAt = new DateTime(2024, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
-                            Stars = 5,
+                            IsVerified = false,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 13
+                            UserId = 44
                         },
                         new
                         {
                             Id = 14,
-                            Comment = "Review 14 for craftsman 14",
+                            Comment = "Review #14 for craftsman 14",
                             CraftsmanId = 14,
                             CreatedAt = new DateTime(2024, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 5,
+                            IsVerified = true,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 14
+                            UserId = 45
                         },
                         new
                         {
                             Id = 15,
-                            Comment = "Review 15 for craftsman 15",
+                            Comment = "Review #15 for craftsman 15",
                             CraftsmanId = 15,
                             CreatedAt = new DateTime(2024, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 4,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
+                            UserId = 46
                         },
                         new
                         {
                             Id = 16,
-                            Comment = "Review 16 for craftsman 16",
+                            Comment = "Review #16 for craftsman 16",
                             CraftsmanId = 16,
                             CreatedAt = new DateTime(2024, 1, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 1, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 16
+                            UserId = 47
                         },
                         new
                         {
                             Id = 17,
-                            Comment = "Review 17 for craftsman 17",
+                            Comment = "Review #17 for craftsman 17",
                             CraftsmanId = 17,
                             CreatedAt = new DateTime(2024, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
-                            Stars = 5,
+                            IsVerified = false,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 17
+                            UserId = 48
                         },
                         new
                         {
                             Id = 18,
-                            Comment = "Review 18 for craftsman 18",
+                            Comment = "Review #18 for craftsman 18",
                             CraftsmanId = 18,
                             CreatedAt = new DateTime(2024, 1, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
+                            IsVerified = true,
                             Stars = 5,
                             UpdatedAt = new DateTime(2024, 1, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 18
+                            UserId = 49
                         },
                         new
                         {
                             Id = 19,
-                            Comment = "Review 19 for craftsman 19",
+                            Comment = "Review #19 for craftsman 19",
                             CraftsmanId = 19,
                             CreatedAt = new DateTime(2024, 1, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
                             Stars = 3,
                             UpdatedAt = new DateTime(2024, 1, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 19
+                            UserId = 32
                         },
                         new
                         {
                             Id = 20,
-                            Comment = "Review 20 for craftsman 20",
+                            Comment = "Review #20 for craftsman 20",
                             CraftsmanId = 20,
                             CreatedAt = new DateTime(2024, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 20
+                            UserId = 33
                         },
                         new
                         {
                             Id = 21,
-                            Comment = "Review 21 for craftsman 21",
+                            Comment = "Review #21 for craftsman 21",
                             CraftsmanId = 21,
                             CreatedAt = new DateTime(2024, 1, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = false,
-                            Stars = 3,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 1, 21, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 22,
-                            Comment = "Review 22 for craftsman 22",
+                            Comment = "Review #22 for craftsman 22",
                             CraftsmanId = 22,
                             CreatedAt = new DateTime(2024, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 5,
+                            IsVerified = true,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 22
+                            UserId = 35
                         },
                         new
                         {
                             Id = 23,
-                            Comment = "Review 23 for craftsman 23",
+                            Comment = "Review #23 for craftsman 23",
                             CraftsmanId = 23,
                             CreatedAt = new DateTime(2024, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 3,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 23
+                            UserId = 36
                         },
                         new
                         {
                             Id = 24,
-                            Comment = "Review 24 for craftsman 24",
+                            Comment = "Review #24 for craftsman 24",
                             CraftsmanId = 24,
                             CreatedAt = new DateTime(2024, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
                             Stars = 5,
                             UpdatedAt = new DateTime(2024, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 24
+                            UserId = 37
                         },
                         new
                         {
                             Id = 25,
-                            Comment = "Review 25 for craftsman 25",
+                            Comment = "Review #25 for craftsman 25",
                             CraftsmanId = 25,
                             CreatedAt = new DateTime(2024, 1, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
-                            Stars = 4,
+                            IsVerified = false,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 1, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 25
+                            UserId = 38
                         },
                         new
                         {
                             Id = 26,
-                            Comment = "Review 26 for craftsman 26",
+                            Comment = "Review #26 for craftsman 26",
                             CraftsmanId = 26,
                             CreatedAt = new DateTime(2024, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
+                            IsVerified = true,
                             Stars = 4,
                             UpdatedAt = new DateTime(2024, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 26
+                            UserId = 39
                         },
                         new
                         {
                             Id = 27,
-                            Comment = "Review 27 for craftsman 27",
+                            Comment = "Review #27 for craftsman 27",
                             CraftsmanId = 27,
                             CreatedAt = new DateTime(2024, 1, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 4,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 1, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 27
+                            UserId = 40
                         },
                         new
                         {
                             Id = 28,
-                            Comment = "Review 28 for craftsman 28",
+                            Comment = "Review #28 for craftsman 28",
                             CraftsmanId = 28,
                             CreatedAt = new DateTime(2024, 1, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 1, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 28
+                            UserId = 41
                         },
                         new
                         {
                             Id = 29,
-                            Comment = "Review 29 for craftsman 29",
+                            Comment = "Review #29 for craftsman 29",
                             CraftsmanId = 29,
                             CreatedAt = new DateTime(2024, 1, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
+                            IsVerified = false,
                             Stars = 4,
                             UpdatedAt = new DateTime(2024, 1, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 29
+                            UserId = 42
                         },
                         new
                         {
                             Id = 30,
-                            Comment = "Review 30 for craftsman 30",
+                            Comment = "Review #30 for craftsman 30",
                             CraftsmanId = 30,
                             CreatedAt = new DateTime(2024, 1, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 4,
+                            IsVerified = true,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 1, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 30
+                            UserId = 43
                         },
                         new
                         {
                             Id = 31,
-                            Comment = "Review 31 for craftsman 1",
+                            Comment = "Review #31 for craftsman 1",
                             CraftsmanId = 1,
                             CreatedAt = new DateTime(2024, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 5,
+                            IsVerified = true,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 32,
-                            Comment = "Review 32 for craftsman 2",
+                            Comment = "Review #32 for craftsman 2",
                             CraftsmanId = 2,
                             CreatedAt = new DateTime(2024, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 32
+                            UserId = 45
                         },
                         new
                         {
                             Id = 33,
-                            Comment = "Review 33 for craftsman 3",
+                            Comment = "Review #33 for craftsman 3",
                             CraftsmanId = 3,
                             CreatedAt = new DateTime(2024, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
-                            Stars = 3,
+                            IsVerified = false,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 33
+                            UserId = 46
                         },
                         new
                         {
                             Id = 34,
-                            Comment = "Review 34 for craftsman 4",
+                            Comment = "Review #34 for craftsman 4",
                             CraftsmanId = 4,
                             CreatedAt = new DateTime(2024, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 4,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 34
+                            UserId = 47
                         },
                         new
                         {
                             Id = 35,
-                            Comment = "Review 35 for craftsman 5",
+                            Comment = "Review #35 for craftsman 5",
                             CraftsmanId = 5,
                             CreatedAt = new DateTime(2024, 2, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 3,
+                            IsVerified = true,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 2, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 35
+                            UserId = 48
                         },
                         new
                         {
                             Id = 36,
-                            Comment = "Review 36 for craftsman 6",
+                            Comment = "Review #36 for craftsman 6",
                             CraftsmanId = 6,
                             CreatedAt = new DateTime(2024, 2, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 4,
+                            IsVerified = true,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 2, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 36
+                            UserId = 49
                         },
                         new
                         {
                             Id = 37,
-                            Comment = "Review 37 for craftsman 7",
+                            Comment = "Review #37 for craftsman 7",
                             CraftsmanId = 7,
                             CreatedAt = new DateTime(2024, 2, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
+                            IsVerified = false,
                             Stars = 3,
                             UpdatedAt = new DateTime(2024, 2, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 37
+                            UserId = 32
                         },
                         new
                         {
                             Id = 38,
-                            Comment = "Review 38 for craftsman 8",
+                            Comment = "Review #38 for craftsman 8",
                             CraftsmanId = 8,
                             CreatedAt = new DateTime(2024, 2, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 2, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 38
+                            UserId = 33
                         },
                         new
                         {
                             Id = 39,
-                            Comment = "Review 39 for craftsman 9",
+                            Comment = "Review #39 for craftsman 9",
                             CraftsmanId = 9,
                             CreatedAt = new DateTime(2024, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 3,
-                            UpdatedAt = new DateTime(2024, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 39
-                        },
-                        new
-                        {
-                            Id = 40,
-                            Comment = "Review 40 for craftsman 10",
-                            CraftsmanId = 10,
-                            CreatedAt = new DateTime(2024, 2, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = true,
-                            IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 5,
-                            UpdatedAt = new DateTime(2024, 2, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 40
-                        },
-                        new
-                        {
-                            Id = 41,
-                            Comment = "Review 41 for craftsman 11",
-                            CraftsmanId = 11,
-                            CreatedAt = new DateTime(2024, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
                             Stars = 5,
+                            UpdatedAt = new DateTime(2024, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 34
+                        },
+                        new
+                        {
+                            Id = 40,
+                            Comment = "Review #40 for craftsman 10",
+                            CraftsmanId = 10,
+                            CreatedAt = new DateTime(2024, 2, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsApproved = true,
+                            IsDeleted = false,
+                            IsVerified = true,
+                            Stars = 3,
+                            UpdatedAt = new DateTime(2024, 2, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 35
+                        },
+                        new
+                        {
+                            Id = 41,
+                            Comment = "Review #41 for craftsman 11",
+                            CraftsmanId = 11,
+                            CreatedAt = new DateTime(2024, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsApproved = true,
+                            IsDeleted = false,
+                            IsVerified = false,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 42,
-                            Comment = "Review 42 for craftsman 12",
+                            Comment = "Review #42 for craftsman 12",
                             CraftsmanId = 12,
                             CreatedAt = new DateTime(2024, 2, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
+                            IsVerified = true,
                             Stars = 5,
                             UpdatedAt = new DateTime(2024, 2, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 42
+                            UserId = 37
                         },
                         new
                         {
                             Id = 43,
-                            Comment = "Review 43 for craftsman 13",
+                            Comment = "Review #43 for craftsman 13",
                             CraftsmanId = 13,
                             CreatedAt = new DateTime(2024, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -5675,12 +5739,12 @@ namespace Sanay3yMasr.Migrations
                             IsVerified = true,
                             Stars = 3,
                             UpdatedAt = new DateTime(2024, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 43
+                            UserId = 38
                         },
                         new
                         {
                             Id = 44,
-                            Comment = "Review 44 for craftsman 14",
+                            Comment = "Review #44 for craftsman 14",
                             CraftsmanId = 14,
                             CreatedAt = new DateTime(2024, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -5688,25 +5752,25 @@ namespace Sanay3yMasr.Migrations
                             IsVerified = true,
                             Stars = 4,
                             UpdatedAt = new DateTime(2024, 2, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 44
+                            UserId = 39
                         },
                         new
                         {
                             Id = 45,
-                            Comment = "Review 45 for craftsman 15",
+                            Comment = "Review #45 for craftsman 15",
                             CraftsmanId = 15,
                             CreatedAt = new DateTime(2024, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
+                            IsVerified = false,
                             Stars = 5,
                             UpdatedAt = new DateTime(2024, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 45
+                            UserId = 40
                         },
                         new
                         {
                             Id = 46,
-                            Comment = "Review 46 for craftsman 16",
+                            Comment = "Review #46 for craftsman 16",
                             CraftsmanId = 16,
                             CreatedAt = new DateTime(2024, 2, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -5714,25 +5778,25 @@ namespace Sanay3yMasr.Migrations
                             IsVerified = true,
                             Stars = 3,
                             UpdatedAt = new DateTime(2024, 2, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 46
+                            UserId = 41
                         },
                         new
                         {
                             Id = 47,
-                            Comment = "Review 47 for craftsman 17",
+                            Comment = "Review #47 for craftsman 17",
                             CraftsmanId = 17,
                             CreatedAt = new DateTime(2024, 2, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 2, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 47
+                            UserId = 42
                         },
                         new
                         {
                             Id = 48,
-                            Comment = "Review 48 for craftsman 18",
+                            Comment = "Review #48 for craftsman 18",
                             CraftsmanId = 18,
                             CreatedAt = new DateTime(2024, 2, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -5740,25 +5804,25 @@ namespace Sanay3yMasr.Migrations
                             IsVerified = true,
                             Stars = 5,
                             UpdatedAt = new DateTime(2024, 2, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 48
+                            UserId = 43
                         },
                         new
                         {
                             Id = 49,
-                            Comment = "Review 49 for craftsman 19",
+                            Comment = "Review #49 for craftsman 19",
                             CraftsmanId = 19,
                             CreatedAt = new DateTime(2024, 2, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
-                            Stars = 4,
+                            IsVerified = false,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 2, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 49
+                            UserId = 44
                         },
                         new
                         {
                             Id = 50,
-                            Comment = "Review 50 for craftsman 20",
+                            Comment = "Review #50 for craftsman 20",
                             CraftsmanId = 20,
                             CreatedAt = new DateTime(2024, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -5766,12 +5830,12 @@ namespace Sanay3yMasr.Migrations
                             IsVerified = true,
                             Stars = 4,
                             UpdatedAt = new DateTime(2024, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 50
+                            UserId = 45
                         },
                         new
                         {
                             Id = 51,
-                            Comment = "Review 51 for craftsman 21",
+                            Comment = "Review #51 for craftsman 21",
                             CraftsmanId = 21,
                             CreatedAt = new DateTime(2024, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -5783,253 +5847,253 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 52,
-                            Comment = "Review 52 for craftsman 22",
+                            Comment = "Review #52 for craftsman 22",
                             CraftsmanId = 22,
                             CreatedAt = new DateTime(2024, 2, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 2, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 2
+                            UserId = 47
                         },
                         new
                         {
                             Id = 53,
-                            Comment = "Review 53 for craftsman 23",
+                            Comment = "Review #53 for craftsman 23",
                             CraftsmanId = 23,
                             CreatedAt = new DateTime(2024, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = false,
-                            Stars = 5,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 3
+                            UserId = 48
                         },
                         new
                         {
                             Id = 54,
-                            Comment = "Review 54 for craftsman 24",
+                            Comment = "Review #54 for craftsman 24",
                             CraftsmanId = 24,
                             CreatedAt = new DateTime(2024, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 4,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 4
+                            UserId = 49
                         },
                         new
                         {
                             Id = 55,
-                            Comment = "Review 55 for craftsman 25",
+                            Comment = "Review #55 for craftsman 25",
                             CraftsmanId = 25,
                             CreatedAt = new DateTime(2024, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
+                            UserId = 32
                         },
                         new
                         {
                             Id = 56,
-                            Comment = "Review 56 for craftsman 26",
+                            Comment = "Review #56 for craftsman 26",
                             CraftsmanId = 26,
                             CreatedAt = new DateTime(2024, 2, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 3,
+                            IsVerified = true,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 2, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 6
+                            UserId = 33
                         },
                         new
                         {
                             Id = 57,
-                            Comment = "Review 57 for craftsman 27",
+                            Comment = "Review #57 for craftsman 27",
                             CraftsmanId = 27,
                             CreatedAt = new DateTime(2024, 2, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = false,
                             Stars = 5,
                             UpdatedAt = new DateTime(2024, 2, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 7
+                            UserId = 34
                         },
                         new
                         {
                             Id = 58,
-                            Comment = "Review 58 for craftsman 28",
+                            Comment = "Review #58 for craftsman 28",
                             CraftsmanId = 28,
                             CreatedAt = new DateTime(2024, 2, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 4,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 2, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 8
+                            UserId = 35
                         },
                         new
                         {
                             Id = 59,
-                            Comment = "Review 59 for craftsman 29",
+                            Comment = "Review #59 for craftsman 29",
                             CraftsmanId = 29,
                             CreatedAt = new DateTime(2024, 2, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 2, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 9
+                            UserId = 36
                         },
                         new
                         {
                             Id = 60,
-                            Comment = "Review 60 for craftsman 30",
+                            Comment = "Review #60 for craftsman 30",
                             CraftsmanId = 30,
                             CreatedAt = new DateTime(2024, 2, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
                             Stars = 5,
                             UpdatedAt = new DateTime(2024, 2, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
+                            UserId = 37
                         },
                         new
                         {
                             Id = 61,
-                            Comment = "Review 61 for craftsman 1",
+                            Comment = "Review #61 for craftsman 1",
                             CraftsmanId = 1,
                             CreatedAt = new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
-                            Stars = 4,
+                            IsVerified = false,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 62,
-                            Comment = "Review 62 for craftsman 2",
+                            Comment = "Review #62 for craftsman 2",
                             CraftsmanId = 2,
                             CreatedAt = new DateTime(2024, 3, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
                             Stars = 4,
                             UpdatedAt = new DateTime(2024, 3, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 12
+                            UserId = 39
                         },
                         new
                         {
                             Id = 63,
-                            Comment = "Review 63 for craftsman 3",
+                            Comment = "Review #63 for craftsman 3",
                             CraftsmanId = 3,
                             CreatedAt = new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
                             Stars = 5,
                             UpdatedAt = new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 13
+                            UserId = 40
                         },
                         new
                         {
                             Id = 64,
-                            Comment = "Review 64 for craftsman 4",
+                            Comment = "Review #64 for craftsman 4",
                             CraftsmanId = 4,
                             CreatedAt = new DateTime(2024, 3, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 4,
+                            IsVerified = true,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 3, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 14
+                            UserId = 41
                         },
                         new
                         {
                             Id = 65,
-                            Comment = "Review 65 for craftsman 5",
+                            Comment = "Review #65 for craftsman 5",
                             CraftsmanId = 5,
                             CreatedAt = new DateTime(2024, 3, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
-                            Stars = 5,
+                            IsVerified = false,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 3, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
+                            UserId = 42
                         },
                         new
                         {
                             Id = 66,
-                            Comment = "Review 66 for craftsman 6",
+                            Comment = "Review #66 for craftsman 6",
                             CraftsmanId = 6,
                             CreatedAt = new DateTime(2024, 3, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 4,
+                            IsVerified = true,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 3, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 16
+                            UserId = 43
                         },
                         new
                         {
                             Id = 67,
-                            Comment = "Review 67 for craftsman 7",
+                            Comment = "Review #67 for craftsman 7",
                             CraftsmanId = 7,
                             CreatedAt = new DateTime(2024, 3, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 4,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 3, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 17
+                            UserId = 44
                         },
                         new
                         {
                             Id = 68,
-                            Comment = "Review 68 for craftsman 8",
+                            Comment = "Review #68 for craftsman 8",
                             CraftsmanId = 8,
                             CreatedAt = new DateTime(2024, 3, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 3,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 3, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 18
+                            UserId = 45
                         },
                         new
                         {
                             Id = 69,
-                            Comment = "Review 69 for craftsman 9",
+                            Comment = "Review #69 for craftsman 9",
                             CraftsmanId = 9,
                             CreatedAt = new DateTime(2024, 3, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = false,
-                            Stars = 3,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 3, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 19
+                            UserId = 46
                         },
                         new
                         {
                             Id = 70,
-                            Comment = "Review 70 for craftsman 10",
+                            Comment = "Review #70 for craftsman 10",
                             CraftsmanId = 10,
                             CreatedAt = new DateTime(2024, 3, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
+                            IsVerified = true,
                             Stars = 3,
                             UpdatedAt = new DateTime(2024, 3, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 20
+                            UserId = 47
                         },
                         new
                         {
                             Id = 71,
-                            Comment = "Review 71 for craftsman 11",
+                            Comment = "Review #71 for craftsman 11",
                             CraftsmanId = 11,
                             CreatedAt = new DateTime(2024, 3, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -6041,7 +6105,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 72,
-                            Comment = "Review 72 for craftsman 12",
+                            Comment = "Review #72 for craftsman 12",
                             CraftsmanId = 12,
                             CreatedAt = new DateTime(2024, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -6049,154 +6113,154 @@ namespace Sanay3yMasr.Migrations
                             IsVerified = true,
                             Stars = 5,
                             UpdatedAt = new DateTime(2024, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 22
+                            UserId = 49
                         },
                         new
                         {
                             Id = 73,
-                            Comment = "Review 73 for craftsman 13",
+                            Comment = "Review #73 for craftsman 13",
                             CraftsmanId = 13,
                             CreatedAt = new DateTime(2024, 3, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
+                            IsVerified = false,
                             Stars = 3,
                             UpdatedAt = new DateTime(2024, 3, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 23
+                            UserId = 32
                         },
                         new
                         {
                             Id = 74,
-                            Comment = "Review 74 for craftsman 14",
+                            Comment = "Review #74 for craftsman 14",
                             CraftsmanId = 14,
                             CreatedAt = new DateTime(2024, 3, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 5,
+                            IsVerified = true,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 3, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 24
+                            UserId = 33
                         },
                         new
                         {
                             Id = 75,
-                            Comment = "Review 75 for craftsman 15",
+                            Comment = "Review #75 for craftsman 15",
                             CraftsmanId = 15,
                             CreatedAt = new DateTime(2024, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 4,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 25
+                            UserId = 34
                         },
                         new
                         {
                             Id = 76,
-                            Comment = "Review 76 for craftsman 16",
+                            Comment = "Review #76 for craftsman 16",
                             CraftsmanId = 16,
                             CreatedAt = new DateTime(2024, 3, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 3, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 26
+                            UserId = 35
                         },
                         new
                         {
                             Id = 77,
-                            Comment = "Review 77 for craftsman 17",
+                            Comment = "Review #77 for craftsman 17",
                             CraftsmanId = 17,
                             CreatedAt = new DateTime(2024, 3, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
-                            Stars = 5,
+                            IsVerified = false,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 3, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 27
+                            UserId = 36
                         },
                         new
                         {
                             Id = 78,
-                            Comment = "Review 78 for craftsman 18",
+                            Comment = "Review #78 for craftsman 18",
                             CraftsmanId = 18,
                             CreatedAt = new DateTime(2024, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
                             Stars = 5,
                             UpdatedAt = new DateTime(2024, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 28
+                            UserId = 37
                         },
                         new
                         {
                             Id = 79,
-                            Comment = "Review 79 for craftsman 19",
+                            Comment = "Review #79 for craftsman 19",
                             CraftsmanId = 19,
                             CreatedAt = new DateTime(2024, 3, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 4,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 3, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 29
+                            UserId = 38
                         },
                         new
                         {
                             Id = 80,
-                            Comment = "Review 80 for craftsman 20",
+                            Comment = "Review #80 for craftsman 20",
                             CraftsmanId = 20,
                             CreatedAt = new DateTime(2024, 3, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 5,
+                            IsVerified = true,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 3, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 30
+                            UserId = 39
                         },
                         new
                         {
                             Id = 81,
-                            Comment = "Review 81 for craftsman 21",
+                            Comment = "Review #81 for craftsman 21",
                             CraftsmanId = 21,
                             CreatedAt = new DateTime(2024, 3, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
+                            IsVerified = false,
                             Stars = 5,
                             UpdatedAt = new DateTime(2024, 3, 21, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 82,
-                            Comment = "Review 82 for craftsman 22",
+                            Comment = "Review #82 for craftsman 22",
                             CraftsmanId = 22,
                             CreatedAt = new DateTime(2024, 3, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
                             Stars = 3,
                             UpdatedAt = new DateTime(2024, 3, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 32
+                            UserId = 41
                         },
                         new
                         {
                             Id = 83,
-                            Comment = "Review 83 for craftsman 23",
+                            Comment = "Review #83 for craftsman 23",
                             CraftsmanId = 23,
                             CreatedAt = new DateTime(2024, 3, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 3,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 3, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 33
+                            UserId = 42
                         },
                         new
                         {
                             Id = 84,
-                            Comment = "Review 84 for craftsman 24",
+                            Comment = "Review #84 for craftsman 24",
                             CraftsmanId = 24,
                             CreatedAt = new DateTime(2024, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -6204,25 +6268,25 @@ namespace Sanay3yMasr.Migrations
                             IsVerified = true,
                             Stars = 5,
                             UpdatedAt = new DateTime(2024, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 34
+                            UserId = 43
                         },
                         new
                         {
                             Id = 85,
-                            Comment = "Review 85 for craftsman 25",
+                            Comment = "Review #85 for craftsman 25",
                             CraftsmanId = 25,
                             CreatedAt = new DateTime(2024, 3, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
+                            IsVerified = false,
                             Stars = 3,
                             UpdatedAt = new DateTime(2024, 3, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 35
+                            UserId = 44
                         },
                         new
                         {
                             Id = 86,
-                            Comment = "Review 86 for craftsman 26",
+                            Comment = "Review #86 for craftsman 26",
                             CraftsmanId = 26,
                             CreatedAt = new DateTime(2024, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -6230,25 +6294,25 @@ namespace Sanay3yMasr.Migrations
                             IsVerified = true,
                             Stars = 4,
                             UpdatedAt = new DateTime(2024, 3, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 36
+                            UserId = 45
                         },
                         new
                         {
                             Id = 87,
-                            Comment = "Review 87 for craftsman 27",
+                            Comment = "Review #87 for craftsman 27",
                             CraftsmanId = 27,
                             CreatedAt = new DateTime(2024, 3, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 3,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 3, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 37
+                            UserId = 46
                         },
                         new
                         {
                             Id = 88,
-                            Comment = "Review 88 for craftsman 28",
+                            Comment = "Review #88 for craftsman 28",
                             CraftsmanId = 28,
                             CreatedAt = new DateTime(2024, 3, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -6256,41 +6320,41 @@ namespace Sanay3yMasr.Migrations
                             IsVerified = true,
                             Stars = 3,
                             UpdatedAt = new DateTime(2024, 3, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 38
+                            UserId = 47
                         },
                         new
                         {
                             Id = 89,
-                            Comment = "Review 89 for craftsman 29",
+                            Comment = "Review #89 for craftsman 29",
                             CraftsmanId = 29,
                             CreatedAt = new DateTime(2024, 3, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
-                            Stars = 3,
+                            IsVerified = false,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 3, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 39
+                            UserId = 48
                         },
                         new
                         {
                             Id = 90,
-                            Comment = "Review 90 for craftsman 30",
+                            Comment = "Review #90 for craftsman 30",
                             CraftsmanId = 30,
                             CreatedAt = new DateTime(2024, 3, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 4,
+                            IsVerified = true,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 3, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 40
+                            UserId = 49
                         },
                         new
                         {
                             Id = 91,
-                            Comment = "Review 91 for craftsman 1",
+                            Comment = "Review #91 for craftsman 1",
                             CraftsmanId = 1,
                             CreatedAt = new DateTime(2024, 3, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
                             Stars = 3,
@@ -6299,59 +6363,59 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 92,
-                            Comment = "Review 92 for craftsman 2",
+                            Comment = "Review #92 for craftsman 2",
                             CraftsmanId = 2,
                             CreatedAt = new DateTime(2024, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
+                            IsVerified = true,
                             Stars = 4,
                             UpdatedAt = new DateTime(2024, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 42
+                            UserId = 33
                         },
                         new
                         {
                             Id = 93,
-                            Comment = "Review 93 for craftsman 3",
+                            Comment = "Review #93 for craftsman 3",
                             CraftsmanId = 3,
                             CreatedAt = new DateTime(2024, 4, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = false,
-                            Stars = 4,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 4, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 43
+                            UserId = 34
                         },
                         new
                         {
                             Id = 94,
-                            Comment = "Review 94 for craftsman 4",
+                            Comment = "Review #94 for craftsman 4",
                             CraftsmanId = 4,
                             CreatedAt = new DateTime(2024, 4, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 4, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 44
+                            UserId = 35
                         },
                         new
                         {
                             Id = 95,
-                            Comment = "Review 95 for craftsman 5",
+                            Comment = "Review #95 for craftsman 5",
                             CraftsmanId = 5,
                             CreatedAt = new DateTime(2024, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
                             Stars = 4,
                             UpdatedAt = new DateTime(2024, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 45
+                            UserId = 36
                         },
                         new
                         {
                             Id = 96,
-                            Comment = "Review 96 for craftsman 6",
+                            Comment = "Review #96 for craftsman 6",
                             CraftsmanId = 6,
                             CreatedAt = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -6359,25 +6423,25 @@ namespace Sanay3yMasr.Migrations
                             IsVerified = true,
                             Stars = 5,
                             UpdatedAt = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 46
+                            UserId = 37
                         },
                         new
                         {
                             Id = 97,
-                            Comment = "Review 97 for craftsman 7",
+                            Comment = "Review #97 for craftsman 7",
                             CraftsmanId = 7,
                             CreatedAt = new DateTime(2024, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = false,
-                            Stars = 5,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 4, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 47
+                            UserId = 38
                         },
                         new
                         {
                             Id = 98,
-                            Comment = "Review 98 for craftsman 8",
+                            Comment = "Review #98 for craftsman 8",
                             CraftsmanId = 8,
                             CreatedAt = new DateTime(2024, 4, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -6385,154 +6449,154 @@ namespace Sanay3yMasr.Migrations
                             IsVerified = true,
                             Stars = 4,
                             UpdatedAt = new DateTime(2024, 4, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 48
+                            UserId = 39
                         },
                         new
                         {
                             Id = 99,
-                            Comment = "Review 99 for craftsman 9",
+                            Comment = "Review #99 for craftsman 9",
                             CraftsmanId = 9,
                             CreatedAt = new DateTime(2024, 4, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 3,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 4, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 49
+                            UserId = 40
                         },
                         new
                         {
                             Id = 100,
-                            Comment = "Review 100 for craftsman 10",
+                            Comment = "Review #100 for craftsman 10",
                             CraftsmanId = 10,
                             CreatedAt = new DateTime(2024, 4, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 4, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 50
+                            UserId = 41
                         },
                         new
                         {
                             Id = 101,
-                            Comment = "Review 101 for craftsman 11",
+                            Comment = "Review #101 for craftsman 11",
                             CraftsmanId = 11,
                             CreatedAt = new DateTime(2024, 4, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
+                            IsVerified = false,
                             Stars = 4,
                             UpdatedAt = new DateTime(2024, 4, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 102,
-                            Comment = "Review 102 for craftsman 12",
+                            Comment = "Review #102 for craftsman 12",
                             CraftsmanId = 12,
                             CreatedAt = new DateTime(2024, 4, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 4,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 4, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 2
+                            UserId = 43
                         },
                         new
                         {
                             Id = 103,
-                            Comment = "Review 103 for craftsman 13",
+                            Comment = "Review #103 for craftsman 13",
                             CraftsmanId = 13,
                             CreatedAt = new DateTime(2024, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 3
+                            UserId = 44
                         },
                         new
                         {
                             Id = 104,
-                            Comment = "Review 104 for craftsman 14",
+                            Comment = "Review #104 for craftsman 14",
                             CraftsmanId = 14,
                             CreatedAt = new DateTime(2024, 4, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 4, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 4
+                            UserId = 45
                         },
                         new
                         {
                             Id = 105,
-                            Comment = "Review 105 for craftsman 15",
+                            Comment = "Review #105 for craftsman 15",
                             CraftsmanId = 15,
                             CreatedAt = new DateTime(2024, 4, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = true,
+                            IsVerified = false,
                             Stars = 5,
                             UpdatedAt = new DateTime(2024, 4, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 5
+                            UserId = 46
                         },
                         new
                         {
                             Id = 106,
-                            Comment = "Review 106 for craftsman 16",
+                            Comment = "Review #106 for craftsman 16",
                             CraftsmanId = 16,
                             CreatedAt = new DateTime(2024, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 4,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 6
+                            UserId = 47
                         },
                         new
                         {
                             Id = 107,
-                            Comment = "Review 107 for craftsman 17",
+                            Comment = "Review #107 for craftsman 17",
                             CraftsmanId = 17,
                             CreatedAt = new DateTime(2024, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 7
+                            UserId = 48
                         },
                         new
                         {
                             Id = 108,
-                            Comment = "Review 108 for craftsman 18",
+                            Comment = "Review #108 for craftsman 18",
                             CraftsmanId = 18,
                             CreatedAt = new DateTime(2024, 4, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            IsDeleted = false,
-                            IsVerified = true,
-                            Stars = 3,
-                            UpdatedAt = new DateTime(2024, 4, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 8
-                        },
-                        new
-                        {
-                            Id = 109,
-                            Comment = "Review 109 for craftsman 19",
-                            CraftsmanId = 19,
-                            CreatedAt = new DateTime(2024, 4, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
                             Stars = 5,
+                            UpdatedAt = new DateTime(2024, 4, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 49
+                        },
+                        new
+                        {
+                            Id = 109,
+                            Comment = "Review #109 for craftsman 19",
+                            CraftsmanId = 19,
+                            CreatedAt = new DateTime(2024, 4, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsApproved = true,
+                            IsDeleted = false,
+                            IsVerified = false,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 4, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 9
+                            UserId = 32
                         },
                         new
                         {
                             Id = 110,
-                            Comment = "Review 110 for craftsman 20",
+                            Comment = "Review #110 for craftsman 20",
                             CraftsmanId = 20,
                             CreatedAt = new DateTime(2024, 4, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -6540,37 +6604,37 @@ namespace Sanay3yMasr.Migrations
                             IsVerified = true,
                             Stars = 4,
                             UpdatedAt = new DateTime(2024, 4, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 10
+                            UserId = 33
                         },
                         new
                         {
                             Id = 111,
-                            Comment = "Review 111 for craftsman 21",
+                            Comment = "Review #111 for craftsman 21",
                             CraftsmanId = 21,
                             CreatedAt = new DateTime(2024, 4, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 3,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 4, 20, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 112,
-                            Comment = "Review 112 for craftsman 22",
+                            Comment = "Review #112 for craftsman 22",
                             CraftsmanId = 22,
                             CreatedAt = new DateTime(2024, 4, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 5,
+                            IsVerified = true,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 4, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 12
+                            UserId = 35
                         },
                         new
                         {
                             Id = 113,
-                            Comment = "Review 113 for craftsman 23",
+                            Comment = "Review #113 for craftsman 23",
                             CraftsmanId = 23,
                             CreatedAt = new DateTime(2024, 4, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
@@ -6578,98 +6642,98 @@ namespace Sanay3yMasr.Migrations
                             IsVerified = false,
                             Stars = 4,
                             UpdatedAt = new DateTime(2024, 4, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 13
+                            UserId = 36
                         },
                         new
                         {
                             Id = 114,
-                            Comment = "Review 114 for craftsman 24",
+                            Comment = "Review #114 for craftsman 24",
                             CraftsmanId = 24,
                             CreatedAt = new DateTime(2024, 4, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 3,
-                            UpdatedAt = new DateTime(2024, 4, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 14
-                        },
-                        new
-                        {
-                            Id = 115,
-                            Comment = "Review 115 for craftsman 25",
-                            CraftsmanId = 25,
-                            CreatedAt = new DateTime(2024, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 3,
-                            UpdatedAt = new DateTime(2024, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 15
-                        },
-                        new
-                        {
-                            Id = 116,
-                            Comment = "Review 116 for craftsman 26",
-                            CraftsmanId = 26,
-                            CreatedAt = new DateTime(2024, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
-                            IsDeleted = false,
-                            IsVerified = true,
-                            Stars = 5,
-                            UpdatedAt = new DateTime(2024, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 16
-                        },
-                        new
-                        {
-                            Id = 117,
-                            Comment = "Review 117 for craftsman 27",
-                            CraftsmanId = 27,
-                            CreatedAt = new DateTime(2024, 4, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
                             Stars = 5,
+                            UpdatedAt = new DateTime(2024, 4, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 37
+                        },
+                        new
+                        {
+                            Id = 115,
+                            Comment = "Review #115 for craftsman 25",
+                            CraftsmanId = 25,
+                            CreatedAt = new DateTime(2024, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsApproved = true,
+                            IsDeleted = false,
+                            IsVerified = true,
+                            Stars = 3,
+                            UpdatedAt = new DateTime(2024, 4, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 38
+                        },
+                        new
+                        {
+                            Id = 116,
+                            Comment = "Review #116 for craftsman 26",
+                            CraftsmanId = 26,
+                            CreatedAt = new DateTime(2024, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsApproved = true,
+                            IsDeleted = false,
+                            IsVerified = true,
+                            Stars = 4,
+                            UpdatedAt = new DateTime(2024, 4, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = 39
+                        },
+                        new
+                        {
+                            Id = 117,
+                            Comment = "Review #117 for craftsman 27",
+                            CraftsmanId = 27,
+                            CreatedAt = new DateTime(2024, 4, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsApproved = true,
+                            IsDeleted = false,
+                            IsVerified = false,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 4, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 17
+                            UserId = 40
                         },
                         new
                         {
                             Id = 118,
-                            Comment = "Review 118 for craftsman 28",
+                            Comment = "Review #118 for craftsman 28",
                             CraftsmanId = 28,
                             CreatedAt = new DateTime(2024, 4, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
-                            IsVerified = false,
-                            Stars = 4,
+                            IsVerified = true,
+                            Stars = 3,
                             UpdatedAt = new DateTime(2024, 4, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 18
+                            UserId = 41
                         },
                         new
                         {
                             Id = 119,
-                            Comment = "Review 119 for craftsman 29",
+                            Comment = "Review #119 for craftsman 29",
                             CraftsmanId = 29,
                             CreatedAt = new DateTime(2024, 4, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 5,
+                            Stars = 4,
                             UpdatedAt = new DateTime(2024, 4, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 19
+                            UserId = 42
                         },
                         new
                         {
                             Id = 120,
-                            Comment = "Review 120 for craftsman 30",
+                            Comment = "Review #120 for craftsman 30",
                             CraftsmanId = 30,
                             CreatedAt = new DateTime(2024, 4, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsApproved = false,
+                            IsApproved = true,
                             IsDeleted = false,
                             IsVerified = true,
-                            Stars = 4,
+                            Stars = 5,
                             UpdatedAt = new DateTime(2024, 4, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserId = 20
+                            UserId = 43
                         });
                 });
 
@@ -6681,16 +6745,31 @@ namespace Sanay3yMasr.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Jti")
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Expiration")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Token")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("RevokedAt")
+                    b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("RevokedTokens");
+                    b.ToTable("RevokedToken");
                 });
 
             modelBuilder.Entity("DataAccess.Models.Skill", b =>
@@ -6899,19 +6978,19 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 19,
-                            ArabicName = "إصلاح تسريب أسطح",
+                            ArabicName = "مهارة عامة 19",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Roof Leak Repair",
+                            Name = "General Skill 19",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 20,
-                            ArabicName = "تركيب شتر",
+                            ArabicName = "مهارة عامة 20",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Shutter Installation",
+                            Name = "General Skill 20",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -6935,177 +7014,168 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 23,
-                            ArabicName = "إصلاح محركات سيارات",
+                            ArabicName = "مهارة عامة 23",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Car Engine Repair",
+                            Name = "General Skill 23",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 24,
-                            ArabicName = "إصلاح فرامل",
+                            ArabicName = "مهارة عامة 24",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Brake Repair",
+                            Name = "General Skill 24",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 25,
-                            ArabicName = "تغيير بطارية",
+                            ArabicName = "مهارة عامة 25",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Battery Replacement",
+                            Name = "General Skill 25",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 26,
-                            ArabicName = "لحام حديد",
+                            ArabicName = "مهارة عامة 26",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Welding Mild Steel",
+                            Name = "General Skill 26",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 27,
-                            ArabicName = "لحام ستانلس ستيل",
+                            ArabicName = "مهارة عامة 27",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Welding Stainless",
+                            Name = "General Skill 27",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 28,
-                            ArabicName = "تقليم حدائق",
+                            ArabicName = "مهارة عامة 28",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Garden Pruning",
+                            Name = "General Skill 28",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 29,
-                            ArabicName = "جزّ العشب",
+                            ArabicName = "مهارة عامة 29",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Lawn Mowing",
+                            Name = "General Skill 29",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 30,
-                            ArabicName = "غسيل بالضغط",
+                            ArabicName = "مهارة عامة 30",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Pressure Washing",
+                            Name = "General Skill 30",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 31,
-                            ArabicName = "تنظيف عميق",
+                            ArabicName = "مهارة عامة 31",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Deep Cleaning",
+                            Name = "General Skill 31",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 32,
-                            ArabicName = "تركيب ورق حائط",
+                            ArabicName = "مهارة عامة 32",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Wallpaper Installation",
+                            Name = "General Skill 32",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 33,
-                            ArabicName = "محارة ديكورية",
+                            ArabicName = "مهارة عامة 33",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Decorative Plaster",
+                            Name = "General Skill 33",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 34,
-                            ArabicName = "مكافحة النمل الأبيض",
+                            ArabicName = "مهارة عامة 34",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Pest Termite",
+                            Name = "General Skill 34",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 35,
-                            ArabicName = "مكافحة القوارض",
+                            ArabicName = "مهارة عامة 35",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Pest Rodent",
+                            Name = "General Skill 35",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 36,
-                            ArabicName = "تقطيع زجاج",
+                            ArabicName = "مهارة عامة 36",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Glass Cutting",
+                            Name = "General Skill 36",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 37,
-                            ArabicName = "تركيب مرايات",
+                            ArabicName = "مهارة عامة 37",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Mirror Fitting",
+                            Name = "General Skill 37",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 38,
-                            ArabicName = "تلميع أرضيات",
+                            ArabicName = "مهارة عامة 38",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Polish Floors",
+                            Name = "General Skill 38",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 39,
-                            ArabicName = "تلميع رخام",
+                            ArabicName = "مهارة عامة 39",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Marble Polishing",
+                            Name = "General Skill 39",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 40,
-                            ArabicName = "إصلاح سيراميك",
+                            ArabicName = "مهارة عامة 40",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Ceramic Fixing",
+                            Name = "General Skill 40",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 41,
-                            ArabicName = "تمديدات تكييف مركزي",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "HVAC Ductwork",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 42,
                             ArabicName = "إصلاح ثلاجات",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -7114,7 +7184,7 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 43,
+                            Id = 42,
                             ArabicName = "إصلاح غسالات",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -7123,7 +7193,7 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 44,
+                            Id = 43,
                             ArabicName = "إصلاح أفران",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -7132,7 +7202,7 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 45,
+                            Id = 44,
                             ArabicName = "إصلاح ميكروويف",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -7141,20 +7211,29 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 46,
-                            ArabicName = "تركيب دش",
+                            Id = 45,
+                            ArabicName = "مهارة عامة 45",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Satellite Installation",
+                            Name = "General Skill 45",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 46,
+                            ArabicName = "مهارة عامة 46",
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "General Skill 46",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 47,
-                            ArabicName = "تركيب مسرح منزلي",
+                            ArabicName = "مهارة عامة 47",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Home Theater Setup",
+                            Name = "General Skill 47",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -7169,28 +7248,28 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 49,
-                            ArabicName = "إصلاح أسوار",
+                            ArabicName = "مهارة عامة 49",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Fence Repair",
+                            Name = "General Skill 49",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 50,
-                            ArabicName = "تنظيف مزاريب",
+                            ArabicName = "مهارة عامة 50",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Gutter Cleaning",
+                            Name = "General Skill 50",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 51,
-                            ArabicName = "صيانة حمامات سباحة",
+                            ArabicName = "مهارة عامة 51",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Pool Maintenance",
+                            Name = "General Skill 51",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -7205,19 +7284,19 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 53,
-                            ArabicName = "أنظمة تخزين طاقة",
+                            ArabicName = "مهارة عامة 53",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Battery Storage",
+                            Name = "General Skill 53",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 54,
-                            ArabicName = "تركيب عزل",
+                            ArabicName = "مهارة عامة 54",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Insulation Install",
+                            Name = "General Skill 54",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -7232,28 +7311,28 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 56,
-                            ArabicName = "أنظمة تحكم دخول",
+                            ArabicName = "مهارة عامة 56",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Access Control",
+                            Name = "General Skill 56",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 57,
-                            ArabicName = "إصلاح حلق باب",
+                            ArabicName = "مهارة عامة 57",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Door Frame Repair",
+                            Name = "General Skill 57",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 58,
-                            ArabicName = "تركيب وزرة",
+                            ArabicName = "مهارة عامة 58",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            Name = "Skirting Fix",
+                            Name = "General Skill 58",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
@@ -7272,159 +7351,6 @@ namespace Sanay3yMasr.Migrations
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
                             Name = "Kitchen Renovation",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 61,
-                            ArabicName = "تركيب رخام مطابخ",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Countertop Install",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 62,
-                            ArabicName = "تقطيع بلاط",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Tile Cutting",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 63,
-                            ArabicName = "فحص سباكة",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Plumbing Inspection",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 64,
-                            ArabicName = "إصلاح بيارات",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Septic Repair",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 65,
-                            ArabicName = "عزل وسد فواصل",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Sealing & Caulking",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 66,
-                            ArabicName = "إصلاح خرسانة",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Concrete Repair",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 67,
-                            ArabicName = "ترميم أساسات",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Foundation Patch",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 68,
-                            ArabicName = "بناء طوب",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Bricklaying",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 69,
-                            ArabicName = "ترميم مباني",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Masonry Repair",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 70,
-                            ArabicName = "إصلاح شبابيك",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Window Repair",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 71,
-                            ArabicName = "تركيب ستائر",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Curtain Rod",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 72,
-                            ArabicName = "تصليح تنجيد",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Upholstery Repair",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 73,
-                            ArabicName = "تنظيف كنب",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Sofa Cleaning",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 74,
-                            ArabicName = "تنظيف مراتب",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Mattress Cleaning",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 75,
-                            ArabicName = "تنظيف مداخن",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Chimney Sweep",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 76,
-                            ArabicName = "إصلاح مدافئ",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Fireplace Repair",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 77,
-                            ArabicName = "تركيب كاشف دخان",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            IsDeleted = false,
-                            Name = "Smoke Alarm Install",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -7532,6 +7458,9 @@ namespace Sanay3yMasr.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("CityId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -7547,6 +7476,9 @@ namespace Sanay3yMasr.Migrations
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
+
+                    b.Property<int?>("GovernorateId")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .ValueGeneratedOnAdd()
@@ -7581,8 +7513,12 @@ namespace Sanay3yMasr.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CityId");
+
                     b.HasIndex("Email")
                         .IsUnique();
+
+                    b.HasIndex("GovernorateId");
 
                     b.ToTable("Users", (string)null);
 
@@ -7591,11 +7527,11 @@ namespace Sanay3yMasr.Migrations
                         {
                             Id = 1,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "Mohamednasr@gmail.com",
-                            FullName = "Mohamednasr",
+                            Email = "admin@gmail.com",
+                            FullName = "Admin",
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "O2Esdae1BIpDX7bsgeUv+S1teVqLWpwXBw9qY8l6U7I=",
                             Phone = "01000000000",
                             ProfileImage = "default-user.png",
                             Role = "Admin",
@@ -7604,12 +7540,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 2,
+                            CityId = 3,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user2@example.com",
                             FullName = "أحمد علي",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000002",
                             ProfileImage = "default-user.png",
                             Role = "Craftsman",
@@ -7618,12 +7556,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 3,
+                            CityId = 4,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user3@example.com",
                             FullName = "محمد حسن",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000003",
                             ProfileImage = "default-user.png",
                             Role = "Craftsman",
@@ -7632,12 +7572,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 4,
+                            CityId = 5,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user4@example.com",
                             FullName = "محمود إبراهيم",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000004",
                             ProfileImage = "default-user.png",
                             Role = "Craftsman",
@@ -7646,12 +7588,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 5,
+                            CityId = 1,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user5@example.com",
                             FullName = "عبدالله محمود",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000005",
                             ProfileImage = "default-user.png",
                             Role = "Craftsman",
@@ -7660,12 +7604,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 6,
+                            CityId = 2,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user6@example.com",
                             FullName = "عمر سامي",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000006",
                             ProfileImage = "default-user.png",
                             Role = "Craftsman",
@@ -7674,362 +7620,414 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 7,
+                            CityId = 3,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user7@example.com",
                             FullName = "كريم صلاح",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000007",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 8,
+                            CityId = 4,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user8@example.com",
                             FullName = "سارة محمد",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000008",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 9,
+                            CityId = 5,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user9@example.com",
                             FullName = "نور مصطفى",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000009",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 10,
+                            CityId = 1,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user10@example.com",
                             FullName = "هند أحمد",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000010",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 11,
+                            CityId = 2,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user11@example.com",
                             FullName = "ليلى صلاح",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000011",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 12,
+                            CityId = 3,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user12@example.com",
                             FullName = "منى علي",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000012",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 13,
+                            CityId = 4,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user13@example.com",
                             FullName = "إيهاب سعيد",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000013",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 14,
+                            CityId = 5,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user14@example.com",
                             FullName = "مروة سمير",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000014",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 15,
+                            CityId = 1,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user15@example.com",
                             FullName = "طارق حسن",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000015",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 16,
+                            CityId = 2,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user16@example.com",
                             FullName = "علي فؤاد",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000016",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 17,
+                            CityId = 3,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user17@example.com",
                             FullName = "يوسف أحمد",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000017",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 18,
+                            CityId = 4,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user18@example.com",
                             FullName = "عائشة محمود",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000018",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 19,
+                            CityId = 5,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user19@example.com",
                             FullName = "مريم علي",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000019",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 20,
+                            CityId = 1,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user20@example.com",
                             FullName = "خالد محمد",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000020",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 21,
+                            CityId = 2,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user21@example.com",
                             FullName = "إبراهيم حسن",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000021",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 22,
+                            CityId = 3,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user22@example.com",
                             FullName = "علياء عمر",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000022",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 23,
+                            CityId = 4,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user23@example.com",
                             FullName = "نوران خالد",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000023",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 24,
+                            CityId = 5,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user24@example.com",
                             FullName = "سعد محمود",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000024",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 25,
+                            CityId = 1,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user25@example.com",
                             FullName = "راغب سمير",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000025",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 26,
+                            CityId = 2,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user26@example.com",
                             FullName = "إيمان أيمن",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000026",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 27,
+                            CityId = 3,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user27@example.com",
                             FullName = "ريم أحمد",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000027",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 28,
+                            CityId = 4,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user28@example.com",
                             FullName = "هشام فتحي",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000028",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 29,
+                            CityId = 5,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user29@example.com",
                             FullName = "سامي ياسر",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000029",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 30,
+                            CityId = 1,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user30@example.com",
                             FullName = "أمل محمود",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000030",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 31,
+                            CityId = 2,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user31@example.com",
                             FullName = "شهد علي",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000031",
                             ProfileImage = "default-user.png",
-                            Role = "Customer",
+                            Role = "Craftsman",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 32,
+                            CityId = 3,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user32@example.com",
                             FullName = "إيناس سامي",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000032",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8038,12 +8036,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 33,
+                            CityId = 4,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user33@example.com",
                             FullName = "مصطفى جمال",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000033",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8052,12 +8052,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 34,
+                            CityId = 5,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user34@example.com",
                             FullName = "حسن يوسف",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000034",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8066,12 +8068,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 35,
+                            CityId = 1,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user35@example.com",
                             FullName = "نبيل عبدالعزيز",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000035",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8080,12 +8084,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 36,
+                            CityId = 2,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user36@example.com",
                             FullName = "شيماء إبراهيم",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000036",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8094,12 +8100,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 37,
+                            CityId = 3,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user37@example.com",
                             FullName = "دنيا حسني",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000037",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8108,12 +8116,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 38,
+                            CityId = 4,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user38@example.com",
                             FullName = "هالة سمير",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000038",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8122,12 +8132,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 39,
+                            CityId = 5,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user39@example.com",
                             FullName = "رنا خالد",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000039",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8136,12 +8148,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 40,
+                            CityId = 1,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user40@example.com",
                             FullName = "نوح أحمد",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000040",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8150,12 +8164,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 41,
+                            CityId = 2,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user41@example.com",
                             FullName = "آدم علي",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000041",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8164,12 +8180,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 42,
+                            CityId = 3,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user42@example.com",
                             FullName = "ملاك حسن",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000042",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8178,12 +8196,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 43,
+                            CityId = 4,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user43@example.com",
                             FullName = "زينة محمود",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000043",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8192,12 +8212,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 44,
+                            CityId = 5,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user44@example.com",
                             FullName = "تامر إيهاب",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000044",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8206,12 +8228,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 45,
+                            CityId = 1,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user45@example.com",
                             FullName = "ماهر صبري",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000045",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8220,12 +8244,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 46,
+                            CityId = 2,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user46@example.com",
                             FullName = "جمال حسين",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000046",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8234,12 +8260,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 47,
+                            CityId = 3,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user47@example.com",
                             FullName = "رامي خالد",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000047",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8248,12 +8276,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 48,
+                            CityId = 4,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user48@example.com",
                             FullName = "بهاء الدين محمد",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000048",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8262,12 +8292,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 49,
+                            CityId = 5,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user49@example.com",
                             FullName = "كرم أحمد",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000049",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8276,12 +8308,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 50,
+                            CityId = 1,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user50@example.com",
                             FullName = "بلال سمير",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000050",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8290,12 +8324,14 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 51,
+                            CityId = 2,
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user51@example.com",
                             FullName = "سلوى علي",
+                            GovernorateId = 1,
                             IsActive = true,
                             IsDeleted = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEERqbEWm5A5WFqfzMM8F+kLtO9c+LeWAc2qN89pq5lIljckEmL/1dj5y/UMzuItRHQ==",
+                            PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
                             Phone = "01000000051",
                             ProfileImage = "default-user.png",
                             Role = "Customer",
@@ -8412,6 +8448,17 @@ namespace Sanay3yMasr.Migrations
                     b.Navigation("Subscription");
                 });
 
+            modelBuilder.Entity("DataAccess.Models.RefreshToken", b =>
+                {
+                    b.HasOne("DataAccess.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("DataAccess.Models.Report", b =>
                 {
                     b.HasOne("DataAccess.Models.Craftsman", "ReportedCraftsman")
@@ -8447,6 +8494,21 @@ namespace Sanay3yMasr.Migrations
                     b.Navigation("Craftsman");
 
                     b.Navigation("Reviewer");
+                });
+
+            modelBuilder.Entity("DataAccess.Models.User", b =>
+                {
+                    b.HasOne("DataAccess.Models.City", "City")
+                        .WithMany()
+                        .HasForeignKey("CityId");
+
+                    b.HasOne("DataAccess.Models.Governorate", "Governorate")
+                        .WithMany()
+                        .HasForeignKey("GovernorateId");
+
+                    b.Navigation("City");
+
+                    b.Navigation("Governorate");
                 });
 
             modelBuilder.Entity("CraftsmanSubscription", b =>

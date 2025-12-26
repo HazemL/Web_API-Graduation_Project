@@ -1,18 +1,26 @@
-﻿using BusinessLogic.Security;
+﻿using BusinessLogic.Interface;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Sanay3yMasr.Controllers
+[ApiController]
+[Route("api/test/hash")]
+public class HashTestController : ControllerBase
 {
-    [ApiController]
-    [Route("api/Test")]
-    public class TestController : ControllerBase
+    private readonly IPasswordHasher _passwordHasher;
+
+    public HashTestController(IPasswordHasher passwordHasher)
     {
-        [HttpGet("hash")]
-        public IActionResult GenerateHash(string password)
-        {
-            var hash = PasswordHasher.Hash(password);
-            return Ok(hash);
-        }
+        _passwordHasher = passwordHasher;
     }
 
+    [HttpGet("{password}")]
+    public IActionResult Hash(string password)
+    {
+        var hash = _passwordHasher.Hash(password);
+        return Ok(new
+        {
+            Password = password,
+            Hash = hash
+        });
+    }
 }
+

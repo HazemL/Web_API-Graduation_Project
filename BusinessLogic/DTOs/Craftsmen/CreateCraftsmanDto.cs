@@ -1,33 +1,22 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BusinessLogic.DTOs.Craftsmen
+public class CreateCraftsmanDto
 {
-    // DTO مسئول عن إنشاء Craftsman جديد
-    public class CreateCraftsmanDto
-    {
-        // الـ User المرتبط بالحرفي
-        [Required]
-        public int UserId { get; set; }
+    [Required]
+    public int UserId { get; set; }
 
-        // المهنة الأساسية
-        [Required]
-        public int ProfessionId { get; set; }
+    [Required]
+    public int ProfessionId { get; set; }
 
-        // نبذة عن الحرفي
-        [Required]
-        [StringLength(1000)]
-        public string Bio { get; set; } = null!;
+    [Required, MinLength(10)]
+    public string Bio { get; set; } = string.Empty;
 
-        // عدد سنوات الخبرة
-        [Range(0, 60)]
-        public int ExperienceYears { get; set; }
+    [Range(0, 50)]
+    public int ExperienceYears { get; set; }
 
-        // أقل سعر
-        [Range(0, double.MaxValue)]
-        public decimal MinPrice { get; set; }
+    [Range(0, 100000)]
+    public decimal MinPrice { get; set; }
 
-        // أعلى سعر
-        [Range(0, double.MaxValue)]
-        public decimal MaxPrice { get; set; }
-    }
+    [Range(0, 100000)]
+    public decimal MaxPrice { get; set; }
 }

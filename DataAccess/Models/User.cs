@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace DataAccess.Models
 {
-    public class User :BaseModel
+    public class User : BaseModel
     {
-       
-
         [Required, EmailAddress]
         public string Email { get; set; } = string.Empty;
 
@@ -20,14 +13,32 @@ namespace DataAccess.Models
         public string FullName { get; set; } = string.Empty;
         public string? Phone { get; set; }
         public string? ProfileImage { get; set; }
-        [Required]
-        public string Role { get; set; } = string.Empty;// "Admin", "Customer", "Craftsman"
-        public bool IsActive { get; set; }
-       
 
-        
-        public virtual ICollection<Craftsman>? CraftsmenProfiles { get; set; }
-        public virtual ICollection<Review>? ReviewsWritten { get; set; }
-        public virtual ICollection<Report>? ReportsFiled { get; set; }
+        [Required]
+        public string Role { get; set; } = "User";
+        public bool IsActive { get; set; } = true;
+
+        // ===== Location =====
+        public int? GovernorateId { get; set; }
+        public Governorate? Governorate { get; set; }
+
+        public int? CityId { get; set; }
+        public City? City { get; set; }
+
+        // =========================
+        // Navigation Properties
+        // =========================
+
+        // User (1) ---> (Many) Craftsman Profiles
+        public virtual ICollection<Craftsman> CraftsmenProfiles { get; set; }
+            = new HashSet<Craftsman>();
+
+        // User (1) ---> (Many) Reports
+        public virtual ICollection<Report> ReportsFiled { get; set; }
+            = new HashSet<Report>();
+
+        // User (1) ---> (Many) Reviews
+        public virtual ICollection<Review> ReviewsWritten { get; set; }
+            = new HashSet<Review>();
     }
 }

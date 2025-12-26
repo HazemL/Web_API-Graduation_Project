@@ -13,23 +13,26 @@ namespace DataAccess.Seeding
             var baseDate = new DateTime(2024, 1, 1);
             int id = 1;
 
-            // Payments for subscriptions 1..20
-            for (int sub = 1; sub <= 20; sub++)
+            // Payments for subscriptions: 1 -> 20
+            for (int subId = 1; subId <= 20; subId++)
             {
+                bool isBasic = (subId % 2 == 0);
+
                 payments.Add(new Payment
                 {
                     Id = id++,
-                    SubscriptionId = sub,
-                    Amount = (sub % 2 == 0) ? 120m : 200m,
+                    SubscriptionId = subId,
+
+                    Amount = isBasic ? 50m : 200m,
                     Currency = "EGP",
-                    PaymentMethod = (sub % 2 == 0) ? "VodafoneCash" : "CreditCard",
-                    ProviderReference = $"TXN{sub:00000}",
+
+                    PaymentMethod = isBasic ? "VodafoneCash" : "CreditCard",
+                    ProviderReference = $"TXN{subId:00000}",
+
                     Status = "Paid",
 
-                    // ✅ BaseModel
-                    IsDeleted = false,
-                    CreatedAt = baseDate.AddDays(sub),
-                    UpdatedAt = baseDate.AddDays(sub)
+                    CreatedAt = baseDate.AddDays(subId),
+                    UpdatedAt = baseDate.AddDays(subId)
                 });
             }
 

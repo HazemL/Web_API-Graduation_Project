@@ -9,25 +9,35 @@ namespace DataAccess.Seeding
     {
         public static void SeedSubscriptionPlans(ModelBuilder modelBuilder)
         {
+            // Fixed date for migration consistency
             var baseDate = new DateTime(2024, 1, 1);
 
             var plans = new List<SubscriptionPlan>
             {
+                // =========================
+                // Free Plan
+                // =========================
                 new SubscriptionPlan
                 {
                     Id = 1,
                     Name = "Free",
                     ArabicName = "مجاني",
                     Price = 0m,
+
+                    // NOTE:
+                    // DurationDays = 0 means no expiration (handled in business logic)
                     DurationDays = 0,
+
                     Features = "Free listing (limited)",
                     IsActive = true,
 
-                    // ✅ BaseModel
-                    IsDeleted = false,
                     CreatedAt = baseDate,
                     UpdatedAt = baseDate
                 },
+
+                // =========================
+                // Basic Plan
+                // =========================
                 new SubscriptionPlan
                 {
                     Id = 2,
@@ -38,10 +48,13 @@ namespace DataAccess.Seeding
                     Features = "Standard listing + contact",
                     IsActive = true,
 
-                    IsDeleted = false,
                     CreatedAt = baseDate,
                     UpdatedAt = baseDate
                 },
+
+                // =========================
+                // Premium Plan
+                // =========================
                 new SubscriptionPlan
                 {
                     Id = 3,
@@ -52,7 +65,6 @@ namespace DataAccess.Seeding
                     Features = "Featured listing + top search",
                     IsActive = true,
 
-                    IsDeleted = false,
                     CreatedAt = baseDate,
                     UpdatedAt = baseDate
                 }

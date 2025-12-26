@@ -13,20 +13,27 @@ namespace DataAccess.Seeding
             var baseDate = new DateTime(2024, 1, 1);
             int id = 1;
 
+            // Create 40 reports
             for (int i = 0; i < 40; i++)
             {
+                int craftsmanId = (i % 30) + 1;
+
+                // Customers only (from SeedUsers: IDs >= 32)
+                int reporterUserId = 32 + (i % 18);
+
+                bool isResolved = (i % 3 != 0);
+
                 reports.Add(new Report
                 {
                     Id = id++,
-
-                    CraftsmanId = (i % 30) + 1,
-                    ReporterUserId = ((i + 5) % 50) + 1,
+                    CraftsmanId = craftsmanId,
+                    ReporterUserId = reporterUserId,
 
                     Message = $"بلاغ رقم {i + 1} بسبب سوء تعامل",
-                    Status = (i % 3 == 0) ? "Pending" : "Resolved",
-                    IsResolved = i % 3 != 0,
 
-                    IsDeleted = false,
+                    Status = isResolved ? "Resolved" : "Pending",
+                    IsResolved = isResolved,
+
                     CreatedAt = baseDate.AddDays(i),
                     UpdatedAt = baseDate.AddDays(i)
                 });

@@ -1,117 +1,69 @@
-﻿using BusinessLogic.Constants;
+﻿using AutoMapper;
 using BusinessLogic.DTOs.Auth;
 using BusinessLogic.Interface;
-using BusinessLogic.Mappers;
-using BusinessLogic.Security;
+using BusinessLogic.Interfaces;
 using DataAccess.Context;
 using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
 
-namespace BusinessLogic.Service
+public class AuthService : IAuthService
 {
-    public class AuthService : IAuthService
+    private readonly Context _context;
+    private readonly IMapper _mapper;
+    private readonly IPasswordHasher _hasher;
+    private readonly ITokenService _tokenService;
+
+    public AuthService(
+        Context context,
+        IMapper mapper,
+        IPasswordHasher hasher,
+        ITokenService tokenService)
     {
-        private readonly Context _context;
-        private readonly JwtTokenGenerator _jwt;
+        _context = context;
+        _mapper = mapper;
+        _hasher = hasher;
+        _tokenService = tokenService;
+    }
 
-        public AuthService(Context context, JwtTokenGenerator jwt)
-        {
-            _context = context;
-            _jwt = jwt;
-        }
+    public async Task<AuthResponseDto> RegisterAsync(RegisterRequestDto dto)
+    {
+        if (await _context.Users.AnyAsync(x => x.Email == dto.Email))
+            throw new Exception("Email already exists");
 
-        // ===================== REGISTER =====================
-        public async Task<AuthResponseDto> RegisterAsync(RegisterRequestDto dto)
-        {
-            // Normalize Email (علشان case insensitive)
-            var email = dto.Email.Trim().ToLower();
+        var user = _mapper.Map<User>(dto);
+        user.PasswordHash = _hasher.Hash(dto.Password);
 
-            // Password validation
-            if (string.IsNullOrWhiteSpace(dto.Password) || dto.Password.Length < 6)
-                throw new Exception("Password must be at least 6 characters");
+        _context.Users.Add(user);
+        await _context.SaveChangesAsync();
 
-            // Check if email already exists
-            var exists = await _context.Users
-                .AnyAsync(x => x.Email == email && !x.IsDeleted);
+        return await _tokenService.GenerateAsync(user);
+    }
 
-            if (exists)
-                throw new Exception("Email already exists");
+    public async Task<AuthResponseDto> LoginAsync(LoginRequestDto dto)
+    {
+        var user = await _context.Users
+            .FirstOrDefaultAsync(x => x.Email == dto.Email && !x.IsDeleted);
 
-            // Prevent self-register as Admin
-            var role = string.IsNullOrWhiteSpace(dto.Role)
-                ? Roles.Customer
-                : dto.Role.Trim();
+        if (user == null ||
+            !_hasher.Verify(dto.Password, user.PasswordHash))
+            throw new Exception("Invalid email or password");
 
-            // Normalize role format (Admin / Customer / Craftsman)
-            role = char.ToUpper(role[0]) + role[1..].ToLower();
+        if (!user.IsActive)
+            throw new Exception("User disabled");
 
-            // Validate role
-            if (!Roles.AllowedRegisterRoles.Contains(role))
-                throw new Exception("Invalid role");
+        return await _tokenService.GenerateAsync(user);
+    }
 
-            // Map DTO → Entity
-            var user = UserMapper.FromRegisterDto(dto, role);
+    public async Task<AuthResponseDto> RefreshTokenAsync(string refreshToken)
+        => await _tokenService.RefreshAsync(refreshToken);
 
-            // Save user
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+    public async Task LogoutAsync(int userId)
+    {
+        var tokens = await _context.RefreshTokens
+            .Where(x => x.UserId == userId && !x.IsRevoked)
+            .ToListAsync();
 
-            // Generate JWT
-            return _jwt.Generate(user);
-        }
-
-        // ===================== LOGIN =====================
-        public async Task<AuthResponseDto> LoginAsync(LoginRequestDto dto)
-        {
-            var email = dto.Email.Trim().ToLower();
-
-            // Get user
-            var user = await _context.Users
-                .FirstOrDefaultAsync(x =>
-                    x.Email == email &&
-                    !x.IsDeleted);
-
-            if (user == null)
-                throw new Exception("Invalid email or password");
-
-            // Verify password hash
-            if (!PasswordHasher.Verify(user.PasswordHash, dto.Password))
-                throw new Exception("Invalid email or password");
-
-            // Check active flag
-            if (!user.IsActive)
-                throw new Exception("User is disabled");
-
-            // Generate JWT
-            return _jwt.Generate(user);
-        }
-
-        // ===================== LOGOUT =====================
-        public async Task LogoutAsync(ClaimsPrincipal user)
-        {
-            // Extract JTI from JWT
-            var jti = user.FindFirst(JwtRegisteredClaimNames.Jti)?.Value;
-
-            if (string.IsNullOrEmpty(jti))
-                throw new Exception("Invalid token");
-
-            //  لو التوكن متلغى قبل كده
-            var exists = await _context.RevokedTokens
-                .AnyAsync(x => x.Jti == jti);
-
-            if (exists)
-                return;
-
-            // نلغيه
-            _context.RevokedTokens.Add(new RevokedToken
-            {
-                Jti = jti,
-                RevokedAt = DateTime.UtcNow
-            });
-
-            await _context.SaveChangesAsync();
-        }
+        tokens.ForEach(x => x.IsRevoked = true);
+        await _context.SaveChangesAsync();
     }
 }

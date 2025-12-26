@@ -8,33 +8,35 @@ namespace DataAccess.Seeding
 {
     public static partial class ModelBuilderExtensions
     {
+        
         public static void SeedCraftsmanSkills(ModelBuilder modelBuilder)
         {
             var list = new List<CraftsmanSkill>();
-            int id = 1;
             var now = new DateTime(2024, 1, 1);
+            int id = 1;
 
-            // نفترض:
-            // Craftsmen: 1 → 30
-            // Skills: 1 → 40
-            int craftsmanCount = 30;
-            int skillCount = 40;
+            // ================================
+            // HARD CONSTRAINTS
+            // ================================
+            // Craftsmen IDs : 1 -> 30
+            // Skills IDs    : 1 -> 60 (MUST match SeedSkills)
+            const int craftsmanCount = 30;
+            const int skillCount = 60;
 
             for (int craftsmanId = 1; craftsmanId <= craftsmanCount; craftsmanId++)
             {
-                // كل Craftsman عنده 3 Skills
+                // كل Craftsman له 3 Skills فقط
                 for (int offset = 0; offset < 3; offset++)
                 {
-                    int skillId = ((craftsmanId + offset) % skillCount) + 1;
+                    // 🔒 SkillId مضمون (1 -> 60)
+                    int skillId = ((craftsmanId - 1) * 3 + offset) % skillCount + 1;
 
-                    ProficiencyLevel level;
-
-                    if (offset == 0)
-                        level = ProficiencyLevel.Beginner;
-                    else if (offset == 1)
-                        level = ProficiencyLevel.Intermediate;
-                    else
-                        level = ProficiencyLevel.Expert;
+                    var level = offset switch
+                    {
+                        0 => ProficiencyLevel.Beginner,
+                        1 => ProficiencyLevel.Intermediate,
+                        _ => ProficiencyLevel.Expert
+                    };
 
                     list.Add(new CraftsmanSkill
                     {
@@ -43,7 +45,6 @@ namespace DataAccess.Seeding
                         SkillId = skillId,
                         ProficiencyLevel = level,
 
-                        // BaseModel
                         IsDeleted = false,
                         CreatedAt = now,
                         UpdatedAt = now
@@ -52,6 +53,7 @@ namespace DataAccess.Seeding
             }
 
             modelBuilder.Entity<CraftsmanSkill>().HasData(list);
+
         }
     }
 }
