@@ -665,3 +665,5 @@ C:\Users\welcome\source\repos\Web_API-Graduation_Project\Sanay3yMasr\obj\Debug\n
 C:\Users\welcome\source\repos\Web_API-Graduation_Project\Sanay3yMasr\bin\Debug\net9.0\FluentValidation.dll
 C:\Users\welcome\source\repos\Web_API-Graduation_Project\Sanay3yMasr\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
 C:\Users\welcome\source\repos\Web_API-Graduation_Project\Sanay3yMasr\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\welcome\source\repos\Web_API-Graduation_Project\Sanay3yMasr\bin\Debug\net9.0\CloudinaryDotNet.dll
+C:\Users\welcome\source\repos\Web_API-Graduation_Project\Sanay3yMasr\bin\Debug\net9.0\Newtonsoft.Json.dll

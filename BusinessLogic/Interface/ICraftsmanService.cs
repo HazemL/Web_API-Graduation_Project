@@ -8,4 +8,7 @@ public interface ICraftsmanService
     Task<ServiceResult<int>> CreateAsync(CreateCraftsmanDto dto);
     Task<ServiceResult<bool>> UpdateAsync(int id, UpdateCraftsmanDto dto);
     Task<ServiceResult<bool>> DeleteAsync(int id);
+
+    // ✅ رفع صورة Craftsman (Gallery)
+    Task<ServiceResult<bool>> UploadProfileImageAsync(int craftsmanId, string imageUrl);
 }

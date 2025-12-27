@@ -19,47 +19,61 @@ namespace BusinessLogic.Service
             _mapper = mapper;
         }
 
-        // GET ALL USERS
         public async Task<IEnumerable<GetUserDto>> GetAllAsync()
         {
-            var users = await _repo.GetAll().ToListAsync();
+            var users = await _repo.GetAll()
+                .Where(x => !x.IsDeleted)
+                .ToListAsync();
+
             return _mapper.Map<IEnumerable<GetUserDto>>(users);
         }
 
-        // GET USER BY ID
         public async Task<GetUserDto?> GetByIdAsync(int id)
         {
             var user = await _repo.GetByID(id);
-            if (user == null) return null;
+            if (user == null || user.IsDeleted)
+                return null;
 
             return _mapper.Map<GetUserDto>(user);
         }
 
-        // UPDATE USER (ADMIN)
         public async Task<bool> UpdateAsync(int id, UpdateUserDto dto, string adminId)
         {
             var user = await _repo.GetByIDWithTracking(id);
-            if (user == null) return false;
+            if (user == null || user.IsDeleted)
+                return false;
 
             _mapper.Map(dto, user);
-
             user.UpdatedBy = adminId;
-            user.UpdatedAt = DateTime.Now;
+            user.UpdatedAt = DateTime.UtcNow;
 
             await _repo.Update(user);
             return true;
         }
 
-        // DELETE USER (SOFT DELETE)
         public async Task<bool> DeleteAsync(int id, string adminId)
         {
             var user = await _repo.GetByIDWithTracking(id);
-            if (user == null) return false;
+            if (user == null || user.IsDeleted)
+                return false;
 
             user.IsDeleted = true;
             user.IsActive = false;
             user.UpdatedBy = adminId;
-            user.UpdatedAt = DateTime.Now;
+            user.UpdatedAt = DateTime.UtcNow;
+
+            await _repo.Update(user);
+            return true;
+        }
+
+        public async Task<bool> UpdateProfileImageAsync(int userId, string imageUrl)
+        {
+            var user = await _repo.GetByIDWithTracking(userId);
+            if (user == null || user.IsDeleted)
+                return false;
+
+            user.ProfileImage = imageUrl;
+            user.UpdatedAt = DateTime.UtcNow;
 
             await _repo.Update(user);
             return true;

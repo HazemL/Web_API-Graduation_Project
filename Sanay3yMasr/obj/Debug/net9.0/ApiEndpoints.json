@@ -548,6 +548,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Sanay3yMasr.Controllers.CraftsmenController",
+    "Method": "UploadImage",
+    "RelativePath": "api/craftsmen/{id}/upload-image",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Sanay3yMasr.Controllers.GalleryController",
     "Method": "Delete",
     "RelativePath": "api/gallery/{galleryId}",
@@ -1128,6 +1149,22 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sanay3yMasr.Controllers.UsersController",
+    "Method": "UploadProfileImage",
+    "RelativePath": "api/users/upload-profile-image",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

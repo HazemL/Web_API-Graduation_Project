@@ -8,13 +8,16 @@ using Microsoft.EntityFrameworkCore;
 public class CraftsmanService : ICraftsmanService
 {
     private readonly IGeneralRepository<Craftsman> _repo;
+    private readonly IGeneralRepository<Gallery> _galleryRepo;
     private readonly IMapper _mapper;
 
     public CraftsmanService(
         IGeneralRepository<Craftsman> repo,
+        IGeneralRepository<Gallery> galleryRepo,
         IMapper mapper)
     {
         _repo = repo;
+        _galleryRepo = galleryRepo;
         _mapper = mapper;
     }
 
@@ -28,6 +31,8 @@ public class CraftsmanService : ICraftsmanService
                 .ThenInclude(u => u.Governorate)
             .Include(x => x.User)
                 .ThenInclude(u => u.City)
+            .Include(x => x.GalleryImages) // ✅ الإضافة المهمة
+            .Where(x => !x.IsDeleted)
             .ToListAsync();
 
         var data = _mapper.Map<IEnumerable<GetCraftsmanDto>>(entities);
@@ -44,7 +49,8 @@ public class CraftsmanService : ICraftsmanService
                 .ThenInclude(u => u.Governorate)
             .Include(x => x.User)
                 .ThenInclude(u => u.City)
-            .FirstOrDefaultAsync(x => x.Id == id);
+            .Include(x => x.GalleryImages) // ✅ الإضافة المهمة
+            .FirstOrDefaultAsync(x => x.Id == id && !x.IsDeleted);
 
         if (entity == null)
             return ServiceResult<GetCraftsmanDto>.Fail("Craftsman not found");
@@ -72,7 +78,7 @@ public class CraftsmanService : ICraftsmanService
     public async Task<ServiceResult<bool>> UpdateAsync(int id, UpdateCraftsmanDto dto)
     {
         var entity = await _repo.GetAll()
-            .FirstOrDefaultAsync(x => x.Id == id);
+            .FirstOrDefaultAsync(x => x.Id == id && !x.IsDeleted);
 
         if (entity == null)
             return ServiceResult<bool>.Fail("Craftsman not found");
@@ -80,16 +86,17 @@ public class CraftsmanService : ICraftsmanService
         _mapper.Map(dto, entity);
         entity.UpdatedAt = DateTime.UtcNow;
 
+        await _repo.Update(entity);
         return ServiceResult<bool>.Ok(true, "Updated successfully");
     }
 
     // ======================
-    // DELETE (Soft Delete)
+    // DELETE
     // ======================
     public async Task<ServiceResult<bool>> DeleteAsync(int id)
     {
         var entity = await _repo.GetAll()
-            .FirstOrDefaultAsync(x => x.Id == id);
+            .FirstOrDefaultAsync(x => x.Id == id && !x.IsDeleted);
 
         if (entity == null)
             return ServiceResult<bool>.Fail("Craftsman not found");
@@ -97,6 +104,50 @@ public class CraftsmanService : ICraftsmanService
         entity.IsDeleted = true;
         entity.UpdatedAt = DateTime.UtcNow;
 
+        await _repo.Update(entity);
         return ServiceResult<bool>.Ok(true, "Deleted successfully");
+    }
+
+    // =====================================================
+    // UPLOAD PROFILE IMAGE (Gallery)
+    // =====================================================
+    public async Task<ServiceResult<bool>> UploadProfileImageAsync(
+        int craftsmanId,
+        string imageUrl)
+    {
+        var craftsman = await _repo.GetAll()
+            .FirstOrDefaultAsync(x => x.Id == craftsmanId && !x.IsDeleted);
+
+        if (craftsman == null)
+            return ServiceResult<bool>.Fail("Craftsman not found");
+
+        // حذف الصورة القديمة
+        var oldImage = await _galleryRepo.GetAll()
+            .FirstOrDefaultAsync(x =>
+                x.CraftsmanId == craftsmanId &&
+                x.MediaType == "Profile" &&
+                !x.IsDeleted);
+
+        if (oldImage != null)
+        {
+            oldImage.IsDeleted = true;
+            oldImage.UpdatedAt = DateTime.UtcNow;
+            await _galleryRepo.Update(oldImage);
+        }
+
+        // إضافة الجديدة
+        var gallery = new Gallery
+        {
+            CraftsmanId = craftsmanId,
+            MediaUrl = imageUrl,
+            MediaType = "Profile",
+            Title = "Profile Image",
+            Description = "Craftsman profile image",
+            CreatedAt = DateTime.UtcNow
+        };
+
+        await _galleryRepo.Add(gallery);
+
+        return ServiceResult<bool>.Ok(true, "Profile image uploaded successfully");
     }
 }
