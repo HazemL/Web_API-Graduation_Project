@@ -110,6 +110,18 @@
         }
       }
     },
+    "/api/auth/me": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/cities": {
       "get": {
         "tags": [

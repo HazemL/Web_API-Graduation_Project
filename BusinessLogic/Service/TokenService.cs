@@ -11,6 +11,7 @@ using System.Text;
 
 namespace BusinessLogic.Services
 {
+  
     public class TokenService : ITokenService
     {
         private readonly Context _context;
@@ -22,9 +23,9 @@ namespace BusinessLogic.Services
             _config = config;
         }
 
-        /// <summary>
-        /// Generate Access Token (JWT) + Refresh Token
-        /// </summary>
+        // =====================================================
+        // GENERATE ACCESS TOKEN + REFRESH TOKEN
+        // =====================================================
         public async Task<AuthResponseDto> GenerateAsync(User user)
         {
             // ============================
@@ -32,9 +33,14 @@ namespace BusinessLogic.Services
             // ============================
             var claims = new[]
             {
+                // User identity
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Role, user.Role)
+                new Claim(ClaimTypes.Role, user.Role),
+
+                // Custom claims for /me endpoint
+                new Claim("fullName", user.FullName),
+                new Claim("profileImage", user.ProfileImage ?? string.Empty)
             };
 
             // ============================
@@ -79,15 +85,16 @@ namespace BusinessLogic.Services
                 AccessToken = new JwtSecurityTokenHandler().WriteToken(jwtToken),
                 AccessTokenExpiresAt = jwtToken.ValidTo,
                 RefreshToken = refreshToken.Token,
+
+                // Extra info for frontend
                 Role = user.Role,
                 FullName = user.FullName
             };
         }
 
-        /// <summary>
-        /// Refresh access token using refresh token
-        /// ❌ بدون Exceptions
-        /// </summary>
+        // =====================================================
+        // REFRESH TOKEN
+        // =====================================================
         public async Task<AuthResponseDto?> RefreshAsync(string refreshToken)
         {
             var token = await _context.RefreshTokens
@@ -97,7 +104,7 @@ namespace BusinessLogic.Services
                     !x.IsRevoked &&
                     x.ExpiresAt > DateTime.UtcNow);
 
-            // ❌ لا Exceptions
+            // ❌ No exceptions
             if (token == null)
                 return null;
 

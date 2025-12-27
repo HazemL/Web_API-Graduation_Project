@@ -2,12 +2,15 @@
 using BusinessLogic.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using BusinessLogic.Constants;
 
 namespace Sanay3yMasr.Controllers
 {
     [ApiController]
     [Route("api/craftsmen")]
-    //[Authorize] // 🔒 أي حد يدخل لازم يكون عامل Login
+
+    // 🔒 الافتراضي: أي Endpoint محتاج Login
+    [Authorize]
     public class CraftsmenController : ControllerBase
     {
         private readonly ICraftsmanService _service;
@@ -17,20 +20,22 @@ namespace Sanay3yMasr.Controllers
             _service = service;
         }
 
-        // =======================
-        // GET ALL (Public / Logged Users)
-        // =======================
+        // =====================================================
+        // GET ALL Craftsmen
+        // Public (مش محتاج Login)
+        // =====================================================
         [HttpGet]
-        [AllowAnonymous] // 👀 متاح للكل
+        [AllowAnonymous]
         public async Task<IActionResult> GetAll()
         {
             var result = await _service.GetAllAsync();
             return Ok(result);
         }
 
-        // =======================
-        // GET BY ID (Public)
-        // =======================
+        // =====================================================
+        // GET Craftsman By Id
+        // Public
+        // =====================================================
         [HttpGet("{id}")]
         [AllowAnonymous]
         public async Task<IActionResult> GetById(int id)
@@ -39,11 +44,12 @@ namespace Sanay3yMasr.Controllers
             return result.Success ? Ok(result) : NotFound(result);
         }
 
-        // =======================
-        // CREATE (Craftsman فقط)
-        // =======================
+        // =====================================================
+        // CREATE Craftsman Profile
+        // Only Craftsman Role
+        // =====================================================
         [HttpPost]
-        //[Authorize(Roles = "Craftsman")]
+        [Authorize(Roles = Roles.Craftsman)]
         public async Task<IActionResult> Create([FromBody] CreateCraftsmanDto dto)
         {
             if (!ModelState.IsValid)
@@ -53,11 +59,12 @@ namespace Sanay3yMasr.Controllers
             return Ok(result);
         }
 
-        // =======================
-        // UPDATE (Craftsman فقط)
-        // =======================
+        // =====================================================
+        // UPDATE Craftsman Profile
+        // Only Craftsman Role
+        // =====================================================
         [HttpPut("{id}")]
-        //[Authorize(Roles = "Craftsman")]
+        [Authorize(Roles = Roles.Craftsman)]
         public async Task<IActionResult> Update(int id, UpdateCraftsmanDto dto)
         {
             if (!ModelState.IsValid)
@@ -67,11 +74,12 @@ namespace Sanay3yMasr.Controllers
             return result.Success ? Ok(result) : NotFound(result);
         }
 
-        // =======================
-        // DELETE (Admin فقط)
-        // =======================
+        // =====================================================
+        // DELETE Craftsman Profile
+        // Admin Only
+        // =====================================================
         [HttpDelete("{id}")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> Delete(int id)
         {
             var result = await _service.DeleteAsync(id);

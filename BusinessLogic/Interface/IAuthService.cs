@@ -1,17 +1,10 @@
-﻿
-
+﻿using BusinessLogic.Common;
 using BusinessLogic.DTOs.Auth;
 
-namespace BusinessLogic.Interface
+public interface IAuthService
 {
-    public interface IAuthService
-    {
-        Task<AuthResponseDto> RegisterAsync(RegisterRequestDto dto);
-        Task<AuthResponseDto> LoginAsync(LoginRequestDto dto);
-        Task<AuthResponseDto> RefreshTokenAsync(string refreshToken);
-        Task LogoutAsync(int userId);
-    }
-
-
-
+    Task<ServiceResult<AuthResponseDto>> RegisterAsync(RegisterRequestDto dto);
+    Task<ServiceResult<AuthResponseDto>> LoginAsync(LoginRequestDto dto);
+    Task<ServiceResult<AuthResponseDto>> RefreshTokenAsync(string refreshToken);
+    Task<ServiceResult<bool>> LogoutAsync(int userId);
 }

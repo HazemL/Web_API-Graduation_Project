@@ -18,6 +18,9 @@ public class CraftsmanService : ICraftsmanService
         _mapper = mapper;
     }
 
+    // ======================
+    // GET ALL
+    // ======================
     public async Task<ServiceResult<IEnumerable<GetCraftsmanDto>>> GetAllAsync()
     {
         var entities = await _repo.GetAll()
@@ -31,6 +34,9 @@ public class CraftsmanService : ICraftsmanService
         return ServiceResult<IEnumerable<GetCraftsmanDto>>.Ok(data);
     }
 
+    // ======================
+    // GET BY ID
+    // ======================
     public async Task<ServiceResult<GetCraftsmanDto>> GetByIdAsync(int id)
     {
         var entity = await _repo.GetAll()
@@ -47,6 +53,9 @@ public class CraftsmanService : ICraftsmanService
             _mapper.Map<GetCraftsmanDto>(entity));
     }
 
+    // ======================
+    // CREATE
+    // ======================
     public async Task<ServiceResult<int>> CreateAsync(CreateCraftsmanDto dto)
     {
         var entity = _mapper.Map<Craftsman>(dto);
@@ -57,6 +66,9 @@ public class CraftsmanService : ICraftsmanService
         return ServiceResult<int>.Ok(entity.Id, "Craftsman created successfully");
     }
 
+    // ======================
+    // UPDATE
+    // ======================
     public async Task<ServiceResult<bool>> UpdateAsync(int id, UpdateCraftsmanDto dto)
     {
         var entity = await _repo.GetAll()
@@ -71,6 +83,9 @@ public class CraftsmanService : ICraftsmanService
         return ServiceResult<bool>.Ok(true, "Updated successfully");
     }
 
+    // ======================
+    // DELETE (Soft Delete)
+    // ======================
     public async Task<ServiceResult<bool>> DeleteAsync(int id)
     {
         var entity = await _repo.GetAll()
