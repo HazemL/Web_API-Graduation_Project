@@ -11,52 +11,49 @@ namespace DataAccess.Seeding
         public static void SeedCraftsmen(ModelBuilder modelBuilder)
         {
             var list = new List<Craftsman>();
-            var now = new DateTime(2024, 1, 1);
+            var baseDate = new DateTime(2024, 1, 1);
+
+            var professionNames = new Dictionary<int, string>
+    {
+        { 1, "فني تكييف" },
+        { 2, "نجار" },
+        { 3, "كهربائي" },
+        { 4, "سباك" },
+        { 5, "إصلاح أجهزة" },
+        { 6, "فني غاز" },
+        { 7, "فني ألوميتال" },
+        { 8, "نقاش" }
+    };
 
             int craftsmanId = 1;
+            int userId = 2;
 
-            // ⚠️ Profession IDs must exist in SeedProfessions
-            var professionIds = new[]
+            for (int professionId = 1; professionId <= 8; professionId++)
             {
-                1, 2, 3, 4, 5,
-                6, 7, 8, 9, 10,
-                11, 12, 13, 14, 15,
-                16, 17, 18, 19, 20
-            };
-
-            // Users 2 -> 31 are Craftsmen (as defined in SeedUsers)
-            for (int userId = 2; userId <= 31; userId++)
-            {
-                bool isVerified = (userId % 3 == 0);
-
-                // Base price calculation (demo logic)
-                var minPrice = 100 + ((userId - 2) * 10) % 400;
-                var maxPrice = 300 + ((userId - 2) * 20) % 800;
-
-                // Ensure valid price range
-                if (maxPrice < minPrice)
-                    maxPrice = minPrice + 100;
-
-                list.Add(new Craftsman
+                for (int i = 0; i < 20; i++)
                 {
-                    Id = craftsmanId++,
-                    UserId = userId,
+                    bool isVerified = craftsmanId % 3 == 0;
 
-                    // Rotate professions for demo distribution
-                    ProfessionId = professionIds[(userId - 2) % professionIds.Length],
+                    list.Add(new Craftsman
+                    {
+                        Id = craftsmanId,
+                        UserId = userId,
+                        ProfessionId = professionId,
 
-                    Bio = $"Skilled professional #{userId}",
-                    ExperienceYears = 2 + ((userId - 2) % 15),
+                        Bio = $"صنايعي {professionNames[professionId]} خبرة أكثر من {1 + (i % 15)} سنة",
+                        ExperienceYears = 1 + (i % 15),
+                        MinPrice = 100 + (i * 20),
+                        MaxPrice = 400 + (i * 20),
 
-                    MinPrice = minPrice,
-                    MaxPrice = maxPrice,
+                        IsVerified = isVerified,
+                        VerificationDate = isVerified ? baseDate : null,
+                        CreatedAt = baseDate,
+                        UpdatedAt = baseDate
+                    });
 
-                    IsVerified = isVerified,
-                    VerificationDate = isVerified ? now : null,
-
-                    CreatedAt = now,
-                    UpdatedAt = now
-                });
+                    craftsmanId++;
+                    userId++;
+                }
             }
 
             modelBuilder.Entity<Craftsman>().HasData(list);

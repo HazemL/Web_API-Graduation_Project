@@ -7,7 +7,7 @@ namespace Sanay3yMasr.Controllers
 {
     [ApiController]
     [Route("api/professions")]
-    [Authorize]
+    
     public class ProfessionsController : ControllerBase
     {
         private readonly IProfessionService _service;
