@@ -623,17 +623,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCraftsmanDto"
+                "$ref": "#/components/schemas/UpdateCraftsmanProfileDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCraftsmanDto"
+                "$ref": "#/components/schemas/UpdateCraftsmanProfileDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCraftsmanDto"
+                "$ref": "#/components/schemas/UpdateCraftsmanProfileDto"
               }
             }
           }
@@ -2310,12 +2310,36 @@
         },
         "additionalProperties": false
       },
-      "UpdateCraftsmanDto": {
+      "UpdateCraftsmanProfileDto": {
         "required": [
-          "bio"
+          "bio",
+          "cityId",
+          "fullName",
+          "governorateId",
+          "professionId"
         ],
         "type": "object",
         "properties": {
+          "fullName": {
+            "minLength": 3,
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "governorateId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cityId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "professionId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "bio": {
             "minLength": 10,
             "type": "string"

@@ -8,7 +8,6 @@ namespace Sanay3yMasr.Controllers
 {
     [ApiController]
     [Route("api/craftsmen")]
-    [Authorize]
     public class CraftsmenController : ControllerBase
     {
         private readonly ICraftsmanService _service;
@@ -42,7 +41,7 @@ namespace Sanay3yMasr.Controllers
         }
 
         // ======================
-        // CREATE
+        // CREATE (Craftsman only)
         // ======================
         [HttpPost]
         [Authorize(Roles = Roles.Craftsman)]
@@ -50,18 +49,20 @@ namespace Sanay3yMasr.Controllers
             => Ok(await _service.CreateAsync(dto));
 
         // ======================
-        // UPDATE
+        // UPDATE FULL PROFILE (Craftsman)
         // ======================
         [HttpPut("{id}")]
         [Authorize(Roles = Roles.Craftsman)]
-        public async Task<IActionResult> Update(int id, UpdateCraftsmanDto dto)
+        public async Task<IActionResult> Update(
+            int id,
+            UpdateCraftsmanProfileDto dto)
         {
             var result = await _service.UpdateAsync(id, dto);
             return result.Success ? Ok(result) : NotFound(result);
         }
 
         // ======================
-        // DELETE
+        // DELETE (Admin only)
         // ======================
         [HttpDelete("{id}")]
         [Authorize(Roles = Roles.Admin)]
@@ -72,10 +73,10 @@ namespace Sanay3yMasr.Controllers
         }
 
         // =====================================================
-        // UPLOAD PROFILE IMAGE
+        // UPLOAD PROFILE IMAGE (Craftsman نفسه)
         // =====================================================
         [HttpPost("{id}/upload-image")]
-        [Authorize(Roles = Roles.Admin)]
+        [Authorize(Roles = Roles.Craftsman)]
         [Consumes("multipart/form-data")]
         public async Task<IActionResult> UploadImage(
             int id,

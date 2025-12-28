@@ -11,7 +11,7 @@ public class CraftsmanProfile : Profile
         // Create / Update
         // ======================
         CreateMap<CreateCraftsmanDto, Craftsman>();
-        CreateMap<UpdateCraftsmanDto, Craftsman>();
+        CreateMap<UpdateCraftsmanProfileDto, Craftsman>();
 
         // ======================
         // Entity -> DTO

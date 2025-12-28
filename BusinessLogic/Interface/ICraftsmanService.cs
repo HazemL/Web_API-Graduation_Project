@@ -6,9 +6,10 @@ public interface ICraftsmanService
     Task<ServiceResult<IEnumerable<GetCraftsmanDto>>> GetAllAsync();
     Task<ServiceResult<GetCraftsmanDto>> GetByIdAsync(int id);
     Task<ServiceResult<int>> CreateAsync(CreateCraftsmanDto dto);
-    Task<ServiceResult<bool>> UpdateAsync(int id, UpdateCraftsmanDto dto);
+
+    Task<ServiceResult<bool>> UpdateAsync( int id,UpdateCraftsmanProfileDto dto);
+
     Task<ServiceResult<bool>> DeleteAsync(int id);
 
-    // ✅ رفع صورة Craftsman (Gallery)
-    Task<ServiceResult<bool>> UploadProfileImageAsync(int craftsmanId, string imageUrl);
+    Task<ServiceResult<bool>> UploadProfileImageAsync(int craftsmanId,string imageUrl);
 }

@@ -21,27 +21,23 @@ public class CraftsmanService : ICraftsmanService
         _mapper = mapper;
     }
 
-    // ======================
-    // GET ALL
-    // ======================
+    // ================= GET ALL =================
     public async Task<ServiceResult<IEnumerable<GetCraftsmanDto>>> GetAllAsync()
     {
-        var entities = await _repo.GetAll()
+        var list = await _repo.GetAll()
             .Include(x => x.User)
                 .ThenInclude(u => u.Governorate)
             .Include(x => x.User)
                 .ThenInclude(u => u.City)
-            .Include(x => x.GalleryImages) // ✅ الإضافة المهمة
+            .Include(x => x.GalleryImages)
             .Where(x => !x.IsDeleted)
             .ToListAsync();
 
-        var data = _mapper.Map<IEnumerable<GetCraftsmanDto>>(entities);
-        return ServiceResult<IEnumerable<GetCraftsmanDto>>.Ok(data);
+        return ServiceResult<IEnumerable<GetCraftsmanDto>>
+            .Ok(_mapper.Map<IEnumerable<GetCraftsmanDto>>(list));
     }
 
-    // ======================
-    // GET BY ID
-    // ======================
+    // ================= GET BY ID =================
     public async Task<ServiceResult<GetCraftsmanDto>> GetByIdAsync(int id)
     {
         var entity = await _repo.GetAll()
@@ -49,19 +45,17 @@ public class CraftsmanService : ICraftsmanService
                 .ThenInclude(u => u.Governorate)
             .Include(x => x.User)
                 .ThenInclude(u => u.City)
-            .Include(x => x.GalleryImages) // ✅ الإضافة المهمة
+            .Include(x => x.GalleryImages)
             .FirstOrDefaultAsync(x => x.Id == id && !x.IsDeleted);
 
         if (entity == null)
             return ServiceResult<GetCraftsmanDto>.Fail("Craftsman not found");
 
-        return ServiceResult<GetCraftsmanDto>.Ok(
-            _mapper.Map<GetCraftsmanDto>(entity));
+        return ServiceResult<GetCraftsmanDto>
+            .Ok(_mapper.Map<GetCraftsmanDto>(entity));
     }
 
-    // ======================
-    // CREATE
-    // ======================
+    // ================= CREATE =================
     public async Task<ServiceResult<int>> CreateAsync(CreateCraftsmanDto dto)
     {
         var entity = _mapper.Map<Craftsman>(dto);
@@ -69,30 +63,40 @@ public class CraftsmanService : ICraftsmanService
         entity.CreatedAt = DateTime.UtcNow;
 
         await _repo.Add(entity);
-        return ServiceResult<int>.Ok(entity.Id, "Craftsman created successfully");
+        return ServiceResult<int>.Ok(entity.Id);
     }
 
-    // ======================
-    // UPDATE
-    // ======================
-    public async Task<ServiceResult<bool>> UpdateAsync(int id, UpdateCraftsmanDto dto)
+    // ================= UPDATE (FULL PROFILE) =================
+    public async Task<ServiceResult<bool>> UpdateAsync(
+        int id,
+        UpdateCraftsmanProfileDto dto)
     {
-        var entity = await _repo.GetAll()
+        var craftsman = await _repo.GetAll()
+            .Include(x => x.User)
             .FirstOrDefaultAsync(x => x.Id == id && !x.IsDeleted);
 
-        if (entity == null)
+        if (craftsman == null)
             return ServiceResult<bool>.Fail("Craftsman not found");
 
-        _mapper.Map(dto, entity);
-        entity.UpdatedAt = DateTime.UtcNow;
+        // ---------- USER ----------
+        craftsman.User!.FullName = dto.FullName;
+        craftsman.User.Phone = dto.Phone;
+        craftsman.User.GovernorateId = dto.GovernorateId;
+        craftsman.User.CityId = dto.CityId;
 
-        await _repo.Update(entity);
-        return ServiceResult<bool>.Ok(true, "Updated successfully");
+        // ---------- CRAFTSMAN ----------
+        craftsman.ProfessionId = dto.ProfessionId;
+        craftsman.Bio = dto.Bio;
+        craftsman.ExperienceYears = dto.ExperienceYears;
+        craftsman.MinPrice = dto.MinPrice;
+        craftsman.MaxPrice = dto.MaxPrice;
+        craftsman.UpdatedAt = DateTime.UtcNow;
+
+        await _repo.Update(craftsman);
+        return ServiceResult<bool>.Ok(true);
     }
 
-    // ======================
-    // DELETE
-    // ======================
+    // ================= DELETE =================
     public async Task<ServiceResult<bool>> DeleteAsync(int id)
     {
         var entity = await _repo.GetAll()
@@ -102,15 +106,12 @@ public class CraftsmanService : ICraftsmanService
             return ServiceResult<bool>.Fail("Craftsman not found");
 
         entity.IsDeleted = true;
-        entity.UpdatedAt = DateTime.UtcNow;
-
         await _repo.Update(entity);
-        return ServiceResult<bool>.Ok(true, "Deleted successfully");
+
+        return ServiceResult<bool>.Ok(true);
     }
 
-    // =====================================================
-    // UPLOAD PROFILE IMAGE (Gallery)
-    // =====================================================
+    // ================= UPLOAD IMAGE =================
     public async Task<ServiceResult<bool>> UploadProfileImageAsync(
         int craftsmanId,
         string imageUrl)
@@ -121,33 +122,28 @@ public class CraftsmanService : ICraftsmanService
         if (craftsman == null)
             return ServiceResult<bool>.Fail("Craftsman not found");
 
-        // حذف الصورة القديمة
-        var oldImage = await _galleryRepo.GetAll()
+        var old = await _galleryRepo.GetAll()
             .FirstOrDefaultAsync(x =>
                 x.CraftsmanId == craftsmanId &&
                 x.MediaType == "Profile" &&
                 !x.IsDeleted);
 
-        if (oldImage != null)
+        if (old != null)
         {
-            oldImage.IsDeleted = true;
-            oldImage.UpdatedAt = DateTime.UtcNow;
-            await _galleryRepo.Update(oldImage);
+            old.IsDeleted = true;
+            await _galleryRepo.Update(old);
         }
 
-        // إضافة الجديدة
-        var gallery = new Gallery
+        await _galleryRepo.Add(new Gallery
         {
             CraftsmanId = craftsmanId,
             MediaUrl = imageUrl,
             MediaType = "Profile",
             Title = "Profile Image",
-            Description = "Craftsman profile image",
+            Description = "Profile image",
             CreatedAt = DateTime.UtcNow
-        };
+        });
 
-        await _galleryRepo.Add(gallery);
-
-        return ServiceResult<bool>.Ok(true, "Profile image uploaded successfully");
+        return ServiceResult<bool>.Ok(true);
     }
 }
