@@ -21,6 +21,35 @@ namespace Sanay3yMasr.Controllers
             _service = service;
             _imageService = imageService;
         }
+        // =========================
+        // SEARCH USERS (Admin)
+        // =========================
+        [HttpGet("search")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Search(
+            [FromServices] IUserSearchService searchService,
+            string? name,
+            string? email,
+            string? phone,
+            string? role,
+            int? governorateId,
+            int? cityId)
+        {
+            var users = await searchService.SearchAsync(
+                name,
+                email,
+                phone,
+                role,
+                governorateId,
+                cityId);
+
+            return Ok(new
+            {
+                success = true,
+                count = users.Count(),
+                data = users
+            });
+        }
 
         // =========================
         // GET ALL USERS (Admin)
