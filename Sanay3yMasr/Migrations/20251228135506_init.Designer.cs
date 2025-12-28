@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Sanay3yMasr.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20251228131615_UpdateSeedUsersCraftsmen")]
-    partial class UpdateSeedUsersCraftsmen
+    [Migration("20251228135506_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -6223,36 +6223,6 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 1,
-                            ArabicName = "فني تكييف",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "AC maintenance and installation",
-                            IsDeleted = false,
-                            Name = "AC Technician",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ArabicName = "نجار",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Wood works and furniture",
-                            IsDeleted = false,
-                            Name = "Carpenter",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ArabicName = "كهربائي",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Electrical maintenance and wiring",
-                            IsDeleted = false,
-                            Name = "Electrician",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 4,
                             ArabicName = "سباك",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Plumbing and installations",
@@ -6262,27 +6232,47 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 5,
-                            ArabicName = "إصلاح أجهزة",
+                            Id = 2,
+                            ArabicName = "كهربائي",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Repair of home appliances",
+                            Description = "Electrical maintenance and wiring",
                             IsDeleted = false,
-                            Name = "Appliance Repair",
+                            Name = "Electrician",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ArabicName = "نجار",
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "Wood works and furniture",
+                            IsDeleted = false,
+                            Name = "Carpenter",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            ArabicName = "فني تكييف",
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "AC maintenance and installation",
+                            IsDeleted = false,
+                            Name = "AC Technician",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            ArabicName = "نقاش",
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "Painting and finishing works",
+                            IsDeleted = false,
+                            Name = "Painter",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 6,
-                            ArabicName = "فني غاز",
-                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Gas systems maintenance and installation",
-                            IsDeleted = false,
-                            Name = "Gas Technician",
-                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 7,
                             ArabicName = "فني ألوميتال",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Aluminum kitchens and windows",
@@ -6292,12 +6282,22 @@ namespace Sanay3yMasr.Migrations
                         },
                         new
                         {
-                            Id = 8,
-                            ArabicName = "نقاش",
+                            Id = 7,
+                            ArabicName = "فني غاز",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Painting and finishing works",
+                            Description = "Gas systems maintenance and installation",
                             IsDeleted = false,
-                            Name = "Painter",
+                            Name = "Gas Technician",
+                            UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 8,
+                            ArabicName = "إصلاح أجهزة",
+                            CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "Repair of home appliances",
+                            IsDeleted = false,
+                            Name = "Appliance Repair",
                             UpdatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
