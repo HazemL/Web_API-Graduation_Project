@@ -7,7 +7,7 @@ namespace Sanay3yMasr.Controllers
 {
     [ApiController]
     [Route("api")]
-    //[Authorize]
+    [Authorize]
     public class SubscriptionsController : ControllerBase
     {
         private readonly ISubscriptionService _service;
@@ -35,7 +35,7 @@ namespace Sanay3yMasr.Controllers
         }
 
         // PUT /api/subscriptions/{id}/cancel
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPut("subscriptions/{id}/cancel")]
         public async Task<IActionResult> Cancel(int id)
         {

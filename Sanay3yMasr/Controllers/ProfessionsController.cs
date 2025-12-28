@@ -7,7 +7,7 @@ namespace Sanay3yMasr.Controllers
 {
     [ApiController]
     [Route("api/professions")]
-    //[Authorize] 
+    [Authorize]
     public class ProfessionsController : ControllerBase
     {
         private readonly IProfessionService _service;
@@ -32,8 +32,8 @@ namespace Sanay3yMasr.Controllers
             return Ok(result);
         }
 
-        // POST /api/professions
-        //[Authorize(Roles = "Admin")]
+         //POST /api/professions
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Create(CreateProfessionDto dto)
         {
@@ -45,7 +45,7 @@ namespace Sanay3yMasr.Controllers
         }
 
         // PUT /api/professions/{id}
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, UpdateProfessionDto dto)
         {
@@ -57,7 +57,7 @@ namespace Sanay3yMasr.Controllers
         }
 
         // DELETE /api/professions/{id}
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

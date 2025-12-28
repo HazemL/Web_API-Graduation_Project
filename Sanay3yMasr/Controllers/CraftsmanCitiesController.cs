@@ -7,7 +7,7 @@ namespace Sanay3yMasr.Controllers
 {
     [ApiController]
     [Route("api/craftsmen")]
-    //[Authorize] 
+    [Authorize]
     public class CraftsmanCitiesController : ControllerBase
     {
         private readonly ICraftsmanCityService _service;
@@ -25,7 +25,7 @@ namespace Sanay3yMasr.Controllers
 
         // ================= POST =================
         // POST /api/craftsmen/{craftsmanId}/cities
-        //[Authorize(Roles = "Craftsman")] 
+        [Authorize(Roles = "Craftsman")]
         [HttpPost("{craftsmanId}/cities")]
         public async Task<IActionResult> Create(
             int craftsmanId,
@@ -40,7 +40,7 @@ namespace Sanay3yMasr.Controllers
 
         // ================= SET PRIMARY =================
         // PUT /api/craftsmen/{craftsmanId}/cities/{cityId}/set-primary
-        //[Authorize(Roles = "Craftsman")]
+        [Authorize(Roles = "Craftsman")]
         [HttpPut("{craftsmanId}/cities/{cityId}/set-primary")]
         public async Task<IActionResult> SetPrimary(int craftsmanId, int cityId)
         {
@@ -50,7 +50,7 @@ namespace Sanay3yMasr.Controllers
 
         // ================= DELETE =================
         // DELETE /api/craftsmen/{craftsmanId}/cities/{cityId}
-        //[Authorize(Roles = "Craftsman,Admin")] // ✅ Craftsman أو Admin
+        [Authorize(Roles = "Craftsman,Admin")] // ✅ Craftsman أو Admin
         [HttpDelete("{craftsmanId}/cities/{cityId}")]
         public async Task<IActionResult> Delete(int craftsmanId, int cityId)
         {

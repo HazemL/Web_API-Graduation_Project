@@ -9,7 +9,7 @@ namespace Sanay3yMasr.Controllers
 {
     [ApiController]
     [Route("api/skills")]
-    //[Authorize] 
+    [Authorize]
     public class SkillsController : ControllerBase
     {
         private readonly ISkillService _skillService;
@@ -42,7 +42,7 @@ namespace Sanay3yMasr.Controllers
 
         // POST /api/skills
         [HttpPost]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create(AddSkillDto dto)
         {
             if (!ModelState.IsValid)
@@ -56,7 +56,7 @@ namespace Sanay3yMasr.Controllers
 
         // PUT /api/skills/{id}
         [HttpPut("{id}")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Update(int id, UpdateSkillDto dto)
         {
             if (!ModelState.IsValid)
@@ -70,7 +70,7 @@ namespace Sanay3yMasr.Controllers
 
         // DELETE /api/skills/{id}
         [HttpDelete("{id}")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             await _skillService.DeleteAsync(id);

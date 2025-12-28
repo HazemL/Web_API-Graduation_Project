@@ -41,7 +41,7 @@ namespace Sanay3yMasr.Controllers
         // POST /api/reports
         // لازم JWT Token
         // =====================================
-        //[Authorize]
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] AddReportDto dto)
         {
@@ -65,7 +65,7 @@ namespace Sanay3yMasr.Controllers
         // PUT /api/reports/{id}/resolve
         // Admin فقط
         // =====================================
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}/resolve")]
         public async Task<IActionResult> Resolve(int id)
         {

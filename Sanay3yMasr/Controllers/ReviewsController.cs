@@ -34,7 +34,7 @@ namespace Sanay3yMasr.Controllers
             => Ok(await _service.GetAverageAsync(craftsmanId));
 
         // POST review
-        //[Authorize]
+        [Authorize]
         [HttpPost("craftsmen/{craftsmanId}/reviews")]
         public async Task<IActionResult> Create(
             int craftsmanId,
@@ -49,7 +49,7 @@ namespace Sanay3yMasr.Controllers
         }
 
         // PUT verify
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPut("reviews/{id}/verify")]
         public async Task<IActionResult> Verify(int id)
         {
@@ -58,7 +58,7 @@ namespace Sanay3yMasr.Controllers
         }
 
         // DELETE review
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("reviews/{id}")]
         public async Task<IActionResult> Delete(int id)
         {

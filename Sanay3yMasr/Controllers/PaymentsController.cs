@@ -7,7 +7,7 @@ namespace Sanay3yMasr.Controllers
 {
     [ApiController]
     [Route("api")]
-    //[Authorize] // 👈 أي Request لازم يكون عامل Login
+    [Authorize] // 👈 أي Request لازم يكون عامل Login
     public class PaymentsController : ControllerBase
     {
         private readonly IPaymentService _paymentService;
@@ -21,7 +21,7 @@ namespace Sanay3yMasr.Controllers
         // GET /api/payments
         // Admin فقط
         // =========================
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet("payments")]
         public async Task<IActionResult> GetAll()
             => Ok(await _paymentService.GetAllAsync());
@@ -30,7 +30,7 @@ namespace Sanay3yMasr.Controllers
         // GET /api/payments/{id}
         // Admin فقط
         // =========================
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet("payments/{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -42,7 +42,7 @@ namespace Sanay3yMasr.Controllers
         // GET /api/craftsmen/{craftsmanId}/payments
         // Admin + Craftsman
         // =========================
-        //[Authorize(Roles = "Admin,Craftsman")]
+        [Authorize(Roles = "Admin,Craftsman")]
         [HttpGet("craftsmen/{craftsmanId}/payments")]
         public async Task<IActionResult> GetByCraftsman(int craftsmanId)
             => Ok(await _paymentService.GetByCraftsmanAsync(craftsmanId));

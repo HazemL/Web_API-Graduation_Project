@@ -32,7 +32,7 @@ namespace Sanay3yMasr.Controllers
         }
 
         // POST (ADMIN ONLY)
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Create(CreateSubscriptionPlanDto dto)
         {
@@ -46,7 +46,7 @@ namespace Sanay3yMasr.Controllers
         }
 
         // PUT (ADMIN ONLY)
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, UpdateSubscriptionPlanDto dto)
         {
@@ -62,7 +62,7 @@ namespace Sanay3yMasr.Controllers
         }
 
         // DELETE (ADMIN ONLY)
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

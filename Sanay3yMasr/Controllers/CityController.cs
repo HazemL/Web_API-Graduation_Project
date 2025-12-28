@@ -31,7 +31,7 @@ namespace Sanay3yMasr.Controllers
         public async Task<IActionResult> GetByGovernorate(int govId)
             => Ok(await _service.GetByGovernorateAsync(govId));
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost("cities")]
         public async Task<IActionResult> Create(AddCityDto dto)
         {
@@ -42,7 +42,7 @@ namespace Sanay3yMasr.Controllers
             return Ok();
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPut("cities/{id}")]
         public async Task<IActionResult> Update(int id, UpdateCityDto dto)
         {
@@ -53,7 +53,7 @@ namespace Sanay3yMasr.Controllers
             return Ok();
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("cities/{id}")]
         public async Task<IActionResult> Delete(int id)
         {

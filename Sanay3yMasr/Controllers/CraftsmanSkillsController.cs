@@ -7,7 +7,7 @@ namespace Sanay3yMasr.Controllers
 {
     [ApiController]
     [Route("api/craftsmen")]
-    //[Authorize] 
+    [Authorize]
     public class CraftsmanSkillsController : ControllerBase
     {
         private readonly ICraftsmanSkillService _service;
@@ -24,7 +24,7 @@ namespace Sanay3yMasr.Controllers
 
         // ================= POST =================
         [HttpPost("{craftsmanId}/skills")]
-        //[Authorize(Roles = "Craftsman")] 
+        [Authorize(Roles = "Craftsman")]
         public async Task<IActionResult> Create(
             int craftsmanId,
             [FromBody] CreateCraftsmanSkillDto dto)
@@ -35,7 +35,7 @@ namespace Sanay3yMasr.Controllers
 
         // ================= PUT =================
         [HttpPut("{craftsmanId}/skills/{skillId}")]
-        //[Authorize(Roles = "Craftsman")]
+        [Authorize(Roles = "Craftsman")]
         public async Task<IActionResult> Update(
             int craftsmanId,
             int skillId,
@@ -47,7 +47,7 @@ namespace Sanay3yMasr.Controllers
 
         // ================= DELETE =================
         [HttpDelete("{craftsmanId}/skills/{skillId}")]
-        //[Authorize(Roles = "Craftsman,Admin")] 
+        [Authorize(Roles = "Craftsman,Admin")]
         public async Task<IActionResult> Delete(int craftsmanId, int skillId)
         {
             await _service.DeleteAsync(craftsmanId, skillId);

@@ -30,7 +30,7 @@ namespace Sanay3yMasr.Controllers
         // ===========================
         // POST → Craftsman أو Admin
         // ===========================
-        //[Authorize(Policy = "CraftsmanOrAdmin")]
+        [Authorize(Policy = "CraftsmanOrAdmin")]
         [HttpPost("craftsmen/{craftsmanId}/gallery")]
         public async Task<IActionResult> Add(
             int craftsmanId,
@@ -46,7 +46,7 @@ namespace Sanay3yMasr.Controllers
         // ===========================
         // DELETE → Craftsman أو Admin
         // ===========================
-        //[Authorize(Policy = "CraftsmanOrAdmin")]
+        [Authorize(Policy = "CraftsmanOrAdmin")]
         [HttpDelete("gallery/{galleryId}")]
         public async Task<IActionResult> Delete(int galleryId)
         {
