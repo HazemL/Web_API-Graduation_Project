@@ -9,7 +9,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BusinessLogic.Service
 {
-   
     public class AuthService : IAuthService
     {
         private readonly Context _context;
@@ -34,26 +33,40 @@ namespace BusinessLogic.Service
         // =========================
         public async Task<ServiceResult<AuthResponseDto>> RegisterAsync(RegisterRequestDto dto)
         {
-            // Check email existence
             bool emailExists = await _context.Users
                 .AnyAsync(x => x.Email == dto.Email && !x.IsDeleted);
 
             if (emailExists)
-                return ServiceResult<AuthResponseDto>
-                    .Fail("Email already exists");
+                return ServiceResult<AuthResponseDto>.Fail("Email already exists");
 
-            // Map DTO -> User
             var user = _mapper.Map<User>(dto);
-
-            // Hash password
             user.PasswordHash = _hasher.Hash(dto.Password);
             user.IsActive = true;
+            user.CreatedAt = DateTime.UtcNow;
 
-            // Save user
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            // Generate tokens
+            // 👇 إضافة Craftsman تلقائي لو الدور Craftsman
+            if (user.Role == "Craftsman")
+            {
+                var craftsman = new Craftsman
+                {
+                    UserId = user.Id,
+                    ProfessionId = 1, // لازم موجود في DB
+                    Bio = string.Empty,
+                    ExperienceYears = 0,
+                    MinPrice = 0,
+                    MaxPrice = 0,
+                    IsVerified = false,
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow
+                };
+
+                _context.Craftsmens.Add(craftsman);
+                await _context.SaveChangesAsync();
+            }
+
             var authResponse = await _tokenService.GenerateAsync(user);
 
             return ServiceResult<AuthResponseDto>
@@ -66,21 +79,16 @@ namespace BusinessLogic.Service
         public async Task<ServiceResult<AuthResponseDto>> LoginAsync(LoginRequestDto dto)
         {
             var user = await _context.Users
-                .FirstOrDefaultAsync(x =>
-                    x.Email == dto.Email &&
-                    !x.IsDeleted);
+                .FirstOrDefaultAsync(x => x.Email == dto.Email && !x.IsDeleted);
 
             if (user == null)
-                return ServiceResult<AuthResponseDto>
-                    .Fail("Invalid email or password");
+                return ServiceResult<AuthResponseDto>.Fail("Invalid email or password");
 
             if (!_hasher.Verify(dto.Password, user.PasswordHash))
-                return ServiceResult<AuthResponseDto>
-                    .Fail("Invalid email or password");
+                return ServiceResult<AuthResponseDto>.Fail("Invalid email or password");
 
             if (!user.IsActive)
-                return ServiceResult<AuthResponseDto>
-                    .Fail("User is disabled");
+                return ServiceResult<AuthResponseDto>.Fail("User is disabled");
 
             var authResponse = await _tokenService.GenerateAsync(user);
 
@@ -89,7 +97,7 @@ namespace BusinessLogic.Service
         }
 
         // =========================
-        // REFRESH TOKEN
+        // REFRESH TOKEN ✅ (اللي كانت ناقصة)
         // =========================
         public async Task<ServiceResult<AuthResponseDto>> RefreshTokenAsync(string refreshToken)
         {
@@ -113,14 +121,12 @@ namespace BusinessLogic.Service
                 .ToListAsync();
 
             if (!tokens.Any())
-                return ServiceResult<bool>
-                    .Fail("No active sessions found");
+                return ServiceResult<bool>.Fail("No active sessions found");
 
             tokens.ForEach(x => x.IsRevoked = true);
             await _context.SaveChangesAsync();
 
-            return ServiceResult<bool>
-                .Ok(true, "Logged out successfully");
+            return ServiceResult<bool>.Ok(true, "Logged out successfully");
         }
     }
 }
