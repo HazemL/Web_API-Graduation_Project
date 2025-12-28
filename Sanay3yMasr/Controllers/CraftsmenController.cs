@@ -21,6 +21,42 @@ namespace Sanay3yMasr.Controllers
             _imageService = imageService;
         }
 
+
+        // =========================
+        // SEARCH CRAFTSMEN (Public)
+        // =========================
+        [HttpGet("search")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Search(
+            [FromServices] ICraftsmanSearchService searchService,
+            string? name,
+            int? professionId,
+            int? governorateId,
+            int? cityId,
+            decimal? minPrice,
+            decimal? maxPrice,
+            int? minExperience,
+            bool? isVerified)
+        {
+            var result = await searchService.SearchAsync(
+                name,
+                professionId,
+                governorateId,
+                cityId,
+                minPrice,
+                maxPrice,
+                minExperience,
+                isVerified);
+
+            return Ok(new
+            {
+                success = true,
+                count = result.Count(),
+                data = result
+            });
+        }
+
+
         // ======================
         // GET ALL (Public)
         // ======================

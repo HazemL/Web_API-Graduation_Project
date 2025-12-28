@@ -110,7 +110,8 @@ namespace Sanay3yMasr
             builder.Services.AddScoped<ISubscriptionPlanService, SubscriptionPlanService>();
             builder.Services.AddScoped<IImageService, CloudinaryImageService>();
             builder.Services.AddScoped<IUserSearchService, UserSearchService>();
-          
+            builder.Services.AddScoped<ICraftsmanSearchService, CraftsmanSearchService>();
+
 
             // =====================================================
             // 📘 SWAGGER + JWT
