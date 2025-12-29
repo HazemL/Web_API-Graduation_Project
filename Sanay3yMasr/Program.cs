@@ -55,6 +55,21 @@ namespace Sanay3yMasr
             builder.Services.AddAuthorization();
 
             // =====================================================
+            // 🌍 CORS
+            // =====================================================
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+            });
+
+            // =====================================================
             // 🧠 CONTROLLERS + FLUENT VALIDATION
             // =====================================================
 
@@ -112,7 +127,6 @@ namespace Sanay3yMasr
             builder.Services.AddScoped<IUserSearchService, UserSearchService>();
             builder.Services.AddScoped<ICraftsmanSearchService, CraftsmanSearchService>();
 
-
             // =====================================================
             // 📘 SWAGGER + JWT
             // =====================================================
@@ -164,8 +178,9 @@ namespace Sanay3yMasr
                 app.UseSwaggerUI();
             }
 
-            app.UseAuthentication(); // 🔓 JWT
-            app.UseAuthorization();  // 🔒 [Authorize]
+            app.UseAuthentication();      // 🔓 JWT
+            app.UseCors("AllowAll");      // 🌍 CORS
+            app.UseAuthorization();       // 🔒 [Authorize]
 
             app.MapGet("/", () => Results.Redirect("/swagger"));
             app.MapControllers();

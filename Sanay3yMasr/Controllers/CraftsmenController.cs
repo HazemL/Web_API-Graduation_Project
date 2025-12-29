@@ -112,7 +112,7 @@ namespace Sanay3yMasr.Controllers
         // UPLOAD PROFILE IMAGE (Craftsman نفسه)
         // =====================================================
         [HttpPost("{id}/upload-image")]
-        [Authorize(Roles = Roles.Craftsman)]
+        //[Authorize(Roles = Roles.Craftsman)]
         [Consumes("multipart/form-data")]
         public async Task<IActionResult> UploadImage(
             int id,

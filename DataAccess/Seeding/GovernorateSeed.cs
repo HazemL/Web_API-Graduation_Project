@@ -60,7 +60,8 @@ namespace DataAccess.Seeding
                 new Governorate { Id = 23, Name = "New Valley", ArabicName = "الوادي الجديد", CreatedAt = baseDate, UpdatedAt = baseDate },
                 new Governorate { Id = 24, Name = "Matrouh", ArabicName = "مطروح", CreatedAt = baseDate, UpdatedAt = baseDate },
                 new Governorate { Id = 25, Name = "North Sinai", ArabicName = "شمال سيناء", CreatedAt = baseDate, UpdatedAt = baseDate },
-                new Governorate { Id = 26, Name = "South Sinai", ArabicName = "جنوب سيناء", CreatedAt = baseDate, UpdatedAt = baseDate }
+                new Governorate { Id = 26, Name = "South Sinai", ArabicName = "جنوب سيناء", CreatedAt = baseDate, UpdatedAt = baseDate },
+                new Governorate { Id = 27, Name = "Alexandria", ArabicName = "الإسكندرية", CreatedAt = baseDate, UpdatedAt = baseDate }
             };
 
             modelBuilder.Entity<Governorate>().HasData(data);

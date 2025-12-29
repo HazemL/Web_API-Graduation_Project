@@ -12,47 +12,72 @@ namespace DataAccess.Seeding
             var baseDate = new DateTime(2024, 1, 1);
             var users = new List<User>();
 
-            // ===================== ADMIN =====================
+            // =====================================================
+            // 🔐 PASSWORD HASH (123456)
+            // =====================================================
+            const string DefaultPasswordHash =
+                "O2Esdae1BIpDX7bsgeUv+S1teVqLWpwXBw9qY8l6U7I=";
+
+            // =====================================================
+            // 🖼️ PROFILE IMAGES (Cloudinary)
+            // =====================================================
+            var profileImages = new List<string>
+            {
+                "https://res.cloudinary.com/dyzyadtiv/image/upload/v1767020179/profiles/nrjgydrm2g0rxvdzzkr0.png",
+                "https://res.cloudinary.com/dyzyadtiv/image/upload/v1767021527/profiles/mdqm8rj0zilxajdcvnzx.png",
+                "https://res.cloudinary.com/dyzyadtiv/image/upload/v1767021553/profiles/ej0kxrdwkegbwiiuvrc6.png",
+                "https://res.cloudinary.com/dyzyadtiv/image/upload/v1767021583/profiles/jxieawtyublxo40xagpf.png",
+                "https://res.cloudinary.com/dyzyadtiv/image/upload/v1767021605/profiles/qucfyefb96ikivt2zf8r.png",
+                "https://res.cloudinary.com/dyzyadtiv/image/upload/v1767021645/profiles/gpqnjbtps2wzka8cdpdp.png",
+                "https://res.cloudinary.com/dyzyadtiv/image/upload/v1767021677/profiles/pzqkgri6ujtotz2lctbq.png"
+            };
+
+            // =====================================================
+            // 👑 ADMIN
+            // =====================================================
             users.Add(new User
             {
                 Id = 1,
                 FullName = "Admin",
                 Email = "admin@gmail.com",
-                PasswordHash = "O2Esdae1BIpDX7bsgeUv+S1teVqLWpwXBw9qY8l6U7I=",
+                PasswordHash = DefaultPasswordHash,
                 Phone = "01000000000",
                 Role = "Admin",
                 IsActive = true,
-                ProfileImage = "default-user.png",
+                ProfileImage = profileImages[0],
                 GovernorateId = null,
                 CityId = null,
                 CreatedAt = baseDate,
                 UpdatedAt = baseDate
             });
 
-            // ===================== NAME PARTS =====================
+            // =====================================================
+            // 🧾 NAME PARTS
+            // =====================================================
             var firstNames = new[]
             {
-        "أحمد","محمد","محمود","عبدالله","عمر","كريم","سارة","نور",
-        "هند","ليلى","منى","إيهاب","مروة","طارق","علي","يوسف",
-        "عائشة","مريم","خالد","إبراهيم"
-    };
+                "أحمد","محمد","محمود","عبدالله","عمر","كريم","إيهاب","طارق",
+                "علي","يوسف","خالد","إبراهيم","مصطفى","حسن","سامي","ياسر"
+            };
 
             var middleNames = new[]
             {
-        "محمد","حسن","إبراهيم","محمود","عبدالرحمن","مصطفى","ياسر",
-        "سامي","فؤاد","خليل","عادل","سعيد","سمير","كمال","حسين"
-    };
+                "محمد","حسن","إبراهيم","محمود","عبدالرحمن",
+                "مصطفى","ياسر","سامي","فؤاد","كمال"
+            };
 
             var lastNames = new[]
             {
-        "علي","حسن","إبراهيم","محمود","سامي","صلاح","مصطفى",
-        "عبدالله","فؤاد","ياسين","سعيد","سمير","عادل","حسين","كمال"
-    };
+                "علي","حسن","إبراهيم","محمود","سامي",
+                "صلاح","مصطفى","عبدالله","فؤاد","ياسين"
+            };
 
+            // =====================================================
+            // 👷 CRAFTSMEN USERS (160)
+            // =====================================================
             const int craftsmenCount = 160;
             int id = 2;
 
-            // ===================== CRAFTSMEN USERS =====================
             for (int i = 0; i < craftsmenCount; i++)
             {
                 var fullName =
@@ -65,15 +90,18 @@ namespace DataAccess.Seeding
                     Id = id,
                     FullName = fullName,
                     Email = $"craftsman{id}@example.com",
-                    PasswordHash = "10000.hFJ4X3Yw9kF2QzJc6R6yVg==.pQ8x3x0+1uYw0xXrC6b3n0k8vZ5q3P9Z+7Yxw4Q1F3Y=",
+                    PasswordHash = DefaultPasswordHash,
                     Phone = $"010{id:00000000}",
                     Role = "Craftsman",
                     IsActive = true,
-                    ProfileImage = "default-user.png",
+
+                    // 🖼️ Profile Image (rotated)
+                    ProfileImage = profileImages[i % profileImages.Count],
+
                     GovernorateId = 1,
                     CityId = (id % 5) + 1,
-                    CreatedAt = baseDate,
-                    UpdatedAt = baseDate
+                    CreatedAt = baseDate.AddDays(i),
+                    UpdatedAt = baseDate.AddDays(i)
                 });
 
                 id++;
