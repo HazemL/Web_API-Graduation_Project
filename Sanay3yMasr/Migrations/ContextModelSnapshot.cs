@@ -714,7 +714,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 1,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -728,7 +728,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 2,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -742,7 +742,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 3,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -757,7 +757,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 4,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -771,7 +771,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 5,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
@@ -785,7 +785,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 6,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 6 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 6 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 6,
                             IsDeleted = false,
@@ -800,7 +800,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 7,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 7 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 7 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 7,
                             IsDeleted = false,
@@ -814,7 +814,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 8,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 8 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 8 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 8,
                             IsDeleted = false,
@@ -828,7 +828,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 9,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 9 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 9 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 9,
                             IsDeleted = false,
@@ -843,7 +843,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 10,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 10 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 10 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 10,
                             IsDeleted = false,
@@ -857,7 +857,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 11,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 11 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 11 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 11,
                             IsDeleted = false,
@@ -871,7 +871,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 12,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 12 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 12 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 12,
                             IsDeleted = false,
@@ -886,7 +886,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 13,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 13 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 13 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 13,
                             IsDeleted = false,
@@ -900,7 +900,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 14,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 14 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 14 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 14,
                             IsDeleted = false,
@@ -914,7 +914,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 15,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 15 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 15 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 15,
                             IsDeleted = false,
@@ -929,7 +929,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 16,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -943,7 +943,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 17,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -957,7 +957,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 18,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -972,7 +972,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 19,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -986,7 +986,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 20,
-                            Bio = "صنايعي فني تكييف خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي سباك خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
@@ -1000,7 +1000,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 21,
-                            Bio = "صنايعي نجار خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -1015,7 +1015,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 22,
-                            Bio = "صنايعي نجار خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -1029,7 +1029,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 23,
-                            Bio = "صنايعي نجار خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -1043,7 +1043,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 24,
-                            Bio = "صنايعي نجار خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -1058,7 +1058,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 25,
-                            Bio = "صنايعي نجار خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
@@ -1072,7 +1072,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 26,
-                            Bio = "صنايعي نجار خبرة أكثر من 6 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 6 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 6,
                             IsDeleted = false,
@@ -1086,7 +1086,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 27,
-                            Bio = "صنايعي نجار خبرة أكثر من 7 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 7 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 7,
                             IsDeleted = false,
@@ -1101,7 +1101,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 28,
-                            Bio = "صنايعي نجار خبرة أكثر من 8 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 8 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 8,
                             IsDeleted = false,
@@ -1115,7 +1115,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 29,
-                            Bio = "صنايعي نجار خبرة أكثر من 9 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 9 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 9,
                             IsDeleted = false,
@@ -1129,7 +1129,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 30,
-                            Bio = "صنايعي نجار خبرة أكثر من 10 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 10 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 10,
                             IsDeleted = false,
@@ -1144,7 +1144,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 31,
-                            Bio = "صنايعي نجار خبرة أكثر من 11 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 11 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 11,
                             IsDeleted = false,
@@ -1158,7 +1158,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 32,
-                            Bio = "صنايعي نجار خبرة أكثر من 12 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 12 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 12,
                             IsDeleted = false,
@@ -1172,7 +1172,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 33,
-                            Bio = "صنايعي نجار خبرة أكثر من 13 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 13 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 13,
                             IsDeleted = false,
@@ -1187,7 +1187,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 34,
-                            Bio = "صنايعي نجار خبرة أكثر من 14 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 14 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 14,
                             IsDeleted = false,
@@ -1201,7 +1201,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 35,
-                            Bio = "صنايعي نجار خبرة أكثر من 15 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 15 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 15,
                             IsDeleted = false,
@@ -1215,7 +1215,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 36,
-                            Bio = "صنايعي نجار خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -1230,7 +1230,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 37,
-                            Bio = "صنايعي نجار خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -1244,7 +1244,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 38,
-                            Bio = "صنايعي نجار خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -1258,7 +1258,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 39,
-                            Bio = "صنايعي نجار خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -1273,7 +1273,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 40,
-                            Bio = "صنايعي نجار خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي كهربائي خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
@@ -1287,7 +1287,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 41,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -1301,7 +1301,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 42,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -1316,7 +1316,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 43,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -1330,7 +1330,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 44,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -1344,7 +1344,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 45,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
@@ -1359,7 +1359,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 46,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 6 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 6 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 6,
                             IsDeleted = false,
@@ -1373,7 +1373,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 47,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 7 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 7 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 7,
                             IsDeleted = false,
@@ -1387,7 +1387,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 48,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 8 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 8 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 8,
                             IsDeleted = false,
@@ -1402,7 +1402,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 49,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 9 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 9 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 9,
                             IsDeleted = false,
@@ -1416,7 +1416,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 50,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 10 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 10 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 10,
                             IsDeleted = false,
@@ -1430,7 +1430,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 51,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 11 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 11 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 11,
                             IsDeleted = false,
@@ -1445,7 +1445,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 52,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 12 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 12 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 12,
                             IsDeleted = false,
@@ -1459,7 +1459,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 53,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 13 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 13 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 13,
                             IsDeleted = false,
@@ -1473,7 +1473,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 54,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 14 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 14 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 14,
                             IsDeleted = false,
@@ -1488,7 +1488,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 55,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 15 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 15 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 15,
                             IsDeleted = false,
@@ -1502,7 +1502,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 56,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -1516,7 +1516,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 57,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -1531,7 +1531,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 58,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -1545,7 +1545,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 59,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -1559,7 +1559,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 60,
-                            Bio = "صنايعي كهربائي خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي نجار خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
@@ -1574,7 +1574,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 61,
-                            Bio = "صنايعي سباك خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -1588,7 +1588,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 62,
-                            Bio = "صنايعي سباك خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -1602,7 +1602,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 63,
-                            Bio = "صنايعي سباك خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -1617,7 +1617,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 64,
-                            Bio = "صنايعي سباك خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -1631,7 +1631,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 65,
-                            Bio = "صنايعي سباك خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
@@ -1645,7 +1645,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 66,
-                            Bio = "صنايعي سباك خبرة أكثر من 6 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 6 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 6,
                             IsDeleted = false,
@@ -1660,7 +1660,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 67,
-                            Bio = "صنايعي سباك خبرة أكثر من 7 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 7 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 7,
                             IsDeleted = false,
@@ -1674,7 +1674,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 68,
-                            Bio = "صنايعي سباك خبرة أكثر من 8 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 8 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 8,
                             IsDeleted = false,
@@ -1688,7 +1688,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 69,
-                            Bio = "صنايعي سباك خبرة أكثر من 9 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 9 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 9,
                             IsDeleted = false,
@@ -1703,7 +1703,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 70,
-                            Bio = "صنايعي سباك خبرة أكثر من 10 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 10 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 10,
                             IsDeleted = false,
@@ -1717,7 +1717,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 71,
-                            Bio = "صنايعي سباك خبرة أكثر من 11 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 11 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 11,
                             IsDeleted = false,
@@ -1731,7 +1731,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 72,
-                            Bio = "صنايعي سباك خبرة أكثر من 12 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 12 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 12,
                             IsDeleted = false,
@@ -1746,7 +1746,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 73,
-                            Bio = "صنايعي سباك خبرة أكثر من 13 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 13 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 13,
                             IsDeleted = false,
@@ -1760,7 +1760,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 74,
-                            Bio = "صنايعي سباك خبرة أكثر من 14 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 14 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 14,
                             IsDeleted = false,
@@ -1774,7 +1774,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 75,
-                            Bio = "صنايعي سباك خبرة أكثر من 15 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 15 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 15,
                             IsDeleted = false,
@@ -1789,7 +1789,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 76,
-                            Bio = "صنايعي سباك خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -1803,7 +1803,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 77,
-                            Bio = "صنايعي سباك خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -1817,7 +1817,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 78,
-                            Bio = "صنايعي سباك خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -1832,7 +1832,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 79,
-                            Bio = "صنايعي سباك خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -1846,7 +1846,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 80,
-                            Bio = "صنايعي سباك خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي فني تكييف خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
@@ -1860,7 +1860,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 81,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -1875,7 +1875,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 82,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -1889,7 +1889,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 83,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -1903,7 +1903,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 84,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -1918,7 +1918,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 85,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
@@ -1932,7 +1932,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 86,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 6 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 6 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 6,
                             IsDeleted = false,
@@ -1946,7 +1946,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 87,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 7 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 7 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 7,
                             IsDeleted = false,
@@ -1961,7 +1961,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 88,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 8 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 8 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 8,
                             IsDeleted = false,
@@ -1975,7 +1975,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 89,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 9 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 9 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 9,
                             IsDeleted = false,
@@ -1989,7 +1989,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 90,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 10 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 10 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 10,
                             IsDeleted = false,
@@ -2004,7 +2004,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 91,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 11 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 11 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 11,
                             IsDeleted = false,
@@ -2018,7 +2018,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 92,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 12 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 12 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 12,
                             IsDeleted = false,
@@ -2032,7 +2032,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 93,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 13 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 13 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 13,
                             IsDeleted = false,
@@ -2047,7 +2047,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 94,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 14 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 14 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 14,
                             IsDeleted = false,
@@ -2061,7 +2061,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 95,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 15 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 15 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 15,
                             IsDeleted = false,
@@ -2075,7 +2075,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 96,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -2090,7 +2090,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 97,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -2104,7 +2104,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 98,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -2118,7 +2118,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 99,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -2133,7 +2133,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 100,
-                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي نقاش خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
@@ -2147,7 +2147,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 101,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -2161,7 +2161,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 102,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -2176,7 +2176,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 103,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -2190,7 +2190,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 104,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -2204,7 +2204,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 105,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
@@ -2219,7 +2219,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 106,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 6 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 6 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 6,
                             IsDeleted = false,
@@ -2233,7 +2233,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 107,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 7 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 7 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 7,
                             IsDeleted = false,
@@ -2247,7 +2247,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 108,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 8 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 8 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 8,
                             IsDeleted = false,
@@ -2262,7 +2262,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 109,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 9 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 9 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 9,
                             IsDeleted = false,
@@ -2276,7 +2276,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 110,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 10 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 10 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 10,
                             IsDeleted = false,
@@ -2290,7 +2290,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 111,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 11 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 11 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 11,
                             IsDeleted = false,
@@ -2305,7 +2305,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 112,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 12 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 12 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 12,
                             IsDeleted = false,
@@ -2319,7 +2319,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 113,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 13 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 13 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 13,
                             IsDeleted = false,
@@ -2333,7 +2333,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 114,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 14 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 14 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 14,
                             IsDeleted = false,
@@ -2348,7 +2348,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 115,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 15 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 15 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 15,
                             IsDeleted = false,
@@ -2362,7 +2362,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 116,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -2376,7 +2376,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 117,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -2391,7 +2391,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 118,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -2405,7 +2405,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 119,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -2419,7 +2419,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 120,
-                            Bio = "صنايعي فني غاز خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
@@ -2434,7 +2434,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 121,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -2448,7 +2448,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 122,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -2462,7 +2462,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 123,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -2477,7 +2477,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 124,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -2491,7 +2491,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 125,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
@@ -2505,7 +2505,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 126,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 6 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 6 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 6,
                             IsDeleted = false,
@@ -2520,7 +2520,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 127,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 7 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 7 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 7,
                             IsDeleted = false,
@@ -2534,7 +2534,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 128,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 8 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 8 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 8,
                             IsDeleted = false,
@@ -2548,7 +2548,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 129,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 9 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 9 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 9,
                             IsDeleted = false,
@@ -2563,7 +2563,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 130,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 10 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 10 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 10,
                             IsDeleted = false,
@@ -2577,7 +2577,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 131,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 11 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 11 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 11,
                             IsDeleted = false,
@@ -2591,7 +2591,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 132,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 12 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 12 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 12,
                             IsDeleted = false,
@@ -2606,7 +2606,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 133,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 13 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 13 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 13,
                             IsDeleted = false,
@@ -2620,7 +2620,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 134,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 14 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 14 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 14,
                             IsDeleted = false,
@@ -2634,7 +2634,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 135,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 15 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 15 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 15,
                             IsDeleted = false,
@@ -2649,7 +2649,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 136,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -2663,7 +2663,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 137,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -2677,7 +2677,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 138,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -2692,7 +2692,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 139,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -2706,7 +2706,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 140,
-                            Bio = "صنايعي فني ألوميتال خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي فني غاز خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
@@ -2720,7 +2720,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 141,
-                            Bio = "صنايعي نقاش خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -2735,7 +2735,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 142,
-                            Bio = "صنايعي نقاش خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -2749,7 +2749,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 143,
-                            Bio = "صنايعي نقاش خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -2763,7 +2763,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 144,
-                            Bio = "صنايعي نقاش خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -2778,7 +2778,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 145,
-                            Bio = "صنايعي نقاش خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
@@ -2792,7 +2792,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 146,
-                            Bio = "صنايعي نقاش خبرة أكثر من 6 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 6 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 6,
                             IsDeleted = false,
@@ -2806,7 +2806,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 147,
-                            Bio = "صنايعي نقاش خبرة أكثر من 7 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 7 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 7,
                             IsDeleted = false,
@@ -2821,7 +2821,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 148,
-                            Bio = "صنايعي نقاش خبرة أكثر من 8 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 8 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 8,
                             IsDeleted = false,
@@ -2835,7 +2835,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 149,
-                            Bio = "صنايعي نقاش خبرة أكثر من 9 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 9 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 9,
                             IsDeleted = false,
@@ -2849,7 +2849,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 150,
-                            Bio = "صنايعي نقاش خبرة أكثر من 10 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 10 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 10,
                             IsDeleted = false,
@@ -2864,7 +2864,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 151,
-                            Bio = "صنايعي نقاش خبرة أكثر من 11 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 11 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 11,
                             IsDeleted = false,
@@ -2878,7 +2878,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 152,
-                            Bio = "صنايعي نقاش خبرة أكثر من 12 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 12 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 12,
                             IsDeleted = false,
@@ -2892,7 +2892,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 153,
-                            Bio = "صنايعي نقاش خبرة أكثر من 13 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 13 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 13,
                             IsDeleted = false,
@@ -2907,7 +2907,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 154,
-                            Bio = "صنايعي نقاش خبرة أكثر من 14 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 14 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 14,
                             IsDeleted = false,
@@ -2921,7 +2921,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 155,
-                            Bio = "صنايعي نقاش خبرة أكثر من 15 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 15 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 15,
                             IsDeleted = false,
@@ -2935,7 +2935,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 156,
-                            Bio = "صنايعي نقاش خبرة أكثر من 1 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 1 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 1,
                             IsDeleted = false,
@@ -2950,7 +2950,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 157,
-                            Bio = "صنايعي نقاش خبرة أكثر من 2 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 2 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 2,
                             IsDeleted = false,
@@ -2964,7 +2964,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 158,
-                            Bio = "صنايعي نقاش خبرة أكثر من 3 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 3 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 3,
                             IsDeleted = false,
@@ -2978,7 +2978,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 159,
-                            Bio = "صنايعي نقاش خبرة أكثر من 4 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 4 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 4,
                             IsDeleted = false,
@@ -2993,7 +2993,7 @@ namespace Sanay3yMasr.Migrations
                         new
                         {
                             Id = 160,
-                            Bio = "صنايعي نقاش خبرة أكثر من 5 سنة",
+                            Bio = "صنايعي إصلاح أجهزة خبرة أكثر من 5 سنة",
                             CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExperienceYears = 5,
                             IsDeleted = false,
